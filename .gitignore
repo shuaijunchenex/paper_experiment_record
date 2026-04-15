@@ -190,7 +190,7 @@ cython_debug/
 .pypirc
 
 # MacOS
-.ds_store
+.DS_Store
 
 src/test/.training_results/
 **/.training_results/
