@@ -16,7 +16,6 @@ src/test/log/
 #VS
 .vs
 _ReSharper.Caches
-*.csv
 
 # Distribution / packaging
 .Python
