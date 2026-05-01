@@ -1,4 +1,5 @@
 from typing import List, Union, Dict, Optional
+import json
 import pandas as pd
 from pathlib import Path
 import numpy as np
@@ -187,6 +188,208 @@ def plot_learning_curves(
         plt.savefig(f"{save_path}.pdf", dpi=dpi, bbox_inches='tight')
     
     plt.show()
+
+
+def _extract_method_from_config(csv_file: Union[str, Path]) -> Optional[str]:
+    """
+    Extract client selection method from the first config line in FedGRA csv.
+
+    Expected first line format:
+        Config,{...json...}
+    """
+    csv_file = Path(csv_file)
+    if not csv_file.exists():
+        return None
+
+    try:
+        with csv_file.open("r", encoding="utf-8") as f:
+            first_line = f.readline().strip()
+    except OSError:
+        return None
+
+    if not first_line:
+        return None
+
+    if "," not in first_line:
+        return None
+
+    left, payload = first_line.split(",", 1)
+    if left.strip().lower() != "config":
+        return None
+
+    try:
+        cfg = json.loads(payload)
+    except json.JSONDecodeError:
+        return None
+
+    method = cfg.get("client_selection", {}).get("method")
+    if method is None:
+        return None
+
+    return str(method)
+
+
+def build_fedgra_metric_dict(
+    files: Union[str, Path, List[Union[str, Path]]],
+    metric: str = "accuracy",
+    header: int = 1,
+    auto_legend: bool = True,
+    labels: Optional[List[str]] = None,
+    legend_map: Optional[Dict[str, str]] = None,
+    sort_files: bool = True,
+    **read_csv_kwargs,
+) -> Dict[str, pd.Series]:
+    """
+    Build a plotting dictionary for FedGRA csv files.
+
+    Args:
+        files:
+            - csv directory path (e.g. fedgra/mnist)
+            - a single csv file path
+            - list of csv file paths
+        metric: metric column to read from CSV (default: accuracy)
+        header: row index of CSV column header (default: 1)
+        auto_legend: whether to auto parse method from config line as legend
+        labels: manual legend labels; has higher priority than auto legend
+        legend_map: map raw legend name -> custom legend name
+        sort_files: whether to sort csv paths
+        **read_csv_kwargs: extra kwargs passed to read_training_csv
+
+    Returns:
+        Dict[str, pd.Series], directly consumable by plot_learning_curves.
+    """
+    # Normalize input into a list of csv files
+    if isinstance(files, (str, Path)):
+        files = Path(files)
+        if files.is_dir():
+            csv_files = list(files.glob("*.csv"))
+        else:
+            csv_files = [files]
+    else:
+        csv_files = [Path(f) for f in files]
+
+    csv_files = [f for f in csv_files if f.suffix.lower() == ".csv"]
+    if sort_files:
+        csv_files = sorted(csv_files)
+
+    if not csv_files:
+        raise ValueError("No csv files found from the provided input.")
+
+    data_dict: Dict[str, pd.Series] = {}
+    for idx, csv_file in enumerate(csv_files):
+        df = read_training_csv(
+            [csv_file],
+            columns=[metric],
+            header=header,
+            **read_csv_kwargs,
+        )
+
+        if metric not in df.columns:
+            raise ValueError(f"Column '{metric}' not found in file: {csv_file}")
+
+        if labels is not None and idx < len(labels):
+            legend_name = labels[idx]
+        elif auto_legend:
+            method = _extract_method_from_config(csv_file)
+            if method:
+                legend_name = method
+            else:
+                legend_name = f"Dataset {idx + 1}"
+        else:
+            legend_name = f"Dataset {idx + 1}"
+
+        if legend_map is not None:
+            legend_name = legend_map.get(legend_name, legend_name)
+
+        # Avoid overwriting when methods repeat (e.g. multiple random runs)
+        if legend_name in data_dict:
+            legend_name = f"{legend_name}_{idx + 1}"
+
+        data_dict[legend_name] = df[metric]
+
+    return data_dict
+
+
+def plot_fedgra_learning_curves(
+    files: Union[str, Path, List[Union[str, Path]]],
+    metric: str = "accuracy",
+    header: int = 1,
+    auto_legend: bool = True,
+    colors: Optional[List[str]] = None,
+    labels: Optional[List[str]] = None,
+    legend_map: Optional[Dict[str, str]] = None,
+    x_range: Optional[int] = None,
+    title: str = "FedGRA Learning Curves",
+    x_label: str = "Communication Rounds",
+    y_label: Optional[str] = None,
+    y_lim: tuple = (0, 1),
+    window_size: int = 10,
+    figsize: tuple = (5, 5),
+    is_legend: bool = True,
+    save_path: Optional[str] = None,
+    plot_raw: bool = True,
+    raw_alpha: float = 0.35,
+    raw_linewidth: float = 0.7,
+    smooth_linewidth: float = 2,
+    dpi: int = 800,
+    fontsize_title: int = 22,
+    fontsize_label: int = 24,
+    fontsize_legend: int = 18,
+    fontsize_tick: int = 20,
+    sort_files: bool = True,
+    **read_csv_kwargs,
+) -> Dict[str, pd.Series]:
+    """
+    Parse FedGRA csv files and plot learning curves.
+
+    Features:
+    1) Auto-read method from csv config header for legend
+    2) Supports manual labels / legend_map override
+    3) Uses the same plotting controls as plot_learning_curves
+
+    Returns:
+        data_dict used for plotting, useful for further custom analysis.
+    """
+    data_dict = build_fedgra_metric_dict(
+        files=files,
+        metric=metric,
+        header=header,
+        auto_legend=auto_legend,
+        labels=labels,
+        legend_map=legend_map,
+        sort_files=sort_files,
+        **read_csv_kwargs,
+    )
+
+    if y_label is None:
+        y_label = metric.replace("_", " ").title()
+
+    plot_learning_curves(
+        data_dict=data_dict,
+        x_range=x_range,
+        colors=colors,
+        labels=list(data_dict.keys()),
+        legend_map=None,
+        title=title,
+        x_label=x_label,
+        y_label=y_label,
+        y_lim=y_lim,
+        window_size=window_size,
+        figsize=figsize,
+        is_legend=is_legend,
+        save_path=save_path,
+        plot_raw=plot_raw,
+        raw_alpha=raw_alpha,
+        raw_linewidth=raw_linewidth,
+        smooth_linewidth=smooth_linewidth,
+        dpi=dpi,
+        fontsize_title=fontsize_title,
+        fontsize_label=fontsize_label,
+        fontsize_legend=fontsize_legend,
+        fontsize_tick=fontsize_tick,
+    )
+
+    return data_dict
 
 
 if __name__ == "__main__":
