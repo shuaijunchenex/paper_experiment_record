@@ -112,12 +112,11 @@ def plot_learning_curves(
             # All numeric columns
             data_dict = {col: data_dict[col] for col in data_dict.select_dtypes(include=[np.number]).columns}
     
-    # Set default colors
+    # Set default colors — cycle if there are more datasets than colors
     default_colors = ["red", "green", "blue", "orange", "purple", "brown", "pink", "gray", "cyan", "magenta", "yellow", "black"]
     if colors is None:
-        colors = default_colors[:len(data_dict)]
+        colors = [default_colors[i % len(default_colors)] for i in range(len(data_dict))]
     elif len(colors) < len(data_dict):
-        # If not enough colors provided, cycle through them
         colors = [colors[i % len(colors)] for i in range(len(data_dict))]
     
     # Set default labels
