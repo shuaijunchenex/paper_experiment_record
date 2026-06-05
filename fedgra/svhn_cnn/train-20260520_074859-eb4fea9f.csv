@@ -1,0 +1,8 @@
+Config,{"general": {"device": "cpu", "training_rounds": 100}, "dataset": "svhn", "model": "cnn_brenden_rgb", "loss_function": "CrossEntropyLoss", "aggregation": "fedavg", "client_selection": {"method": "pyramidfl", "round": 1, "client_selection_round": 1, "number": 2, "random_seed": 42, "pyramidfl_use_system_utility_in_explore": false, "pyramidfl_force_one_explore_when_k2": true}, "hyperparameters": {"training_rounds": 100, "local_epochs": 5, "selected_clients": 2, "client_selection_round": 1, "client_selection_method": "pyramidfl", "optimizer": "Adam", "lr": 0.001, "weight_decay": 0.0001, "batch_size": 64, "shuffle": true, "trainer_type": "standard"}, "rank_distribution": {}, "rank_ratio_list": [], "rank_ratio_list_str": "", "epoch": 5, "batch_size": 64}
+
+accuracy,average_loss,precision,recall,f1_score,mcc,total_test_samples
+0.15938076213890595,2.301224262053496,0.015938076213890595,0.1,0.02749411881647394,0.0,26032
+0.06699446834665028,2.3561255659292137,0.006699446834665028,0.1,0.012557603686635947,0.0,26032
+0.07594499078057775,2.3485288704987606,0.007594499078057775,0.1,0.014116890999321646,0.0,26032
+0.07594499078057775,2.2922864978710566,0.007594499078057775,0.1,0.014116890999321646,0.0,26032
+0.09157959434542103,2.3695710518642956,0.009157959434542102,0.1,0.01677927927927928,0.0,26032
