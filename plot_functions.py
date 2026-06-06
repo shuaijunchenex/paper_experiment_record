@@ -55,6 +55,7 @@ def plot_learning_curves(
     colors: Optional[List[str]] = None,
     labels: Optional[List[str]] = None,
     legend_map: Optional[Dict[str, str]] = None,
+    color_map: Optional[Dict[str, str]] = None,
     title: str = "Learning Curves",
     x_label: str = "Communication Rounds",
     y_label: str = "Test Accuracy",
@@ -128,6 +129,18 @@ def plot_learning_curves(
     elif len(labels) < len(data_dict):
         # If not enough labels provided, use generic names
         labels = labels + [f"Dataset {i+1}" for i in range(len(labels), len(data_dict))]
+
+    # Apply color_map to fix specific colors for certain labels
+    if color_map is not None:
+        for i, label in enumerate(labels):
+            if label in color_map:
+                colors[i] = color_map[label]
+        # 避免 mapped colors 与其他默认颜色冲突：将冲突的非目标颜色替换掉
+        mapped_colors = set(color_map.values())
+        unmapped_palette = [c for c in default_colors if c not in mapped_colors]
+        for i, label in enumerate(labels):
+            if label not in color_map and colors[i] in mapped_colors:
+                colors[i] = unmapped_palette[i % len(unmapped_palette)]
     
     # Process each data series
     for idx, (key, series) in enumerate(data_dict.items()):
@@ -317,6 +330,7 @@ def plot_fedgra_learning_curves(
     colors: Optional[List[str]] = None,
     labels: Optional[List[str]] = None,
     legend_map: Optional[Dict[str, str]] = None,
+    color_map: Optional[Dict[str, str]] = None,
     x_range: Optional[int] = None,
     title: str = "FedGRA Learning Curves",
     x_label: str = "Communication Rounds",
@@ -369,6 +383,7 @@ def plot_fedgra_learning_curves(
         colors=colors,
         labels=list(data_dict.keys()),
         legend_map=None,
+        color_map=color_map,
         title=title,
         x_label=x_label,
         y_label=y_label,
