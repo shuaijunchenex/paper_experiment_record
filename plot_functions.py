@@ -1,9 +1,52 @@
-from typing import List, Union, Dict, Optional
+from typing import List, Union, Dict, Optional, Sequence
 import json
 import pandas as pd
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
+
+
+DEFAULT_LEGEND_MAP = {
+    "adafl": "AdaFL",
+    "afl": "AFL",
+    "fedgra": "FedGRA",
+    "fedsdr": "FedSDR",
+    "high_loss": "High-Loss",
+    "high_weight_divergence": "High-Weight-Div",
+    "oort": "Oort",
+    "powd": "Pow-D",
+    "pow-d": "Pow-D",
+    "pyramidfl": "PyramidFL",
+    "repufl": "RepuFL",
+    "random": "Random",
+    "all_participate": "All-Participate",
+}
+
+DEFAULT_COLOR_MAP = {
+    "FedGRA": "blue",
+    "AdaFL": "red",
+    "AFL": "green",
+    "FedSDR": "orange",
+    "Oort": "purple",
+    "Pow-D": "brown",
+    "PyramidFL": "magenta",
+    "Random": "gray",
+    "RepuFL": "cyan",
+    "High-Loss": "pink",
+    "High-Weight-Div": "olive",
+    "All-Participate": "teal",
+}
+
+
+def _save_current_figure(save_path: Union[str, Path], dpi: int = 800) -> Path:
+    """Save the current matplotlib figure, defaulting to PDF when no suffix is given."""
+    output_path = Path(save_path)
+    if output_path.suffix == "":
+        output_path = output_path.with_suffix(".pdf")
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    plt.savefig(output_path, dpi=dpi, bbox_inches="tight")
+    return output_path
 
 
 def read_training_csv(
@@ -197,7 +240,7 @@ def plot_learning_curves(
         plt.legend(fontsize=fontsize_legend)
     
     if save_path:
-        plt.savefig(f"{save_path}.pdf", dpi=dpi, bbox_inches='tight')
+        _save_current_figure(save_path, dpi=dpi)
     
     plt.show()
 
@@ -320,6 +363,374 @@ def build_fedgra_metric_dict(
         data_dict[legend_name] = df[metric]
 
     return data_dict
+
+
+def _auto_csv_header(csv_file: Union[str, Path]) -> int:
+    """Return 1 for FedGRA config-prefixed csv files, otherwise 0."""
+    try:
+        with Path(csv_file).open("r", encoding="utf-8") as f:
+            first_line = f.readline().strip()
+    except OSError:
+        return 0
+
+    return 1 if first_line.lower().startswith("config,") else 0
+
+
+def _normalize_method_name(method: str) -> str:
+    return method.lower().replace("-", "_").strip()
+
+
+def _method_from_filename(csv_file: Union[str, Path]) -> str:
+    stem = Path(csv_file).stem
+    if stem.startswith("aws_fmnist_result_"):
+        return stem.replace("aws_fmnist_result_", "", 1)
+    if stem.endswith("_experiment_result"):
+        return stem.replace("_experiment_result", "")
+
+    # Common local filename pattern: fedgra_mnist_-train-...
+    prefix = stem.split("-train-", 1)[0].strip("_")
+    if "_" in prefix:
+        return prefix.split("_", 1)[0]
+    return prefix or stem
+
+
+def _method_label(
+    raw_method: str,
+    legend_map: Optional[Dict[str, str]] = None,
+) -> str:
+    if legend_map is None:
+        return raw_method
+
+    normalized = _normalize_method_name(raw_method)
+    return (
+        legend_map.get(raw_method)
+        or legend_map.get(normalized)
+        or legend_map.get(normalized.replace("_", "-"))
+        or raw_method
+    )
+
+
+def _unique_label(label: str, existing: Dict[str, pd.Series]) -> str:
+    if label not in existing:
+        return label
+
+    index = 2
+    candidate = f"{label}_{index}"
+    while candidate in existing:
+        index += 1
+        candidate = f"{label}_{index}"
+    return candidate
+
+
+def read_metric_folder(
+    directory: Union[str, Path],
+    metric: str = "accuracy",
+    header: Union[int, str] = "auto",
+    legend_map: Optional[Dict[str, str]] = DEFAULT_LEGEND_MAP,
+    method_order: Optional[Sequence[str]] = None,
+    sort_files: bool = True,
+    **read_csv_kwargs,
+) -> Dict[str, pd.Series]:
+    """
+    Read one metric from all CSV files in a folder.
+
+    This supports both ordinary CSV files (header on row 0) and FedGRA CSV files
+    whose first row is a JSON config and whose header is on row 1.
+    """
+    directory = Path(directory)
+    csv_files = list(directory.glob("*.csv")) if directory.is_dir() else [directory]
+    csv_files = [csv_file for csv_file in csv_files if csv_file.suffix.lower() == ".csv"]
+    if sort_files:
+        csv_files = sorted(csv_files)
+
+    if not csv_files:
+        raise ValueError(f"No csv files found in: {directory}")
+
+    raw_data: Dict[str, pd.Series] = {}
+    for csv_file in csv_files:
+        csv_header = _auto_csv_header(csv_file) if header == "auto" else header
+        df = pd.read_csv(csv_file, header=csv_header, **read_csv_kwargs)
+        if metric not in df.columns:
+            raise ValueError(f"Column '{metric}' not found in file: {csv_file}")
+
+        raw_method = _extract_method_from_config(csv_file) or _method_from_filename(csv_file)
+        raw_data[_unique_label(raw_method, raw_data)] = df[metric]
+
+    ordered_items = list(raw_data.items())
+    if method_order is not None:
+        order_index = {
+            _normalize_method_name(method): idx for idx, method in enumerate(method_order)
+        }
+        ordered_items = sorted(
+            ordered_items,
+            key=lambda item: order_index.get(_normalize_method_name(item[0]), len(order_index)),
+        )
+
+    data_dict: Dict[str, pd.Series] = {}
+    for raw_method, series in ordered_items:
+        label = _method_label(raw_method, legend_map=legend_map)
+        data_dict[_unique_label(label, data_dict)] = series
+
+    return data_dict
+
+
+def _apply_default_style() -> None:
+    try:
+        from style import MatplotlibStyle
+    except ImportError:
+        return
+
+    MatplotlibStyle().apply()
+
+
+def plot_metric_folders(
+    directories: Union[str, Path, Sequence[Union[str, Path]]],
+    save_path: Optional[Union[str, Path]] = None,
+    titles: Optional[Sequence[str]] = None,
+    metric: str = "accuracy",
+    header: Union[int, str] = "auto",
+    legend_map: Optional[Dict[str, str]] = DEFAULT_LEGEND_MAP,
+    color_map: Optional[Dict[str, str]] = DEFAULT_COLOR_MAP,
+    method_order: Optional[Sequence[str]] = None,
+    figsize: Optional[tuple] = None,
+    x_range: Optional[int] = 100,
+    x_ticks: Optional[Sequence[float]] = None,
+    y_lim: Union[tuple, Sequence[tuple]] = (0, 0.8),
+    window_size: int = 5,
+    plot_raw: bool = True,
+    plot_smooth: bool = True,
+    raw_alpha: float = 0.35,
+    raw_linewidth: float = 0.7,
+    smooth_linewidth: float = 2,
+    title_fontsize: int = 22,
+    label_fontsize: int = 24,
+    tick_fontsize: int = 20,
+    legend_fontsize: int = 20,
+    legend_ncol: int = 4,
+    sharey: bool = False,
+    use_style: bool = True,
+    dpi: int = 800,
+    show: bool = True,
+    **read_csv_kwargs,
+) -> List[Dict[str, pd.Series]]:
+    """
+    Plot metric curves from one or more folders and optionally save the figure.
+
+    Args:
+        directories: a folder path, csv path, or a list of folders/csv files.
+        save_path: output path, e.g. ``"aws_combined.pdf"`` or ``"figs/aws.png"``.
+        titles: subplot titles. Defaults to each directory name.
+        metric: CSV metric column to plot.
+        header: ``"auto"`` supports both ordinary and FedGRA config-prefixed CSVs.
+    """
+    if isinstance(directories, (str, Path)):
+        directories = [directories]
+    directories = list(directories)
+
+    if not directories:
+        raise ValueError("At least one directory or csv file is required.")
+
+    if use_style:
+        _apply_default_style()
+
+    if figsize is None:
+        figsize = (5 * len(directories), 5)
+
+    if titles is None:
+        titles = [Path(directory).name for directory in directories]
+
+    if isinstance(y_lim[0], (int, float)):
+        y_lims = [y_lim] * len(directories)
+    else:
+        y_lims = list(y_lim)
+
+    data_sets = [
+        read_metric_folder(
+            directory=directory,
+            metric=metric,
+            header=header,
+            legend_map=legend_map,
+            method_order=method_order,
+            **read_csv_kwargs,
+        )
+        for directory in directories
+    ]
+
+    fig, axes = plt.subplots(1, len(directories), figsize=figsize, sharey=sharey)
+    if len(directories) == 1:
+        axes = [axes]
+
+    legend_labels: List[str] = []
+    for data_dict in data_sets:
+        for label in data_dict:
+            if label not in legend_labels:
+                legend_labels.append(label)
+
+    default_colors = plt.rcParams["axes.prop_cycle"].by_key().get("color", [])
+    color_by_label = {}
+    for idx, label in enumerate(legend_labels):
+        color_by_label[label] = (
+            color_map.get(label)
+            if color_map is not None and label in color_map
+            else default_colors[idx % len(default_colors)]
+        )
+
+    y_label = metric.replace("_", " ").title()
+    if metric == "accuracy":
+        y_label = "Test Accuracy"
+
+    for ax, title, data_dict, current_y_lim in zip(axes, titles, data_sets, y_lims):
+        for label, series in data_dict.items():
+            data = series.dropna().to_numpy()
+            if x_range is not None:
+                data = data[:x_range]
+            x = np.arange(len(data))
+            color = color_by_label[label]
+
+            if plot_raw:
+                ax.plot(
+                    x,
+                    data,
+                    linestyle="dashed",
+                    linewidth=raw_linewidth,
+                    alpha=raw_alpha,
+                    color=color,
+                )
+
+            if plot_smooth and len(data) >= window_size:
+                rolling = np.convolve(data, np.ones(window_size) / window_size, mode="valid")
+                x_roll = np.arange(window_size - 1, len(data))
+                ax.plot(x_roll, rolling, linewidth=smooth_linewidth, color=color, label=label)
+            elif not plot_smooth:
+                ax.plot(x, data, linewidth=smooth_linewidth, color=color, label=label)
+
+        ax.set_title(title, fontsize=title_fontsize, pad=1)
+        ax.set_xlabel("Communication rounds", fontsize=label_fontsize)
+        if x_range is not None:
+            ax.set_xlim([0, x_range])
+        if x_ticks is not None:
+            ax.set_xticks(x_ticks)
+        ax.set_ylim(current_y_lim)
+        ax.tick_params(axis="x", labelsize=tick_fontsize)
+        ax.tick_params(axis="y", labelsize=tick_fontsize)
+
+    axes[0].set_ylabel(y_label, fontsize=label_fontsize)
+    if not sharey:
+        for ax in axes[1:]:
+            ax.set_ylabel(y_label, fontsize=label_fontsize)
+
+    from matplotlib.lines import Line2D
+
+    handles = [
+        Line2D([0], [0], color=color_by_label[label], linewidth=smooth_linewidth, label=label)
+        for label in legend_labels
+    ]
+    fig.legend(
+        handles=handles,
+        loc="upper center",
+        ncol=legend_ncol,
+        fontsize=legend_fontsize,
+        frameon=False,
+        bbox_to_anchor=(0.5, 1.17),
+    )
+
+    plt.tight_layout()
+    if save_path:
+        _save_current_figure(save_path, dpi=dpi)
+    if show:
+        plt.show()
+
+    return data_sets
+
+
+def plot_accuracy_from_folder(
+    directory: Union[str, Path],
+    save_path: Optional[Union[str, Path]] = None,
+    title: Optional[str] = None,
+    **kwargs,
+) -> Dict[str, pd.Series]:
+    """Convenience wrapper for plotting accuracy curves from one folder."""
+    data_sets = plot_metric_folders(
+        directories=[directory],
+        save_path=save_path,
+        titles=[title or Path(directory).name],
+        metric="accuracy",
+        **kwargs,
+    )
+    return data_sets[0]
+
+
+def plot_combined_smoothed_datasets(
+    dir1: Union[str, Path],
+    dir2: Union[str, Path],
+    save_path: Optional[Union[str, Path]] = None,
+    label1: str = "Dataset 1",
+    label2: str = "Dataset 2",
+    **kwargs,
+) -> List[Dict[str, pd.Series]]:
+    """Convenience wrapper for the common two-panel smoothed accuracy figure."""
+    return plot_metric_folders(
+        directories=[dir1, dir2],
+        save_path=save_path,
+        titles=[label1, label2],
+        metric="accuracy",
+        plot_raw=True,
+        plot_smooth=True,
+        **kwargs,
+    )
+
+
+def plot_four_smoothed_datasets(
+    directories: Sequence[Union[str, Path]],
+    save_path: Optional[Union[str, Path]] = None,
+    titles: Optional[Sequence[str]] = None,
+    figsize: tuple = (20, 5),
+    x_ticks: Optional[Sequence[float]] = (0, 25, 50, 75, 100),
+    y_lim: Union[tuple, Sequence[tuple]] = (0, 0.8),
+    legend_ncol: int = 4,
+    return_data: bool = False,
+    **kwargs,
+) -> Optional[List[Dict[str, pd.Series]]]:
+    """
+    Convenience wrapper for a one-row, four-panel smoothed accuracy figure.
+
+    Args:
+        directories: exactly four data folders or csv paths.
+        save_path: output path. If no suffix is given, PDF is used.
+        titles: exactly four subplot titles.
+        figsize: whole figure size, e.g. ``(20, 5)``.
+        x_ticks: x-axis tick locations. Defaults to ``(0, 25, 50, 75, 100)``.
+        y_lim: either one shared ``(min, max)`` tuple or four per-panel tuples.
+        legend_ncol: number of columns in the shared legend.
+        return_data: if True, return the data dictionaries used for plotting.
+    """
+    directories = list(directories)
+    if len(directories) != 4:
+        raise ValueError("plot_four_smoothed_datasets requires exactly four directories.")
+
+    if titles is not None and len(titles) != 4:
+        raise ValueError("titles must contain exactly four labels when provided.")
+
+    if not isinstance(y_lim[0], (int, float)) and len(y_lim) != 4:
+        raise ValueError("y_lim must be one shared tuple or exactly four per-panel tuples.")
+
+    data_sets = plot_metric_folders(
+        directories=directories,
+        save_path=save_path,
+        titles=titles,
+        metric="accuracy",
+        figsize=figsize,
+        x_ticks=x_ticks,
+        y_lim=y_lim,
+        legend_ncol=legend_ncol,
+        plot_raw=True,
+        plot_smooth=True,
+        **kwargs,
+    )
+
+    if return_data:
+        return data_sets
+    return None
 
 
 def plot_fedgra_learning_curves(
