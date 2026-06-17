@@ -493,6 +493,7 @@ def plot_metric_folders(
     color_map: Optional[Dict[str, str]] = DEFAULT_COLOR_MAP,
     method_order: Optional[Sequence[str]] = None,
     figsize: Optional[tuple] = None,
+    n_cols: Optional[int] = None,
     x_range: Optional[int] = 100,
     x_ticks: Optional[Sequence[float]] = None,
     y_lim: Union[tuple, Sequence[tuple]] = (0, 0.8),
@@ -507,6 +508,8 @@ def plot_metric_folders(
     tick_fontsize: int = 20,
     legend_fontsize: int = 20,
     legend_ncol: int = 4,
+    legend_loc: str = "upper center",
+    legend_bbox_to_anchor: tuple = (0.5, 1.17),
     sharey: bool = False,
     use_style: bool = True,
     dpi: int = 800,
@@ -522,6 +525,7 @@ def plot_metric_folders(
         titles: subplot titles. Defaults to each directory name.
         metric: CSV metric column to plot.
         header: ``"auto"`` supports both ordinary and FedGRA config-prefixed CSVs.
+        n_cols: number of subplot columns. Defaults to one row with all plots.
     """
     if isinstance(directories, (str, Path)):
         directories = [directories]
@@ -556,9 +560,15 @@ def plot_metric_folders(
         for directory in directories
     ]
 
-    fig, axes = plt.subplots(1, len(directories), figsize=figsize, sharey=sharey)
-    if len(directories) == 1:
-        axes = [axes]
+    if n_cols is None:
+        n_cols = len(directories)
+    n_rows = int(np.ceil(len(directories) / n_cols))
+
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=figsize, sharey=sharey)
+    axes = np.asarray(axes).reshape(-1)
+    for ax in axes[len(directories):]:
+        ax.set_visible(False)
+    axes = axes[:len(directories)]
 
     legend_labels: List[str] = []
     for data_dict in data_sets:
@@ -627,11 +637,11 @@ def plot_metric_folders(
     ]
     fig.legend(
         handles=handles,
-        loc="upper center",
+        loc=legend_loc,
         ncol=legend_ncol,
         fontsize=legend_fontsize,
         frameon=False,
-        bbox_to_anchor=(0.5, 1.17),
+        bbox_to_anchor=legend_bbox_to_anchor,
     )
 
     plt.tight_layout()
@@ -688,6 +698,8 @@ def plot_four_smoothed_datasets(
     x_ticks: Optional[Sequence[float]] = (0, 25, 50, 75, 100),
     y_lim: Union[tuple, Sequence[tuple]] = (0, 0.8),
     legend_ncol: int = 4,
+    legend_loc: str = "upper center",
+    legend_bbox_to_anchor: tuple = (0.5, 1.17),
     return_data: bool = False,
     **kwargs,
 ) -> Optional[List[Dict[str, pd.Series]]]:
@@ -702,6 +714,8 @@ def plot_four_smoothed_datasets(
         x_ticks: x-axis tick locations. Defaults to ``(0, 25, 50, 75, 100)``.
         y_lim: either one shared ``(min, max)`` tuple or four per-panel tuples.
         legend_ncol: number of columns in the shared legend.
+        legend_loc: legend location passed to matplotlib, e.g. ``"lower center"``.
+        legend_bbox_to_anchor: legend anchor, e.g. ``(0.5, -0.08)``.
         return_data: if True, return the data dictionaries used for plotting.
     """
     directories = list(directories)
@@ -723,6 +737,68 @@ def plot_four_smoothed_datasets(
         x_ticks=x_ticks,
         y_lim=y_lim,
         legend_ncol=legend_ncol,
+        legend_loc=legend_loc,
+        legend_bbox_to_anchor=legend_bbox_to_anchor,
+        plot_raw=True,
+        plot_smooth=True,
+        **kwargs,
+    )
+
+    if return_data:
+        return data_sets
+    return None
+
+
+def plot_eight_smoothed_datasets(
+    directories: Sequence[Union[str, Path]],
+    save_path: Optional[Union[str, Path]] = None,
+    titles: Optional[Sequence[str]] = None,
+    figsize: tuple = (20, 10),
+    x_ticks: Optional[Sequence[float]] = (0, 25, 50, 75, 100),
+    y_lim: Union[tuple, Sequence[tuple]] = (0, 0.8),
+    legend_ncol: int = 8,
+    legend_loc: str = "upper center",
+    legend_bbox_to_anchor: tuple = (0.5, 1.08),
+    return_data: bool = False,
+    **kwargs,
+) -> Optional[List[Dict[str, pd.Series]]]:
+    """
+    Convenience wrapper for a two-row, eight-panel smoothed accuracy figure.
+
+    Args:
+        directories: exactly eight data folders or csv paths.
+        save_path: output path. If no suffix is given, PDF is used.
+        titles: exactly eight subplot titles.
+        figsize: whole figure size, e.g. ``(20, 10)``.
+        x_ticks: x-axis tick locations. Defaults to ``(0, 25, 50, 75, 100)``.
+        y_lim: either one shared ``(min, max)`` tuple or eight per-panel tuples.
+        legend_ncol: number of columns in the shared legend.
+        legend_loc: legend location passed to matplotlib, e.g. ``"lower center"``.
+        legend_bbox_to_anchor: legend anchor, e.g. ``(0.5, -0.03)``.
+        return_data: if True, return the data dictionaries used for plotting.
+    """
+    directories = list(directories)
+    if len(directories) != 8:
+        raise ValueError("plot_eight_smoothed_datasets requires exactly eight directories.")
+
+    if titles is not None and len(titles) != 8:
+        raise ValueError("titles must contain exactly eight labels when provided.")
+
+    if not isinstance(y_lim[0], (int, float)) and len(y_lim) != 8:
+        raise ValueError("y_lim must be one shared tuple or exactly eight per-panel tuples.")
+
+    data_sets = plot_metric_folders(
+        directories=directories,
+        save_path=save_path,
+        titles=titles,
+        metric="accuracy",
+        figsize=figsize,
+        n_cols=4,
+        x_ticks=x_ticks,
+        y_lim=y_lim,
+        legend_ncol=legend_ncol,
+        legend_loc=legend_loc,
+        legend_bbox_to_anchor=legend_bbox_to_anchor,
         plot_raw=True,
         plot_smooth=True,
         **kwargs,

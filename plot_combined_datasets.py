@@ -7,6 +7,7 @@ _plot_functions = importlib.reload(_plot_functions)
 plot_accuracy_from_folder = _plot_functions.plot_accuracy_from_folder
 plot_combined_smoothed_datasets = _plot_functions.plot_combined_smoothed_datasets
 plot_four_smoothed_datasets = _plot_functions.plot_four_smoothed_datasets
+plot_eight_smoothed_datasets = _plot_functions.plot_eight_smoothed_datasets
 plot_metric_folders = _plot_functions.plot_metric_folders
 
 
@@ -14,6 +15,7 @@ __all__ = [
     "plot_accuracy_from_folder",
     "plot_combined_smoothed_datasets",
     "plot_four_smoothed_datasets",
+    "plot_eight_smoothed_datasets",
     "plot_metric_folders",
 ]
 
