@@ -1,0 +1,9 @@
+C:\Users\94804\anaconda3\python.exe -m entries.aasb_mnist_experiment H:\flex-src\src\test\rbla_reference_experiment\aasb_mnist\mnist_rbla_cc_svd_r20.yaml  # AASB_SEED=42 AASB_RUN_NAME=mnist_rbla_cc_svd_r20_seed42
+C:\Users\94804\anaconda3\python.exe -m entries.aasb_mnist_experiment H:\flex-src\src\test\rbla_reference_experiment\aasb_mnist\mnist_rbla_cc_activation_r20.yaml  # AASB_SEED=42 AASB_RUN_NAME=mnist_rbla_cc_activation_r20_seed42
+C:\Users\94804\anaconda3\python.exe -m entries.aasb_mnist_experiment H:\flex-src\src\test\rbla_reference_experiment\aasb_mnist\mnist_rbla_none_r20.yaml  # AASB_SEED=42 AASB_RUN_NAME=mnist_rbla_none_r20_seed42
+C:\Users\94804\anaconda3\python.exe -m entries.aasb_mnist_experiment H:\flex-src\src\test\rbla_reference_experiment\aasb_mnist\mnist_rbla_none_r20.yaml  # AASB_SEED=43 AASB_RUN_NAME=mnist_rbla_none_r20_seed43
+C:\Users\94804\anaconda3\python.exe -m entries.aasb_mnist_experiment H:\flex-src\src\test\rbla_reference_experiment\aasb_mnist\mnist_rbla_none_r20.yaml  # AASB_SEED=44 AASB_RUN_NAME=mnist_rbla_none_r20_seed44
+C:\Users\94804\anaconda3\python.exe -m entries.aasb_mnist_experiment H:\flex-src\src\test\rbla_reference_experiment\aasb_mnist\mnist_rbla_cc_svd_r20.yaml  # AASB_SEED=43 AASB_RUN_NAME=mnist_rbla_cc_svd_r20_seed43
+C:\Users\94804\anaconda3\python.exe -m entries.aasb_mnist_experiment H:\flex-src\src\test\rbla_reference_experiment\aasb_mnist\mnist_rbla_cc_svd_r20.yaml  # AASB_SEED=44 AASB_RUN_NAME=mnist_rbla_cc_svd_r20_seed44
+C:\Users\94804\anaconda3\python.exe -m entries.aasb_mnist_experiment H:\flex-src\src\test\rbla_reference_experiment\aasb_mnist\mnist_rbla_cc_activation_r20.yaml  # AASB_SEED=43 AASB_RUN_NAME=mnist_rbla_cc_activation_r20_seed43
+C:\Users\94804\anaconda3\python.exe -m entries.aasb_mnist_experiment H:\flex-src\src\test\rbla_reference_experiment\aasb_mnist\mnist_rbla_cc_activation_r20.yaml  # AASB_SEED=44 AASB_RUN_NAME=mnist_rbla_cc_activation_r20_seed44

@@ -1,0 +1,337 @@
+{
+  "runner": {
+    "general": {
+      "device": "cpu",
+      "training_rounds": 19
+    },
+    "training_logger": {
+      "name": "train",
+      "path": "H:\\flex-src\\src\\test\\experiment_results\\aasb_mnist\\_dev_c_seed42",
+      "prefix": "framework_seed42_",
+      "save_weights": false
+    },
+    "client_nodes": {
+      "group-1": {
+        "number": 10,
+        "id_prefix": "client",
+        "link_to": "server-1"
+      }
+    },
+    "server_node": {
+      "id": "server-1"
+    },
+    "strategy": {
+      "role": "runner",
+      "strategy_name": "rbla"
+    }
+  },
+  "client": {
+    "role": "client",
+    "training_logger": {
+      "name": "train",
+      "path": "H:\\flex-src\\src\\test\\experiment_results\\aasb_mnist\\_dev_c_seed42",
+      "prefix": "framework_seed42_",
+      "save_weights": false
+    },
+    "data_loader": {
+      "name": "mnist",
+      "root": ".dataset",
+      "split": "",
+      "batch_size": 64,
+      "shuffle": true,
+      "num_workers": 0,
+      "is_download": true,
+      "is_load_train_set": true,
+      "is_load_test_set": true,
+      "task_type": "cv"
+    },
+    "nn_model": {
+      "name": "simple_lora_mlp",
+      "input_dim": 0,
+      "hidden_dim": 0,
+      "output_dim": 0,
+      "softmax_dim": 1,
+      "lora_mode": "standard",
+      "rank_ratio": 1,
+      "cap_lora_rank_to_matrix_dim": true,
+      "share_model": false
+    },
+    "loss_func": {
+      "type": "CrossEntropyLoss",
+      "reduction": "mean",
+      "weight": "None"
+    },
+    "optimizer": {
+      "type": "Adam",
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "momentum": 0.9,
+      "nesterov": false,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "amsgrad": false,
+      "eps": "1e-8",
+      "alpha": "None",
+      "centered": "None"
+    },
+    "training": {
+      "epochs": 5,
+      "batch_size": 64,
+      "shuffle": true,
+      "lr": 0.01
+    },
+    "trainer": {
+      "trainer_type": "standard",
+      "save_path": "./.training_results/"
+    },
+    "strategy": {
+      "role": "client",
+      "strategy_name": "rbla"
+    }
+  },
+  "server": {
+    "role": "server",
+    "general": {
+      "device": "cpu",
+      "training_rounds": 19
+    },
+    "training_logger": {
+      "name": "train",
+      "path": "H:\\flex-src\\src\\test\\experiment_results\\aasb_mnist\\_dev_c_seed42",
+      "prefix": "framework_seed42_",
+      "save_weights": false
+    },
+    "data_loader": {
+      "name": "mnist",
+      "root": ".dataset",
+      "split": "",
+      "batch_size": 64,
+      "shuffle": true,
+      "num_workers": 0,
+      "is_download": true,
+      "is_load_train_set": true,
+      "is_load_test_set": true,
+      "task_type": "cv"
+    },
+    "nn_model": {
+      "name": "simple_lora_mlp",
+      "input_dim": 0,
+      "hidden_dim": 0,
+      "output_dim": 0,
+      "softmax_dim": 1,
+      "lora_mode": "standard",
+      "rank_ratio": 0.1,
+      "cap_lora_rank_to_matrix_dim": true,
+      "share_model": false
+    },
+    "loss_func": {
+      "type": "CrossEntropyLoss",
+      "reduction": "mean",
+      "weight": "None"
+    },
+    "optimizer": {
+      "type": "Adam",
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "momentum": 0.9,
+      "nesterov": false,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "amsgrad": false,
+      "eps": "1e-8",
+      "alpha": "None",
+      "centered": "None"
+    },
+    "training": {
+      "epochs": 5,
+      "batch_size": 64,
+      "shuffle": true,
+      "lr": 0.01
+    },
+    "trainer": {
+      "trainer_type": "standard",
+      "save_path": "./.training_results/"
+    },
+    "data_distribution": {
+      "use": "mnist_double_imbalance",
+      "custom_define": {
+        "mnist_double_imbalance": [
+          [
+            600,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            600,
+            666,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            600,
+            666,
+            750,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            600,
+            666,
+            750,
+            857,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            600,
+            666,
+            750,
+            857,
+            1000,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            600,
+            666,
+            750,
+            857,
+            1000,
+            1200,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            600,
+            666,
+            750,
+            857,
+            1000,
+            1200,
+            1500,
+            0,
+            0,
+            0
+          ],
+          [
+            600,
+            666,
+            750,
+            857,
+            1000,
+            1200,
+            1500,
+            2000,
+            0,
+            0
+          ],
+          [
+            600,
+            666,
+            750,
+            857,
+            1000,
+            1200,
+            1500,
+            2000,
+            3000,
+            0
+          ],
+          [
+            600,
+            672,
+            750,
+            858,
+            1000,
+            1200,
+            1500,
+            2000,
+            3000,
+            6000
+          ]
+        ]
+      }
+    },
+    "client_selection": {
+      "method": "random",
+      "round": 1,
+      "client_selection_round": 1,
+      "number": 10,
+      "random_seed": 42
+    },
+    "strategy": {
+      "role": "server",
+      "strategy_name": "rbla"
+    },
+    "aggregation": {
+      "method": "rbla",
+      "device": "cpu",
+      "is_wbab": false,
+      "pad_mode": "nan"
+    },
+    "canonicalization": {
+      "enabled": true,
+      "start_round": 0,
+      "interval": 1,
+      "deterministic_sign": true,
+      "svd_fallback": true,
+      "log_diagnostics": true,
+      "ordering": "activation_aware",
+      "activation_chunk_size": 4096,
+      "activation_fallback": false
+    },
+    "rank_distribution": {
+      "rank_ratio_list": [
+        0.01,
+        0.02,
+        0.03,
+        0.04,
+        0.05,
+        0.06,
+        0.07,
+        0.08,
+        0.09,
+        0.1
+      ]
+    },
+    "lora_inference": {
+      "device": "cpu",
+      "lora_mode": "standard",
+      "scaling": 0.5,
+      "rank_ratio": 1,
+      "use_bias": true,
+      "alpha": 0
+    }
+  }
+}

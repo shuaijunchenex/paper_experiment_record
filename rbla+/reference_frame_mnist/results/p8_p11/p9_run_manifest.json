@@ -1,0 +1,52 @@
+[
+  {
+    "phase": "p9",
+    "mode": "p9_freeze",
+    "training_seed": 43,
+    "rank_seed": 42,
+    "scaling_type": "population",
+    "gamma": 1.0,
+    "rank_ratio_list": [
+      0.4,
+      0.9,
+      0.1,
+      0.7,
+      0.2,
+      1.0,
+      0.5,
+      0.8,
+      0.3,
+      0.6
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 232.86,
+    "result_csv": "/Users/chensj/Documents/GitHub/usyd-learning-src/src/test/.training_results/p9_p9_freeze_population_t43_r42_-train-20260716_145126-336850c74e789300.csv",
+    "log": "/Users/chensj/Documents/GitHub/usyd-learning-src/src/test/rbla_reference_experiment/results/p8_p11/logs/p9_p9_freeze_population_t43_r42.log",
+    "reused": false
+  },
+  {
+    "phase": "p9",
+    "mode": "p9_freeze",
+    "training_seed": 44,
+    "rank_seed": 42,
+    "scaling_type": "population",
+    "gamma": 1.0,
+    "rank_ratio_list": [
+      0.4,
+      0.9,
+      0.1,
+      0.7,
+      0.2,
+      1.0,
+      0.5,
+      0.8,
+      0.3,
+      0.6
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 223.075,
+    "result_csv": "/Users/chensj/Documents/GitHub/usyd-learning-src/src/test/.training_results/p9_p9_freeze_population_t44_r42_-train-20260716_145518-268b57000b346bcf.csv",
+    "log": "/Users/chensj/Documents/GitHub/usyd-learning-src/src/test/rbla_reference_experiment/results/p8_p11/logs/p9_p9_freeze_population_t44_r42.log",
+    "reused": false
+  }
+]
