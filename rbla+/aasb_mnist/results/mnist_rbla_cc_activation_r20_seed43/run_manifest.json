@@ -1,0 +1,10 @@
+{
+  "run_name": "mnist_rbla_cc_activation_r20_seed43",
+  "method": "rbla_cc_activation",
+  "seed": 43,
+  "communication_rounds": 20,
+  "config": "H:\\flex-src\\src\\test\\rbla_reference_experiment\\aasb_mnist\\mnist_rbla_cc_activation_r20.yaml",
+  "device": "cpu",
+  "output_dir": "H:\\flex-src\\src\\test\\experiment_results\\aasb_mnist\\mnist_rbla_cc_activation_r20_seed43",
+  "status": "complete"
+}

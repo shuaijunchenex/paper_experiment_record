@@ -1,0 +1,27 @@
+[
+  {
+    "phase": "p8",
+    "mode": "p9_freeze",
+    "training_seed": 42,
+    "rank_seed": 42,
+    "scaling_type": "q_power",
+    "gamma": 0.5,
+    "rank_ratio_list": [
+      0.4,
+      0.9,
+      0.1,
+      0.7,
+      0.2,
+      1.0,
+      0.5,
+      0.8,
+      0.3,
+      0.6
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 238.384,
+    "result_csv": "/Users/chensj/Documents/GitHub/usyd-learning-src/src/test/.training_results/p8_p9_freeze_qpower050_t42_r42_-train-20260716_152307-a21be1d6a541c62a.csv",
+    "log": "/Users/chensj/Documents/GitHub/usyd-learning-src/src/test/rbla_reference_experiment/results/p8_p11/logs/p8_p9_freeze_qpower050_t42_r42.log",
+    "reused": false
+  }
+]

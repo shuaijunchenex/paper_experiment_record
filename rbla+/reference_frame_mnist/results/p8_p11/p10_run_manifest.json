@@ -1,0 +1,77 @@
+[
+  {
+    "phase": "p10",
+    "mode": "p10_freeze",
+    "training_seed": 42,
+    "rank_seed": 42,
+    "scaling_type": "q_power",
+    "gamma": 0.5,
+    "rank_ratio_list": [
+      0.4,
+      0.9,
+      0.1,
+      0.7,
+      0.2,
+      1.0,
+      0.5,
+      0.8,
+      0.3,
+      0.6
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 259.6,
+    "result_csv": "/Users/chensj/Documents/GitHub/usyd-learning-src/src/test/.training_results/p10_p10_freeze_qpower050_t42_r42_-train-20260716_152733-08f7b5999e615aac.csv",
+    "log": "/Users/chensj/Documents/GitHub/usyd-learning-src/src/test/rbla_reference_experiment/results/p8_p11/logs/p10_p10_freeze_qpower050_t42_r42.log",
+    "reused": false
+  },
+  {
+    "phase": "p10",
+    "mode": "p10_freeze",
+    "training_seed": 42,
+    "rank_seed": 42,
+    "scaling_type": "effective_support",
+    "gamma": 0.5,
+    "rank_ratio_list": [
+      0.4,
+      0.9,
+      0.1,
+      0.7,
+      0.2,
+      1.0,
+      0.5,
+      0.8,
+      0.3,
+      0.6
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 256.328,
+    "result_csv": "/Users/chensj/Documents/GitHub/usyd-learning-src/src/test/.training_results/p10_p10_freeze_effective_support_t42_r42_-train-20260716_153153-955f9b76088afc6a.csv",
+    "log": "/Users/chensj/Documents/GitHub/usyd-learning-src/src/test/rbla_reference_experiment/results/p8_p11/logs/p10_p10_freeze_effective_support_t42_r42.log",
+    "reused": false
+  },
+  {
+    "phase": "p10",
+    "mode": "p10_freeze",
+    "training_seed": 42,
+    "rank_seed": 42,
+    "scaling_type": "population",
+    "gamma": 1.0,
+    "rank_ratio_list": [
+      0.4,
+      0.9,
+      0.1,
+      0.7,
+      0.2,
+      1.0,
+      0.5,
+      0.8,
+      0.3,
+      0.6
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 251.017,
+    "result_csv": "/Users/chensj/Documents/GitHub/usyd-learning-src/src/test/.training_results/p10_p10_freeze_population_t42_r42_-train-20260716_153609-3a7e68ae93a85d29.csv",
+    "log": "/Users/chensj/Documents/GitHub/usyd-learning-src/src/test/rbla_reference_experiment/results/p8_p11/logs/p10_p10_freeze_population_t42_r42.log",
+    "reused": false
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "run_name": "mnist_rbla_cc_svd_r20_seed44",
+  "method": "rbla_cc_svd",
+  "seed": 44,
+  "communication_rounds": 20,
+  "config": "H:\\flex-src\\src\\test\\rbla_reference_experiment\\aasb_mnist\\mnist_rbla_cc_svd_r20.yaml",
+  "device": "cpu",
+  "output_dir": "H:\\flex-src\\src\\test\\experiment_results\\aasb_mnist\\mnist_rbla_cc_svd_r20_seed44",
+  "status": "complete"
+}

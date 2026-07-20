@@ -1,0 +1,13 @@
+{
+  "p9_n_crossed_runs": 18,
+  "descriptive_correlations": {
+    "tail_risk_vs_accuracy": -0.21084123706284724,
+    "tail_risk_vs_f1": -0.25509684797386606,
+    "tail_entropy_vs_accuracy": 0.6130172010612879,
+    "tail_entropy_vs_f1": 0.657801496736492,
+    "tail_risk_vs_posthoc_accuracy_gain": 0.8668739063259953,
+    "tail_risk_vs_posthoc_macro_f1_gain": 0.8799935438698333,
+    "tail_entropy_vs_posthoc_accuracy_gain": -0.5897860710660794
+  },
+  "interpretation_scope": "Descriptive correlations across the 18 P9 crossed runs; not causal evidence."
+}
