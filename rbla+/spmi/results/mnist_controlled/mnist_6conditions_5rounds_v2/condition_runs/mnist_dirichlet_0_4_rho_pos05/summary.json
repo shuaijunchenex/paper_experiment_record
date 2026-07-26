@@ -1,0 +1,46 @@
+{
+  "experiment": "SPMI MNIST short shadow verification",
+  "arguments": {
+    "rounds": 5,
+    "test_samples": 2000,
+    "seed": 42,
+    "gate_abs": 0.01,
+    "gate_rel": 0.1,
+    "conditions": [
+      "mnist_dirichlet_0_4_rho_pos05"
+    ],
+    "output_dir": "H:\\flex-src\\experiment_results\\spmi_mnist\\mnist_6conditions_5rounds_v2\\condition_runs\\mnist_dirichlet_0_4_rho_pos05",
+    "verbose_framework": false
+  },
+  "method_integrity": "Training and broadcast use the existing RBLA implementation. SP+ is constructed only as a read-only shadow candidate.",
+  "condition_summary": [
+    {
+      "condition": "mnist_dirichlet_0_4_rho_pos05",
+      "alpha": 0.4,
+      "rho": 0.5,
+      "mean_spmi_abs": 0.1128333068745934,
+      "mean_spmi_rel": 0.9972613041916439,
+      "mean_instant_task_loss_gain": 5.7123827264752444e-05,
+      "instant_gate_accuracy": 1.0,
+      "gate_plus_round_fraction": 1.0,
+      "long_horizon_raw_accuracy": 0.8166,
+      "long_horizon_plus_accuracy": 0.8281,
+      "long_horizon_accuracy_delta_pp": 1.1499999999999955,
+      "long_horizon_raw_loss": 0.5974780979156494,
+      "long_horizon_plus_loss": 0.5647883441925049,
+      "long_horizon_relative_loss_gain": 0.054712890459391525,
+      "long_horizon_winner": "rbla_plus",
+      "long_horizon_raw_file": "H:\\flex-src\\src\\test\\experiment_results\\mnist_dirichlet_0_4_rho_pos05_rbla_-train-20260722_151707-d6a4586169320317.csv",
+      "long_horizon_plus_file": "H:\\flex-src\\src\\test\\experiment_results\\mnist_dirichlet_0_4_rho_pos05_rbla_plus_-train-20260722_153827-2672260d77cd0513.csv"
+    }
+  ],
+  "correlations": {
+    "pearson_spmi_abs_vs_instant_gain": NaN,
+    "spearman_spmi_abs_vs_instant_gain": NaN,
+    "pearson_spmi_rel_vs_instant_gain": NaN,
+    "pearson_spmi_abs_vs_long_horizon_gain": NaN,
+    "spearman_spmi_abs_vs_long_horizon_gain": NaN,
+    "pearson_spmi_rel_vs_long_horizon_gain": NaN
+  },
+  "round_gate_accuracy": 1.0
+}

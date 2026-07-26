@@ -1,0 +1,76 @@
+{
+  "experiment": "MNIST double-imbalance correct-vs-mismatch first-round SPMI",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "conditions": {
+    "correct": "sample volume and rank are monotonically aligned",
+    "mismatch": "the same rank multiset is assigned in reverse order"
+  },
+  "protocol": {
+    "communication_rounds": 1,
+    "local_epochs": 5,
+    "method": "ordinary RBLA trajectory; SPMI is read-only",
+    "dataset": "MNIST"
+  },
+  "comparability": {
+    "all_pairs_same_client_volumes": true,
+    "all_pairs_same_rank_multiset": true,
+    "all_pairs_same_initial_server_checksum": true
+  },
+  "aggregate": {
+    "correct_mean_spmi_abs": 0.14351286921632267,
+    "correct_sample_std_spmi_abs": 0.0012710678212207315,
+    "mismatch_mean_spmi_abs": 0.4760576298033405,
+    "mismatch_sample_std_spmi_abs": 0.0010902951543945902,
+    "correct_mean_spmi_rel": 0.9999989396816149,
+    "mismatch_mean_spmi_rel": 0.9999522695662248,
+    "correct_mean_weighted_opportunity": 6876.405141632553,
+    "mismatch_mean_weighted_opportunity": 10173.412861116814,
+    "weighted_opportunity_ratio_mismatch_over_correct": 1.4794667637488135,
+    "mean_paired_delta": 0.3325447605870178,
+    "pairwise_detection_count": 3,
+    "pair_count": 3,
+    "max_correct": 0.1443487196349907,
+    "min_mismatch": 0.47488021711625594,
+    "strict_cross_seed_separation": true,
+    "descriptive_midpoint_threshold": 0.30961446837562334
+  },
+  "pairs": [
+    {
+      "seed": 42,
+      "correct_spmi_abs": 0.1420501335149126,
+      "mismatch_spmi_abs": 0.47488021711625594,
+      "mismatch_minus_correct": 0.33283008360134336,
+      "mismatch_over_correct": 3.343046608727069,
+      "detected_by_pairwise_order": true,
+      "same_client_volumes": true,
+      "same_rank_multiset": true,
+      "same_initial_server_checksum": true
+    },
+    {
+      "seed": 43,
+      "correct_spmi_abs": 0.14413975449906466,
+      "mismatch_spmi_abs": 0.47703236470400723,
+      "mismatch_minus_correct": 0.33289261020494254,
+      "mismatch_over_correct": 3.3095128152664,
+      "detected_by_pairwise_order": true,
+      "same_client_volumes": true,
+      "same_rank_multiset": true,
+      "same_initial_server_checksum": true
+    },
+    {
+      "seed": 44,
+      "correct_spmi_abs": 0.1443487196349907,
+      "mismatch_spmi_abs": 0.47626030758975824,
+      "mismatch_minus_correct": 0.3319115879547675,
+      "mismatch_over_correct": 3.2993732732376158,
+      "detected_by_pairwise_order": true,
+      "same_client_volumes": true,
+      "same_rank_multiset": true,
+      "same_initial_server_checksum": true
+    }
+  ]
+}

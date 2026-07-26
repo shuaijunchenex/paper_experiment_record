@@ -1,0 +1,4 @@
+seed,correct_spmi_abs,mismatch_spmi_abs,mismatch_minus_correct,mismatch_over_correct,detected_by_pairwise_order,same_client_volumes,same_rank_multiset,same_initial_server_checksum
+42,0.1420501335149126,0.47488021711625594,0.33283008360134336,3.343046608727069,True,True,True,True
+43,0.14413975449906466,0.47703236470400723,0.33289261020494254,3.3095128152664,True,True,True,True
+44,0.1443487196349907,0.47626030758975824,0.3319115879547675,3.2993732732376158,True,True,True,True

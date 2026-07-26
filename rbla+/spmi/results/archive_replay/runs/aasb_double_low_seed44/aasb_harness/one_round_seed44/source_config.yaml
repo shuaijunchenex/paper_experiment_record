@@ -1,0 +1,62 @@
+yaml_folder_aggregation_path: ../../../yamls/aggregation/
+yaml_folder_client_selection_path: ../../../yamls/client_selection/
+yaml_folder_dataset_loader_path: ../../../yamls/dataset_loader/
+yaml_folder_data_distribution_path: ../../../yamls/data_distribution/
+yaml_folder_loss_func_path: ../../../yamls/loss_func/
+yaml_folder_lora_inference_path: ../../../yamls/lora_inference/
+yaml_folder_nn_model_path: ../../../yamls/nn_model/
+yaml_folder_fl_nodes_path: ../../../yamls/fl_nodes/
+yaml_folder_optimizer_path: ../../../yamls/optimizer/
+yaml_folder_client_strategy_path: ../../../yamls/client_strategy/
+yaml_folder_server_strategy_path: ../../../yamls/server_strategy/
+yaml_folder_runner_strategy_path: ../../../yamls/runner_strategy/
+yaml_folder_trainer_path: ../../../yamls/trainer/
+yaml_folder_training_logger_path: ../../../yamls/training_logger/
+yaml_folder_training_path: ../../../yamls/training/
+yaml_folder_general_path: ../../../yamls/general/
+yaml_folder_rank_distribution_path: ../../../yamls/rank_distribution/
+yaml_folder_role_path: ../../../yamls/role/
+
+yaml_folder_aggregation_files:
+- aggregation_rbla.yaml: aggregation_method
+yaml_folder_client_selection_files:
+- random.yaml: client_selection
+yaml_folder_dataset_loader_files:
+- mnist.yaml: dataset
+yaml_folder_data_distribution_files:
+- mnist_noniid_double_imbalance_10.yaml: distribution
+yaml_folder_loss_func_files:
+- cross_entropy.yaml: loss
+yaml_folder_lora_inference_files:
+- base_lora_inference.yaml: lora_inference
+yaml_folder_nn_model_files:
+- nn_model_mnist_mlp_lora_canonical.yaml: model
+yaml_folder_fl_nodes_files:
+- default_10_clients.yaml: nodes
+yaml_folder_optimizer_files:
+- adam_1e3.yaml: optimizer
+yaml_folder_client_strategy_files:
+- rbla.yaml: client_strategy
+yaml_folder_server_strategy_files:
+- rbla.yaml: server_strategy
+yaml_folder_runner_strategy_files:
+- rbla.yaml: runner_strategy
+yaml_folder_trainer_files:
+- standard_trainer.yaml: trainer
+yaml_folder_training_logger_files:
+- experiment_training_logger.yaml: logger
+yaml_folder_training_files:
+- training_epoch5.yaml: training
+yaml_folder_general_files:
+- general_20_communication_rounds.yaml: general
+yaml_folder_rank_distribution_files:
+- het_rank_canonical_valid.yaml: ranks
+yaml_folder_role_files:
+- server.yaml: role_server
+- client.yaml: role_client
+
+yaml_combination:
+  runner: [general, logger, nodes, runner_strategy]
+  client_yaml: [role_client, logger, dataset, model, loss, optimizer, training, client_strategy, trainer]
+  edge_yaml: []
+  server_yaml: [role_server, general, logger, dataset, model, loss, optimizer, training, trainer, distribution, client_selection, server_strategy, aggregation_method, ranks, lora_inference]
