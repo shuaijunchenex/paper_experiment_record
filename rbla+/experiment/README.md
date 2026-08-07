@@ -4,26 +4,31 @@
 
 ## 目录结构
 
-- `01_dirichlet_main/`：主要 Dirichlet 对比实验，按 `alpha / dataset / rank` 分类。
+- `01_dirichlet_main/`：主要视觉 Dirichlet 对比实验，按 `alpha / dataset / rank` 分类。
 - `02_double_imbalance/`：double-imbalance 实验，按 `dataset / rank` 分类。
 - `03_cost_matched/`：Dirichlet α=0.4、rank mismatch、成本匹配的补充实验。
-- `04_legacy_momentum09/`：较早的 MNIST momentum=0.9 实验，按数据分布与 rank 分类。
-- `05_reports/`：已有实验报告。
-- `manifest.csv`：所有归档文件的分类信息、原始文件名及相对路径。
+- `04_legacy_momentum09/`：较早的 MNIST momentum=0.9 实验。
+- `05_reports/`：已有视觉实验报告。
+- `06_nlp_dirichlet_rank_correct/`：TinyBERT 文本实验，包含结果、配置、依赖、日志和汇总。
+- `07_figures/`：论文补充图、绘图 Notebook 与相关绘图数据。
+- `manifest.csv`：正式归档 CSV 的分类、来源、相对路径与 SHA-256。
 
 ## 文件数量
 
-- Dirichlet 主实验：120 个 CSV。
-- Double-imbalance：48 个 CSV。
-- Cost-matched：16 个 CSV。
-- Legacy momentum/extreme：24 个 CSV。
-- 报告：1 个 Markdown 文件。
-- 合计：208 个 CSV + 1 个报告。
+- 原视觉归档：208 个 CSV。
+- NLP 正式结果：28 个 CSV。
+- NLP 失败/已替代记录：2 个 CSV。
+- 当前合计：238 个 CSV。
 
-## 主实验覆盖情况
+## NLP 覆盖情况
 
-- MNIST、FMNIST、KMNIST：α=0.1、0.4、0.8；3 种 rank；4 种方法，分别为 36 个结果。
-- QMNIST：目前仅有 α=0.4；3 种 rank；4 种方法，共 12 个结果。
-- QMNIST 的 α=0.1 和 α=0.8 尚未出现在源结果目录中，共缺少 24 个主实验组合。
+- GLUE：SST-2、QQP、RTE、MRPC、MNLI。
+- 其他文本分类：IMDb、AG News。
+- 所有正式 NLP 组合均覆盖 RBLA、RBLA+、SP、ZeroPadding，使用 Dirichlet α=0.4 与 rank-correct。
+- NLP 详细结果见 `06_nlp_dirichlet_rank_correct/README.md` 和 `summary.csv`。
 
-每个主实验 CSV 包含 round 0 至 round 100，共 101 条评估记录。
+
+## 图表归档
+
+- 共 17 个源文件：11 PDF、2 PNG、3 Notebook、1 CSV。
+- 所有文件保留原目录层级并通过 SHA-256 校验。
