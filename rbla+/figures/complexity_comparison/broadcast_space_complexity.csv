@@ -1,0 +1,29 @@
+matrix_dimension,d_out,d_in,R,r,method,auxiliary_scalar_elements,common_payload_scalars_excluded,space_expression,asymptotic_space_order,space_scope,relative_to_sp_plus,analytical_checks_passed
+128,128,128,32,32,RBLA index prefix,1,8192,1 (constant-size prefix view),O(1),algorithm-specific auxiliary tensors,4.643387815750371e-05,True
+128,128,128,32,32,SP+ (compact QR),21536,8192,2(m+n)R + 5R^2 + R,O(m+n) for fixed R,algorithm-specific auxiliary tensors,1.0,True
+128,128,128,32,32,Dense truncated SVD,24608,8192,mn + (m+n)r + r,O(mn) for fixed r,algorithm-specific auxiliary tensors,1.1426448736998513,True
+128,128,128,32,32,Full dense SVD,49280,8192,mn + (m+n)k + k,"O(mn + (m+n)min(m,n))",algorithm-specific auxiliary tensors,2.288261515601783,True
+256,256,256,32,32,RBLA index prefix,1,16384,1 (constant-size prefix view),O(1),algorithm-specific auxiliary tensors,2.6371308016877638e-05,True
+256,256,256,32,32,SP+ (compact QR),37920,16384,2(m+n)R + 5R^2 + R,O(m+n) for fixed R,algorithm-specific auxiliary tensors,1.0,True
+256,256,256,32,32,Dense truncated SVD,81952,16384,mn + (m+n)r + r,O(mn) for fixed r,algorithm-specific auxiliary tensors,2.1611814345991562,True
+256,256,256,32,32,Full dense SVD,196864,16384,mn + (m+n)k + k,"O(mn + (m+n)min(m,n))",algorithm-specific auxiliary tensors,5.191561181434599,True
+512,512,512,32,32,RBLA index prefix,1,32768,1 (constant-size prefix view),O(1),algorithm-specific auxiliary tensors,1.4146672702580353e-05,True
+512,512,512,32,32,SP+ (compact QR),70688,32768,2(m+n)R + 5R^2 + R,O(m+n) for fixed R,algorithm-specific auxiliary tensors,1.0,True
+512,512,512,32,32,Dense truncated SVD,294944,32768,mn + (m+n)r + r,O(mn) for fixed r,algorithm-specific auxiliary tensors,4.17247623358986,True
+512,512,512,32,32,Full dense SVD,786944,32768,mn + (m+n)k + k,"O(mn + (m+n)min(m,n))",algorithm-specific auxiliary tensors,11.132639203259393,True
+1024,1024,1024,32,32,RBLA index prefix,1,65536,1 (constant-size prefix view),O(1),algorithm-specific auxiliary tensors,7.340850364106178e-06,True
+1024,1024,1024,32,32,SP+ (compact QR),136224,65536,2(m+n)R + 5R^2 + R,O(m+n) for fixed R,algorithm-specific auxiliary tensors,1.0,True
+1024,1024,1024,32,32,Dense truncated SVD,1114144,65536,mn + (m+n)r + r,O(mn) for fixed r,algorithm-specific auxiliary tensors,8.178764388066714,True
+1024,1024,1024,32,32,Full dense SVD,3146752,65536,mn + (m+n)k + k,"O(mn + (m+n)min(m,n))",algorithm-specific auxiliary tensors,23.099835564951842,True
+2048,2048,2048,32,32,RBLA index prefix,1,131072,1 (constant-size prefix view),O(1),algorithm-specific auxiliary tensors,3.7411708368250926e-06,True
+2048,2048,2048,32,32,SP+ (compact QR),267296,131072,2(m+n)R + 5R^2 + R,O(m+n) for fixed R,algorithm-specific auxiliary tensors,1.0,True
+2048,2048,2048,32,32,Dense truncated SVD,4325408,131072,mn + (m+n)r + r,O(mn) for fixed r,algorithm-specific auxiliary tensors,16.18209026696995,True
+2048,2048,2048,32,32,Full dense SVD,12584960,131072,mn + (m+n)k + k,"O(mn + (m+n)min(m,n))",algorithm-specific auxiliary tensors,47.08248533461032,True
+4096,4096,4096,32,32,RBLA index prefix,1,262144,1 (constant-size prefix view),O(1),algorithm-specific auxiliary tensors,1.8887881535207012e-06,True
+4096,4096,4096,32,32,SP+ (compact QR),529440,262144,2(m+n)R + 5R^2 + R,O(m+n) for fixed R,algorithm-specific auxiliary tensors,1.0,True
+4096,4096,4096,32,32,Dense truncated SVD,17039392,262144,mn + (m+n)r + r,O(mn) for fixed r,algorithm-specific auxiliary tensors,32.183801752795404,True
+4096,4096,4096,32,32,Full dense SVD,50335744,262144,mn + (m+n)k + k,"O(mn + (m+n)min(m,n))",algorithm-specific auxiliary tensors,95.07355696585071,True
+8192,8192,8192,32,32,RBLA index prefix,1,524288,1 (constant-size prefix view),O(1),algorithm-specific auxiliary tensors,9.490115096115886e-07,True
+8192,8192,8192,32,32,SP+ (compact QR),1053728,524288,2(m+n)R + 5R^2 + R,O(m+n) for fixed R,algorithm-specific auxiliary tensors,1.0,True
+8192,8192,8192,32,32,Dense truncated SVD,67633184,524288,mn + (m+n)r + r,O(mn) for fixed r,algorithm-specific auxiliary tensors,64.18467004767834,True
+8192,8192,8192,32,32,Full dense SVD,201334784,524288,mn + (m+n)k + k,"O(mn + (m+n)min(m,n))",algorithm-specific auxiliary tensors,191.06902730116312,True

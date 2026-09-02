@@ -1,0 +1,29 @@
+matrix_dimension,d_out,d_in,R,r,method,work_units,common_payload_scalars_excluded,materializes_dense_update,complexity_expression,asymptotic_order,complexity_type,dense_svd_model,relative_to_sp_plus,analytical_checks_passed
+128,128,128,32,32,RBLA index prefix,1,8192,False,1 (constant-time prefix view),O(1),rank_fixed_server_time_proxy,not applicable,1.7951516544117647e-06,True
+128,128,128,32,32,SP+ (compact QR),557056,8192,False,(m+n)R^2 + R^3 + (m+n)Rr,"O(m+n) for fixed R,r",rank_fixed_server_time_proxy,not applicable,1.0,True
+128,128,128,32,32,Dense truncated SVD,1048576,8192,True,mnR + mnr,"O(mn) for fixed R,r",rank_fixed_server_time_proxy,rank-r truncated SVD after dense materialization,1.8823529411764706,True
+128,128,128,32,32,Full dense SVD,2621440,8192,True,"mnR + mn min(m,n)","O(mn min(m,n))",rank_fixed_server_time_proxy,full SVD after dense materialization,4.705882352941177,True
+256,256,256,32,32,RBLA index prefix,1,16384,False,1 (constant-time prefix view),O(1),rank_fixed_server_time_proxy,not applicable,9.247750946969697e-07,True
+256,256,256,32,32,SP+ (compact QR),1081344,16384,False,(m+n)R^2 + R^3 + (m+n)Rr,"O(m+n) for fixed R,r",rank_fixed_server_time_proxy,not applicable,1.0,True
+256,256,256,32,32,Dense truncated SVD,4194304,16384,True,mnR + mnr,"O(mn) for fixed R,r",rank_fixed_server_time_proxy,rank-r truncated SVD after dense materialization,3.878787878787879,True
+256,256,256,32,32,Full dense SVD,18874368,16384,True,"mnR + mn min(m,n)","O(mn min(m,n))",rank_fixed_server_time_proxy,full SVD after dense materialization,17.454545454545453,True
+512,512,512,32,32,RBLA index prefix,1,32768,False,1 (constant-time prefix view),O(1),rank_fixed_server_time_proxy,not applicable,4.6950120192307695e-07,True
+512,512,512,32,32,SP+ (compact QR),2129920,32768,False,(m+n)R^2 + R^3 + (m+n)Rr,"O(m+n) for fixed R,r",rank_fixed_server_time_proxy,not applicable,1.0,True
+512,512,512,32,32,Dense truncated SVD,16777216,32768,True,mnR + mnr,"O(mn) for fixed R,r",rank_fixed_server_time_proxy,rank-r truncated SVD after dense materialization,7.876923076923077,True
+512,512,512,32,32,Full dense SVD,142606336,32768,True,"mnR + mn min(m,n)","O(mn min(m,n))",rank_fixed_server_time_proxy,full SVD after dense materialization,66.95384615384616,True
+1024,1024,1024,32,32,RBLA index prefix,1,65536,False,1 (constant-time prefix view),O(1),rank_fixed_server_time_proxy,not applicable,2.365703730620155e-07,True
+1024,1024,1024,32,32,SP+ (compact QR),4227072,65536,False,(m+n)R^2 + R^3 + (m+n)Rr,"O(m+n) for fixed R,r",rank_fixed_server_time_proxy,not applicable,1.0,True
+1024,1024,1024,32,32,Dense truncated SVD,67108864,65536,True,mnR + mnr,"O(mn) for fixed R,r",rank_fixed_server_time_proxy,rank-r truncated SVD after dense materialization,15.875968992248062,True
+1024,1024,1024,32,32,Full dense SVD,1107296256,65536,True,"mnR + mn min(m,n)","O(mn min(m,n))",rank_fixed_server_time_proxy,full SVD after dense materialization,261.95348837209303,True
+2048,2048,2048,32,32,RBLA index prefix,1,131072,False,1 (constant-time prefix view),O(1),rank_fixed_server_time_proxy,not applicable,1.1874544017509728e-07,True
+2048,2048,2048,32,32,SP+ (compact QR),8421376,131072,False,(m+n)R^2 + R^3 + (m+n)Rr,"O(m+n) for fixed R,r",rank_fixed_server_time_proxy,not applicable,1.0,True
+2048,2048,2048,32,32,Dense truncated SVD,268435456,131072,True,mnR + mnr,"O(mn) for fixed R,r",rank_fixed_server_time_proxy,rank-r truncated SVD after dense materialization,31.875486381322958,True
+2048,2048,2048,32,32,Full dense SVD,8724152320,131072,True,"mnR + mn min(m,n)","O(mn min(m,n))",rank_fixed_server_time_proxy,full SVD after dense materialization,1035.953307392996,True
+4096,4096,4096,32,32,RBLA index prefix,1,262144,False,1 (constant-time prefix view),O(1),rank_fixed_server_time_proxy,not applicable,5.948845638401559e-08,True
+4096,4096,4096,32,32,SP+ (compact QR),16809984,262144,False,(m+n)R^2 + R^3 + (m+n)Rr,"O(m+n) for fixed R,r",rank_fixed_server_time_proxy,not applicable,1.0,True
+4096,4096,4096,32,32,Dense truncated SVD,1073741824,262144,True,mnR + mnr,"O(mn) for fixed R,r",rank_fixed_server_time_proxy,rank-r truncated SVD after dense materialization,63.875243664717345,True
+4096,4096,4096,32,32,Full dense SVD,69256347648,262144,True,"mnR + mn min(m,n)","O(mn min(m,n))",rank_fixed_server_time_proxy,full SVD after dense materialization,4119.953216374269,True
+8192,8192,8192,32,32,RBLA index prefix,1,524288,False,1 (constant-time prefix view),O(1),rank_fixed_server_time_proxy,not applicable,2.9773246951219512e-08,True
+8192,8192,8192,32,32,SP+ (compact QR),33587200,524288,False,(m+n)R^2 + R^3 + (m+n)Rr,"O(m+n) for fixed R,r",rank_fixed_server_time_proxy,not applicable,1.0,True
+8192,8192,8192,32,32,Dense truncated SVD,4294967296,524288,True,mnR + mnr,"O(mn) for fixed R,r",rank_fixed_server_time_proxy,rank-r truncated SVD after dense materialization,127.87512195121951,True
+8192,8192,8192,32,32,Full dense SVD,551903297536,524288,True,"mnR + mn min(m,n)","O(mn min(m,n))",rank_fixed_server_time_proxy,full SVD after dense materialization,16431.953170731707,True
