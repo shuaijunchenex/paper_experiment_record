@@ -74,12 +74,13 @@ The horizontal axes are logarithmic. Panel (b) includes the \(10^{-10}\) accepta
 
 ## Numerical checks
 
-The notebook verifies achieved condition numbers, nonsingularity, \(\kappa\le10\), full-update invariance, SP+ equivalence, compact full-rank reconstruction, absence of dense-shaped compact intermediates, and finite values. Float64 tolerance is \(10^{-10}\).
+`plot_figure.py` verifies achieved condition numbers, nonsingularity, \(\kappa\le10\), full-update invariance, SP+ equivalence, compact full-rank reconstruction, absence of dense-shaped compact intermediates, and finite values. Float64 tolerance is \(10^{-10}\).
 
 The conclusions are limited to broadcast representation. The experiment does not repair aggregation-stage mismatch or imply that SP+ eliminates LoRA gauge freedom.
 
 ## Outputs
 
-- plot.ipynb: complete reproducible experiment;
+- plot_figure.py: one-call experiment, validation, CSV export, and adjustable plotting API;
+- plot.ipynb: one code cell with one `plot_condition_number_sensitivity(...)` call;
 - condition_number_sensitivity.csv: trial-level results;
 - condition_number_sensitivity.pdf: vector figure.
