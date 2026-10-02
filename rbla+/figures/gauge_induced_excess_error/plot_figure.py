@@ -92,14 +92,14 @@ def plot_gauge_induced_excess_error(
     print_report: bool = True,
     gauge_order: Sequence[str] = DEFAULT_GAUGE_ORDER,
     styles: Mapping[str, Mapping[str, Any]] | None = None,
-    figsize: tuple[float, float] = (7.16, 2.70), dpi: int = 600,
-    font_family: str | None = None, font_size: float = 8,
-    axes_label_size: float = 8, tick_label_size: float = 7,
-    legend_fontsize: float = 6.4, line_width: float = 1.45,
-    marker_size: float = 4.0, diagonal_marker_size: float = 5.2,
-    band_alpha: float = .13, show_bands: bool = True,
-    sp_color: str = "#4C72B0", sp_marker: str = "D", sp_marker_size: float = 3.3,
-    xlabel: str = r"Client rank $r$", ylabel: str = "Excess error over dense optimum",
+    figsize: tuple[float, float] = (10.0, 5.0), dpi: int = 600,
+    font_family: str | None = None, font_size: float = 16,
+    axes_label_size: float = 22, tick_label_size: float = 17,
+    legend_fontsize: float = 16, line_width: float = 2.2,
+    marker_size: float = 6.0, diagonal_marker_size: float = 7.0,
+    band_alpha: float = .15, show_bands: bool = True,
+    sp_color: str = "#4C72B0", sp_marker: str = "D", sp_marker_size: float = 5.5,
+    xlabel: str = r"Client rank $r$", ylabel: str = "Excess error over optimum",
     title: str | None = None, xlim: tuple[float, float] | None = None,
     ylim: tuple[float, float] | None = None, xticks: Sequence[float] | None = None,
     xticklabels: Sequence[str] | None = None,
@@ -129,11 +129,13 @@ def plot_gauge_induced_excess_error(
         fonts = {f.name for f in font_manager.fontManager.ttflist}; font_family = "Times New Roman" if "Times New Roman" in fonts else "DejaVu Serif"
     rc = {"font.family": font_family, "font.size": font_size, "axes.labelsize": axes_label_size,
           "xtick.labelsize": tick_label_size, "ytick.labelsize": tick_label_size,
-          "legend.fontsize": legend_fontsize, "axes.linewidth": .8,
+          "legend.fontsize": legend_fontsize, "axes.linewidth": 1.1,
+          "xtick.major.width": 1.0, "ytick.major.width": 1.0,
+          "xtick.major.size": 4.0, "ytick.major.size": 4.0,
           "pdf.fonttype": 42, "ps.fonttype": 42, **dict(rc_params or {})}
     with mpl.rc_context(rc):
         fig, ax = plt.subplots(**{"figsize": figsize, "dpi": dpi, **dict(figure_kwargs or {})})
-        ax.axhline(0, color="black", linestyle="--", linewidth=1, zorder=1)
+        ax.axhline(0, color="black", linestyle="--", linewidth=2.0, zorder=1)
         for gauge_type in gauge_order:
             group = gauge_stats[gauge_stats["gauge_type"].eq(gauge_type)].sort_values("r")
             style = resolved_styles[gauge_type]; x = group["r"].to_numpy(float)
@@ -154,14 +156,15 @@ def plot_gauge_induced_excess_error(
         ticks = ranks if xticks is None else xticks; labels = [str(x) for x in ticks] if xticklabels is None else xticklabels
         ax.set_xticks(ticks); ax.set_xticklabels(labels); ax.set_xlim(*(xlim or (min(ranks) - .45, max(ranks) + .45)))
         ax.set_ylim(*(ylim or (-.025 * metrics["maximum_excess"], 1.08 * metrics["maximum_excess"])))
-        ax.grid(show_grid, axis=grid_axis, which="major", **{"color": ".75", "linestyle": ":", "linewidth": .5, "alpha": .55, **dict(grid_kwargs or {})})
+        ax.grid(show_grid, axis=grid_axis, which="major", **{"color": ".75", "linestyle": ":", "linewidth": .7, "alpha": .30, **dict(grid_kwargs or {})})
         ax.set_axisbelow(True)
         for spine in hidden_spines: ax.spines[spine].set_visible(False)
-        ax.tick_params(direction="out", width=.8, length=3)
-        handles, labels = ax.get_legend_handles_labels(); handles.append(Line2D([0], [0], color="black", linestyle="--", linewidth=1)); labels.append("Dense optimum (zero)")
+        ax.tick_params(direction="out", width=1.0, length=4)
+        handles, labels = ax.get_legend_handles_labels(); handles.append(Line2D([0], [0], color="black", linestyle="--", linewidth=2.0)); labels.append("Dense optimum")
         options = {"handles": handles, "labels": labels, "loc": legend_loc, "ncol": legend_ncol,
-                   "fontsize": legend_fontsize, "handlelength": 1.5, "handletextpad": .35,
-                   "columnspacing": .8, "borderaxespad": 0, **dict(legend_kwargs or {})}
+                   "fontsize": legend_fontsize, "handlelength": 2.0, "handletextpad": .45,
+                   "columnspacing": .8, "borderaxespad": 0, "frameon": False,
+                   **dict(legend_kwargs or {})}
         if legend_bbox_to_anchor is not None: options["bbox_to_anchor"] = legend_bbox_to_anchor
         ax.legend(**options)
         if tight_layout: fig.tight_layout(**{"pad": .3, **dict(tight_layout_kwargs or {})})

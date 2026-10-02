@@ -1,0 +1,42 @@
+{
+  "pdf": "server_cost_summary.pdf",
+  "sha256": "d230716bbf4ad0322b2b1f39942174baadc5ad2c6ec5105da85eb88c36f4fe74",
+  "pages": 1,
+  "page_points": [
+    252.0,
+    272.0
+  ],
+  "single_column_width_inches": 3.5,
+  "raster_images": 0,
+  "font_sizes_pt": [
+    8.0,
+    9.0
+  ],
+  "used_fonts": [
+    "TimesNewRomanPS-BoldMT",
+    "TimesNewRomanPSMT"
+  ],
+  "fonts": [
+    {
+      "font": "AAAAAA+TimesNewRomanPS-BoldMT",
+      "embedded_bytes": 59392,
+      "type": "TrueType"
+    },
+    {
+      "font": "AAAAAA+TimesNewRomanPSMT",
+      "embedded_bytes": 75484,
+      "type": "TrueType"
+    }
+  ],
+  "source_hashes_verified": true,
+  "summary_csv_unchanged_byte_for_byte": true,
+  "all_medians_and_iqrs_verified": true,
+  "summary_records": 18,
+  "raw_measurements": 144,
+  "text_within_page": true,
+  "visually_reviewed_poppler_render": true,
+  "latex_float": "table",
+  "latex_width": "columnwidth",
+  "latex_compiled_locally": false,
+  "checks_passed": true
+}

@@ -1,0 +1,19 @@
+{
+  "gauge_raw.csv": {
+    "source": "H:\\paper-experiment-record\\rbla+\\figures\\gauge_induced_excess_error\\gauge_induced_excess_error.csv",
+    "sha256": "b5d023212421fa04df9783180872bd01d18e7e4969fcba5dceb5b469e4fe0259"
+  },
+  "synthetic_main_raw.csv": {
+    "source": "H:\\paper-experiment-record\\rbla+\\figures\\synthetic_rbla_redistribution\\results\\raw\\shared_R32_eta0.3.csv",
+    "sha256": "5d54fc6d7b05516c0bccc6318346d76fd79ad865e74fe4da39d98a1d7e04f0dc"
+  },
+  "synthetic_config.json": {
+    "source": "H:\\paper-experiment-record\\rbla+\\figures\\synthetic_rbla_redistribution\\results\\config_frozen.json",
+    "sha256": "181353b4c685e026c4f308f4a5a4af0116d3be98a19c435568e482a64730e50a"
+  },
+  "gauge_analysis_function": {
+    "source": "H:\\paper-experiment-record\\rbla+\\figures\\gauge_induced_excess_error\\plot_figure.py",
+    "source_sha256": "793b3f89dab2f8d304fb511e9960a23f16a81b8e1f0cc5575eb7e1af2af293b8",
+    "function_sha256": "ba841db043fec67ee76e7ba21082a15b5d6795f8b6867d2677c4b5aeac62ee45"
+  }
+}

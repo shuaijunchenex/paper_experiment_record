@@ -1,0 +1,13 @@
+dataset,training_path,broadcast,final_accuracy_percent,last10_accuracy_percent,final_update,last10_start_update,last10_end_update,seed,client_count,source_file
+cifar10,RBLA,RBLA,16.965000000000003,17.836600000000004,101,92,101,42,10,cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-rbla-broadcast-accuracy.csv
+cifar10,RBLA,RBLA+,35.492000000000004,38.452699999999993,101,92,101,42,10,cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-rbla_plus_rank_scale-broadcast-accuracy.csv
+cifar10,RBLA+,RBLA,72.956999999999994,72.843499999999992,101,92,101,42,10,cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-rbla-broadcast-accuracy.csv
+cifar10,RBLA+,RBLA+,72.727000000000004,72.756500000000003,101,92,101,42,10,cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-rbla_plus_rank_scale-broadcast-accuracy.csv
+mnli,RBLA,RBLA,56.812022414671425,56.930106979113603,101,92,101,42,10,mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-rbla-broadcast-accuracy.csv
+mnli,RBLA,RBLA+,42.602139582272038,42.555068772287306,101,92,101,42,10,mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-rbla_plus_rank_scale-broadcast-accuracy.csv
+mnli,RBLA+,RBLA,58.040753948038713,58.137748344370856,101,92,101,42,10,mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-rbla-broadcast-accuracy.csv
+mnli,RBLA+,RBLA+,60.53082017320429,62.58818135506877,101,92,101,42,10,mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-rbla_plus_rank_scale-broadcast-accuracy.csv
+qqp,RBLA,RBLA,75.660895374721733,75.985975760573837,101,92,101,42,10,qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-rbla-broadcast-accuracy.csv
+qqp,RBLA,RBLA+,70.129359386594118,69.825500865693783,101,92,101,42,10,qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-rbla_plus_rank_scale-broadcast-accuracy.csv
+qqp,RBLA+,RBLA,76.636655948553042,77.073583972297783,101,92,101,42,10,qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-rbla-broadcast-accuracy.csv
+qqp,RBLA+,RBLA+,75.271580509522636,77.245436557012113,101,92,101,42,10,qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-rbla_plus_rank_scale-broadcast-accuracy.csv

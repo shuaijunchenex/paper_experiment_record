@@ -1,0 +1,88 @@
+{
+  "title": "Training path and raw-prefix reconstruction quality",
+  "metric": "(||X-X_prefix,q||_F^2 - ||X-X_dense,q||_F^2) / ||X||_F^2",
+  "axis_label_note": "Excess uses squared Frobenius errors; the full definition is in caption.txt and figure_ieee.tex",
+  "raw_pairs": 732,
+  "groups": 12,
+  "center": "median",
+  "error_bars": "25th to 75th percentiles across layer/unique-target-width pairs within each checkpoint",
+  "not_confidence_intervals": true,
+  "single_training_seed": 42,
+  "weighting": "one observation per layer and distinct non-full target width; no duplication by client requests",
+  "full_width_excluded": true,
+  "all_layers_included": true,
+  "yaxis": {
+    "scale": "symlog",
+    "linthresh": 1e-05,
+    "linscale": 0.7
+  },
+  "display_only_adjustment": "summary values in [-1e-12,0) placed at zero; raw values and signed quantiles retained",
+  "xaxis": "logged round; measured checkpoints 9, 49, 100",
+  "xlim": [
+    0,
+    100
+  ],
+  "xticks": [
+    0,
+    50,
+    100
+  ],
+  "interpretation": "separate training trajectories have different aggregate reference matrices",
+  "source_batch": "run_all_20260915_223408_556671",
+  "source_hashes_verified": true,
+  "source_files": [
+    {
+      "name": "reconstruction.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\reconstruction.csv",
+      "sha256": "e16fdc57e3e3e0f52a54ab9e937b6f449bea43e372c0703830570519fce90d53",
+      "bytes": 3772043
+    }
+  ],
+  "new_experiments_run": false,
+  "displayed_datasets": [
+    "cifar10",
+    "mnli"
+  ],
+  "omitted_from_figure": [
+    "qqp"
+  ],
+  "layout": {
+    "figsize_inches": [
+      3.5,
+      2.0
+    ],
+    "font_family": "Times New Roman",
+    "axis_font_pt": 8,
+    "tick_font_pt": 7.5,
+    "panel_font_pt": 8,
+    "panel_labels": "below x-axis labels",
+    "panel_label_gap_pt": 4,
+    "pdf_fonttype": 42,
+    "legend": "one shared figure legend",
+    "column_layout": "single column",
+    "reference": [
+      "rbla+/figures/complexity_comparison/broadcast_space_complexity.pdf",
+      "rbla+/figures/gauge_induced_suboptimality/gauge_induced_suboptimality.pdf"
+    ],
+    "axes_positions": [
+      [
+        0.14,
+        0.28,
+        0.36244541484716153,
+        0.62
+      ],
+      [
+        0.6075545851528383,
+        0.28,
+        0.36244541484716153,
+        0.62
+      ]
+    ]
+  },
+  "software": {
+    "python": "3.11.11",
+    "matplotlib": "3.10.7",
+    "numpy": "1.26.4",
+    "pandas": "2.3.1"
+  }
+}

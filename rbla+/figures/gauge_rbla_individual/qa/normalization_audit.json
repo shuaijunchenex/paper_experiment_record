@@ -1,0 +1,14 @@
+{
+  "common_excess_definition": "(E_method - E_opt) / ||X||_F; unsquared Frobenius norms",
+  "archived_gauge_denominator": "||X||_F + float64 machine epsilon",
+  "gauge_norm_from_recorded_spectrum": 1.555236014688532,
+  "machine_epsilon": 2.220446049250313e-16,
+  "gauge_conversion_multiplier": 1.0000000000000002,
+  "maximum_archived_optimum_vs_spectrum_gap": 1.504488186137112e-15,
+  "maximum_gauge_excess_change": 2.220446049250313e-16,
+  "raw_source_csv_unchanged": true,
+  "synthetic_definition_maximum_gaps": {
+    "pre": 0.0,
+    "sp": 0.0
+  }
+}

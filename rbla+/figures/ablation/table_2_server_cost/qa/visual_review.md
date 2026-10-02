@@ -1,0 +1,3 @@
+# Single-column table review
+
+The 3.5-inch-wide final PDF was rendered with Poppler and visually inspected. The five-column layout has dataset group rows, four measurement columns, 8 pt Times New Roman body and notes, and no overall scaling. All headers, units, median [IQR] values and notes are readable, with no overlap or clipping. Both fonts are embedded and no raster images are used. All displayed medians and IQRs were independently checked against 144 frozen measurements. The summary CSV and Markdown are byte-identical to the previous layout. The LaTeX uses table and columnwidth; no local LaTeX compiler was available, so the PDF is a ReportLab preview.

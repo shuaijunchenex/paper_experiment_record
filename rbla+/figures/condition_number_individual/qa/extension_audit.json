@@ -1,0 +1,62 @@
+{
+  "checks": {
+    "achieved condition numbers match their targets": true,
+    "all gauges are nonsingular": true,
+    "all gauges satisfy the condition-number limit": true,
+    "all complete updates are gauge invariant": true,
+    "SP+ matches the dense optimum": true,
+    "compact full-rank reconstruction is accurate": true,
+    "compact SP+ has no dense-shaped intermediate": true,
+    "all numeric values are finite": true,
+    "RBLA excess is non-negative within tolerance": true
+  },
+  "metrics": {
+    "all_checks_passed": true,
+    "d_out": 128,
+    "d_in": 96,
+    "full_rank": 16,
+    "client_rank": 8,
+    "kappas": [
+      10,
+      20,
+      50,
+      100,
+      200,
+      500,
+      1000,
+      2000,
+      5000,
+      10000,
+      20000,
+      50000,
+      100000
+    ],
+    "trials": 100,
+    "maximum_excess": 4832.464075362485
+  },
+  "fp_dtype": "float64",
+  "condition_rtol": 1e-09,
+  "reconstruction_tolerance": 1e-10,
+  "anchor_kappa": 10,
+  "anchor_maximum_broadcast_error_gap": 1.2212453270876722e-15,
+  "added_kappas": [
+    20,
+    50,
+    100,
+    200,
+    500,
+    1000,
+    2000,
+    5000,
+    10000,
+    20000,
+    50000,
+    100000
+  ],
+  "added_rows": 2400,
+  "original_source_preserved": true,
+  "maximum_condition_relative_error": 2.0864536054432393e-12,
+  "maximum_full_update_error": 1.7148757864685975e-12,
+  "maximum_compact_reconstruction_error": 3.811442159484377e-12,
+  "maximum_sp_optimality_gap": 2.7755575615628914e-17
+}

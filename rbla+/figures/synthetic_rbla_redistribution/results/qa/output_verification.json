@@ -1,0 +1,328 @@
+{
+  "all_checks_passed": true,
+  "unique_rank_records": 7200,
+  "saved_factor_identities_checked": 210,
+  "raw_sha256_verified": true,
+  "config_sha256_verified": true,
+  "actual_client_weighting_verified": true,
+  "reproductions": [
+    {
+      "setting": "shared_R32_eta0",
+      "seed": 2026091100,
+      "bitwise_global_factors": true,
+      "max_raw_metric_gap": 0.0,
+      "svd_shapes": [
+        [
+          32,
+          32
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "setting": "shared_R32_eta0.1",
+      "seed": 2026091100,
+      "bitwise_global_factors": true,
+      "max_raw_metric_gap": 0.0,
+      "svd_shapes": [
+        [
+          32,
+          32
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "setting": "shared_R32_eta0.3",
+      "seed": 2026091100,
+      "bitwise_global_factors": true,
+      "max_raw_metric_gap": 0.0,
+      "svd_shapes": [
+        [
+          32,
+          32
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "setting": "shared_R32_eta1",
+      "seed": 2026091100,
+      "bitwise_global_factors": true,
+      "max_raw_metric_gap": 0.0,
+      "svd_shapes": [
+        [
+          32,
+          32
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "setting": "independent_R32",
+      "seed": 2026091100,
+      "bitwise_global_factors": true,
+      "max_raw_metric_gap": 0.0,
+      "svd_shapes": [
+        [
+          32,
+          32
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "setting": "shared_R16_eta0.3",
+      "seed": 2026091100,
+      "bitwise_global_factors": true,
+      "max_raw_metric_gap": 0.0,
+      "svd_shapes": [
+        [
+          16,
+          16
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "setting": "shared_R64_eta0.3",
+      "seed": 2026091100,
+      "bitwise_global_factors": true,
+      "max_raw_metric_gap": 0.0,
+      "svd_shapes": [
+        [
+          64,
+          64
+        ]
+      ],
+      "passed": true
+    }
+  ],
+  "figures": [
+    {
+      "file": "independent_R32.pdf",
+      "pages": 1,
+      "fonts": [
+        {
+          "name": "CZRBLR+STIXGeneral-Regular",
+          "type": "Type0",
+          "embedded_bytes": 2072
+        },
+        {
+          "name": "FTXWZA+STIXGeneral-Italic",
+          "type": "Type0",
+          "embedded_bytes": 2048
+        },
+        {
+          "name": "FHXFSG+TimesNewRomanPSMT",
+          "type": "Type0",
+          "embedded_bytes": 50484
+        }
+      ],
+      "text_inside_page": true,
+      "png_pixels": [
+        6837,
+        2882
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "svg_xml_valid": true,
+      "renderer": "PyMuPDF"
+    },
+    {
+      "file": "main_R32_eta0.3.pdf",
+      "pages": 1,
+      "fonts": [
+        {
+          "name": "CZRBLR+STIXGeneral-Regular",
+          "type": "Type0",
+          "embedded_bytes": 2216
+        },
+        {
+          "name": "FTXWZA+STIXGeneral-Italic",
+          "type": "Type0",
+          "embedded_bytes": 2212
+        },
+        {
+          "name": "FHXFSG+TimesNewRomanPSMT",
+          "type": "Type0",
+          "embedded_bytes": 51356
+        }
+      ],
+      "text_inside_page": true,
+      "png_pixels": [
+        6837,
+        2882
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "svg_xml_valid": true,
+      "renderer": "PyMuPDF"
+    },
+    {
+      "file": "shared_R16_eta0.3.pdf",
+      "pages": 1,
+      "fonts": [
+        {
+          "name": "CZRBLR+STIXGeneral-Regular",
+          "type": "Type0",
+          "embedded_bytes": 2308
+        },
+        {
+          "name": "FTXWZA+STIXGeneral-Italic",
+          "type": "Type0",
+          "embedded_bytes": 2212
+        },
+        {
+          "name": "FHXFSG+TimesNewRomanPSMT",
+          "type": "Type0",
+          "embedded_bytes": 51356
+        }
+      ],
+      "text_inside_page": true,
+      "png_pixels": [
+        6837,
+        2882
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "svg_xml_valid": true,
+      "renderer": "PyMuPDF"
+    },
+    {
+      "file": "shared_R32_eta0.1.pdf",
+      "pages": 1,
+      "fonts": [
+        {
+          "name": "CZRBLR+STIXGeneral-Regular",
+          "type": "Type0",
+          "embedded_bytes": 2276
+        },
+        {
+          "name": "FTXWZA+STIXGeneral-Italic",
+          "type": "Type0",
+          "embedded_bytes": 2212
+        },
+        {
+          "name": "FHXFSG+TimesNewRomanPSMT",
+          "type": "Type0",
+          "embedded_bytes": 51356
+        }
+      ],
+      "text_inside_page": true,
+      "png_pixels": [
+        6837,
+        2882
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "svg_xml_valid": true,
+      "renderer": "PyMuPDF"
+    },
+    {
+      "file": "shared_R32_eta0.pdf",
+      "pages": 1,
+      "fonts": [
+        {
+          "name": "CZRBLR+STIXGeneral-Regular",
+          "type": "Type0",
+          "embedded_bytes": 2164
+        },
+        {
+          "name": "FTXWZA+STIXGeneral-Italic",
+          "type": "Type0",
+          "embedded_bytes": 2212
+        },
+        {
+          "name": "FHXFSG+TimesNewRomanPSMT",
+          "type": "Type0",
+          "embedded_bytes": 51356
+        }
+      ],
+      "text_inside_page": true,
+      "png_pixels": [
+        6837,
+        2882
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "svg_xml_valid": true,
+      "renderer": "PyMuPDF"
+    },
+    {
+      "file": "shared_R32_eta1.pdf",
+      "pages": 1,
+      "fonts": [
+        {
+          "name": "CZRBLR+STIXGeneral-Regular",
+          "type": "Type0",
+          "embedded_bytes": 2140
+        },
+        {
+          "name": "FTXWZA+STIXGeneral-Italic",
+          "type": "Type0",
+          "embedded_bytes": 2212
+        },
+        {
+          "name": "FHXFSG+TimesNewRomanPSMT",
+          "type": "Type0",
+          "embedded_bytes": 51356
+        }
+      ],
+      "text_inside_page": true,
+      "png_pixels": [
+        6837,
+        2882
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "svg_xml_valid": true,
+      "renderer": "PyMuPDF"
+    },
+    {
+      "file": "shared_R64_eta0.3.pdf",
+      "pages": 1,
+      "fonts": [
+        {
+          "name": "CZRBLR+STIXGeneral-Regular",
+          "type": "Type0",
+          "embedded_bytes": 2300
+        },
+        {
+          "name": "FTXWZA+STIXGeneral-Italic",
+          "type": "Type0",
+          "embedded_bytes": 2212
+        },
+        {
+          "name": "FHXFSG+TimesNewRomanPSMT",
+          "type": "Type0",
+          "embedded_bytes": 51356
+        }
+      ],
+      "text_inside_page": true,
+      "png_pixels": [
+        6837,
+        2882
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ],
+      "svg_xml_valid": true,
+      "renderer": "PyMuPDF"
+    }
+  ],
+  "visual_review": "Render files are ready; human/agent visual inspection is a separate step."
+}

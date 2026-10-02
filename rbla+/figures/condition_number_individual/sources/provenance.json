@@ -1,0 +1,27 @@
+{
+  "protected_original_files": {
+    "condition_number_sensitivity\\condition_number_sensitivity.csv": "1007d006d646e95a21df81ceb1607eeb44b963c7397498f0f94cc624fd3e896f",
+    "condition_number_sensitivity\\condition_number_sensitivity.pdf": "dea53894b05eed2845404783377e99dd46b77fc09772130d1614f259d90c73ec",
+    "condition_number_sensitivity\\plot.ipynb": "73f9edeb54081a990cb4bb42b36442b5dd52a76161cc5e3489f00e4d501b86e3",
+    "condition_number_sensitivity\\plot_figure.py": "8ef4c9bfac4326ac354c5d94b9fb95abbceecf84f05e2288c4189a5ae2c61383",
+    "condition_number_sensitivity\\README.md": "128ecf8f0a3b117fe8cbb93b56971a07f9d527e3d00d1e16b3158240bf73edbc",
+    "gauge_rbla_individual\\gauge_excess_error.pdf": "6693f6732b91466024ce2882eabfc24330059ff4fd38424dd99b5d0db3ef146d",
+    "gauge_rbla_individual\\rbla_excess_error.pdf": "80e51d01fd1164b23c844626aade1186c274b4860b63bb060a443f8b278ed263",
+    "gauge_rbla_individual\\rbla_relative_error.pdf": "3fefe0d9cc501c5ebdcd2fd316d597f9d840f0671665df755b8ab1a723f815ff",
+    "gauge_rbla_three_panel\\gauge_rbla_three_panel.pdf": "877046b23d9941a879531d222be6189b192523de6b2088c879481dcd99f16752"
+  },
+  "source_panel": "condition_number_sensitivity, panel (a)",
+  "style_reference": "gauge_rbla_individual/plot_figures.py",
+  "input_sha256": {
+    "condition_raw.csv": "1007d006d646e95a21df81ceb1607eeb44b963c7397498f0f94cc624fd3e896f",
+    "source_generator.py": "8ef4c9bfac4326ac354c5d94b9fb95abbceecf84f05e2288c4189a5ae2c61383"
+  },
+  "authorized_reference_revisions": [
+    {
+      "file": "gauge_rbla_individual\\rbla_excess_error.pdf",
+      "previous_sha256": "f0e2660a5a5078bcde03e92779cb83323412529b9343021f732f9a2eb91fd04f",
+      "updated_sha256": "80e51d01fd1164b23c844626aade1186c274b4860b63bb060a443f8b278ed263",
+      "reason": "User requested the Optimum (zero) reference line in the standalone excess-error PDF."
+    }
+  ]
+}

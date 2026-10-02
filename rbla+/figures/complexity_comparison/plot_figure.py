@@ -305,15 +305,15 @@ def plot_absolute_units(
         handlelength=2.2,
         columnspacing=1.25,
     )
-    fig.text(
-        0.5,
-        0.01,
-        r"Fixed $R=r=32$; analytical units; common factor inputs and transmitted payload excluded",
-        ha="center",
-        va="bottom",
-        fontsize=6.5,
-        color="0.3",
-    )
+    # fig.text(
+    #     0.5,
+    #     0.01,
+    #     r"Fixed $R=r=32$; analytical units; common factor inputs and transmitted payload excluded",
+    #     ha="center",
+    #     va="bottom",
+    #     fontsize=6.5,
+    #     color="0.3",
+    # )
     fig.subplots_adjust(left=0.09, right=0.995, bottom=0.25, top=0.78, wspace=0.33)
     fig.savefig(path)
     plt.close(fig)
@@ -324,7 +324,7 @@ def annotate_endpoint(ax: plt.Axes, group: pd.DataFrame, method: str) -> None:
     value = float(endpoint.relative_to_sp_plus)
     label = "1×" if np.isclose(value, 1.0) else f"{value:,.0f}×"
     vertical_offset = {
-        "SP+ (compact QR)": -8,
+        "SP+ (compact QR)": -6,
         "Dense truncated SVD": 3,
         "Full dense SVD": 3,
     }[method]
@@ -377,15 +377,15 @@ def plot_relative_multipliers(
         handlelength=2.2,
         columnspacing=1.5,
     )
-    fig.text(
-        0.5,
-        0.01,
-        r"SP+ is the 1× baseline; fixed $R=r=32$; common factor inputs and transmitted payload excluded",
-        ha="center",
-        va="bottom",
-        fontsize=6.5,
-        color="0.3",
-    )
+    # fig.text(
+    #     0.5,
+    #     0.01,
+    #     r"SP+ is the 1× baseline; fixed $R=r=32$; common factor inputs and transmitted payload excluded",
+    #     ha="center",
+    #     va="bottom",
+    #     fontsize=6.5,
+    #     color="0.3",
+    # )
     fig.subplots_adjust(left=0.09, right=0.995, bottom=0.25, top=0.78, wspace=0.33)
     fig.savefig(path)
     plt.close(fig)
@@ -430,38 +430,38 @@ def plot_complexity_comparison(
     print_report: bool = True,
     absolute_output_name: str = "broadcast_complexity",
     relative_output_name: str = "broadcast_space_complexity",
-    figsize: tuple[float, float] = (7.16, 2.65),
+    figsize: tuple[float, float] = (10.0, 5.0),
     dpi: int = 600,
     font_family: str | None = None,
-    font_size: float = 8,
-    axes_label_size: float = 8,
-    tick_label_size: float = 7,
-    title_size: float = 8,
-    legend_fontsize: float = 7,
+    font_size: float = 14,
+    axes_label_size: float = 18,
+    tick_label_size: float = 16,
+    title_size: float = 18,
+    legend_fontsize: float = 15,
     method_styles: Mapping[str, Mapping[str, Any]] | None = None,
-    line_width: float = 1.45,
-    marker_size: float = 4.2,
-    xlabel: str = r"Square matrix dimension $d$ ($m=n=d$)",
+    line_width: float = 2.2,
+    marker_size: float = 7.0,
+    xlabel: str = r"Matrix dimension $d$ ($m=n=d$)",
     xscale: str = "log",
     xscale_base: float = 2,
     yscale: str = "log",
     xlim: tuple[float, float] | None = None,
     xticks: Sequence[float] | None = None,
     xticklabels: Sequence[str] | None = None,
-    absolute_work_ylabel: str = "Rank-fixed server work (units)",
-    absolute_space_ylabel: str = "Auxiliary storage (scalar elements)",
+    absolute_work_ylabel: str = "Server work (analytical units)",
+    absolute_space_ylabel: str = "Auxiliary storage (elements)",
     absolute_work_title: str = "(a) Server work",
     absolute_space_title: str = "(b) Auxiliary storage",
     absolute_work_ylim: tuple[float, float] = (0.5, 1e13),
     absolute_space_ylim: tuple[float, float] = (0.5, 1e10),
-    relative_work_ylabel: str = "Relative server work vs. SP+",
-    relative_space_ylabel: str = "Relative auxiliary storage vs. SP+",
+    relative_work_ylabel: str = "Server work relative to SP+",
+    relative_space_ylabel: str = "Storage relative to SP+",
     relative_work_title: str = "(a) Server work multiplier",
     relative_space_title: str = "(b) Auxiliary storage multiplier",
     relative_work_ylim: tuple[float, float] = (0.7, 1e5),
     relative_space_ylim: tuple[float, float] = (0.7, 1e3),
     title_loc: str = "left",
-    title_pad: float = 3,
+    title_pad: float = 8,
     show_grid: bool = True,
     grid_kwargs: Mapping[str, Any] | None = None,
     hidden_spines: Sequence[str] = ("top", "right"),
@@ -473,13 +473,13 @@ def plot_complexity_comparison(
     relative_legend_ncol: int = 3,
     legend_kwargs: Mapping[str, Any] | None = None,
     show_endpoint_annotations: bool = True,
-    annotation_fontsize: float = 6.5,
+    annotation_fontsize: float = 12,
     annotation_kwargs: Mapping[str, Any] | None = None,
     show_footnotes: bool = True,
     absolute_footnote: str | None = None,
     relative_footnote: str | None = None,
     footnote_y: float = 0.01,
-    footnote_fontsize: float = 6.5,
+    footnote_fontsize: float = 11,
     footnote_kwargs: Mapping[str, Any] | None = None,
     figure_kwargs: Mapping[str, Any] | None = None,
     rc_params: Mapping[str, Any] | None = None,
@@ -542,7 +542,9 @@ def plot_complexity_comparison(
         "font.family": font_family, "font.size": font_size,
         "axes.labelsize": axes_label_size, "axes.titlesize": title_size,
         "xtick.labelsize": tick_label_size, "ytick.labelsize": tick_label_size,
-        "legend.fontsize": legend_fontsize, "axes.linewidth": 0.8,
+        "legend.fontsize": legend_fontsize, "axes.linewidth": 1.1,
+        "xtick.major.width": 1.0, "ytick.major.width": 1.0,
+        "xtick.major.size": 4.0, "ytick.major.size": 4.0,
         "pdf.fonttype": 42, "ps.fonttype": 42, **dict(rc_params or {}),
     }
     labels = list(xticklabels) if xticklabels is not None else [
@@ -551,14 +553,14 @@ def plot_complexity_comparison(
     ]
     ticks = list(xticks) if xticks is not None else resolved_dimensions.tolist()
     limits = xlim or (resolved_dimensions[0] / 1.12, resolved_dimensions[-1] * 1.16)
-    absolute_footnote = absolute_footnote or (
-        rf"Fixed $R={full_rank}, r={client_rank}$; analytical units; common factor "
-        "inputs and transmitted payload excluded"
-    )
-    relative_footnote = relative_footnote or (
-        rf"SP+ is the 1× baseline; fixed $R={full_rank}, r={client_rank}$; common "
-        "factor inputs and transmitted payload excluded"
-    )
+    # absolute_footnote = absolute_footnote or (
+    #     rf"Fixed $R={full_rank}, r={client_rank}$; analytical units; common factor "
+    #     "inputs and transmitted payload excluded"
+    # )
+    # relative_footnote = relative_footnote or (
+    #     rf"SP+ is the 1× baseline; fixed $R={full_rank}, r={client_rank}$; common "
+    #     "factor inputs and transmitted payload excluded"
+    # )
 
     def style_axis_local(axis: plt.Axes) -> None:
         axis.set_xlabel(xlabel)
@@ -571,14 +573,14 @@ def plot_complexity_comparison(
         axis.set_xticks(ticks)
         axis.set_xticklabels(labels)
         axis.grid(show_grid, which="major", **{
-            "color": "0.75", "linestyle": ":", "linewidth": 0.5,
-            "alpha": 0.55, **dict(grid_kwargs or {}),
+            "color": "0.75", "linestyle": ":", "linewidth": 0.7,
+            "alpha": 0.30, **dict(grid_kwargs or {}),
         })
         axis.grid(False, which="minor")
         axis.set_axisbelow(True)
         for spine in hidden_spines:
             axis.spines[spine].set_visible(False)
-        axis.tick_params(direction="out", width=0.8, length=3)
+        axis.tick_params(direction="out", width=1.0, length=4)
 
     with mpl.rc_context(rc):
         fig_abs, (ax_aw, ax_as) = plt.subplots(
@@ -602,16 +604,16 @@ def plot_complexity_comparison(
         handles, legend_labels = ax_aw.get_legend_handles_labels()
         abs_legend = {"handles": handles, "labels": legend_labels,
                       "loc": absolute_legend_loc, "ncol": absolute_legend_ncol,
-                      "fontsize": legend_fontsize, "handlelength": 2.2,
+                      "fontsize": legend_fontsize, "handlelength": 2.2, "frameon": False,
                       "columnspacing": 1.25, **dict(legend_kwargs or {})}
         if absolute_legend_bbox_to_anchor is not None:
             abs_legend["bbox_to_anchor"] = absolute_legend_bbox_to_anchor
         fig_abs.legend(**abs_legend)
-        if show_footnotes:
-            fig_abs.text(0.5, footnote_y, absolute_footnote, ha="center", va="bottom",
-                         fontsize=footnote_fontsize, color="0.3", **dict(footnote_kwargs or {}))
-        fig_abs.subplots_adjust(**{"left": .09, "right": .995, "bottom": .25,
-                                   "top": .78, "wspace": .33,
+        # if show_footnotes:
+        #     fig_abs.text(0.5, footnote_y, absolute_footnote, ha="center", va="bottom",
+        #                  fontsize=footnote_fontsize, color="0.3", **dict(footnote_kwargs or {}))
+        fig_abs.subplots_adjust(**{"left": .115, "right": .98, "bottom": .25,
+                                   "top": .78, "wspace": .32,
                                    **dict(absolute_subplot_adjust or {})})
 
         fig_rel, (ax_rw, ax_rs) = plt.subplots(
@@ -627,7 +629,7 @@ def plot_complexity_comparison(
                     endpoint = group.iloc[-1]
                     value = float(endpoint["relative_to_sp_plus"])
                     text = "1×" if np.isclose(value, 1) else f"{value:,.0f}×"
-                    offset = -8 if method == "SP+ (compact QR)" else 3
+                    offset = 1 if method == "SP+ (compact QR)" else 3
                     axis.annotate(text, (endpoint["matrix_dimension"], value),
                         xytext=(-6, offset), textcoords="offset points", ha="right",
                         va="bottom" if offset >= 0 else "top", fontsize=annotation_fontsize,
@@ -642,7 +644,7 @@ def plot_complexity_comparison(
         handles, legend_labels = ax_rw.get_legend_handles_labels()
         rel_legend = {"handles": handles, "labels": legend_labels,
                       "loc": relative_legend_loc, "ncol": relative_legend_ncol,
-                      "fontsize": legend_fontsize, "handlelength": 2.2,
+                      "fontsize": legend_fontsize, "handlelength": 2.2, "frameon": False,
                       "columnspacing": 1.5, **dict(legend_kwargs or {})}
         if relative_legend_bbox_to_anchor is not None:
             rel_legend["bbox_to_anchor"] = relative_legend_bbox_to_anchor
@@ -650,8 +652,8 @@ def plot_complexity_comparison(
         if show_footnotes:
             fig_rel.text(0.5, footnote_y, relative_footnote, ha="center", va="bottom",
                          fontsize=footnote_fontsize, color="0.3", **dict(footnote_kwargs or {}))
-        fig_rel.subplots_adjust(**{"left": .09, "right": .995, "bottom": .25,
-                                   "top": .78, "wspace": .33,
+        fig_rel.subplots_adjust(**{"left": .115, "right": .98, "bottom": .25,
+                                   "top": .78, "wspace": .32,
                                    **dict(relative_subplot_adjust or {})})
         abs_paths = _save_formats(fig_abs, target / absolute_output_name, save_formats, dpi, savefig_kwargs)
         rel_paths = _save_formats(fig_rel, target / relative_output_name, save_formats, dpi, savefig_kwargs)

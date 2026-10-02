@@ -477,14 +477,20 @@ def plot_spectrum_robustness_heatmap(
     print_report: bool = True,
     normalized_output_name: str = "spectrum_robustness_heatmap",
     absolute_output_name: str = "spectrum_robustness_absolute_rank",
-    normalized_figsize: tuple[float, float] = (7.16, 4.65),
-    absolute_figsize: tuple[float, float] = (7.16, 2.75),
+    normalized_figsize: tuple[float, float] = (10.0, 6.8),
+    absolute_figsize: tuple[float, float] = (10.0, 5.0),
     dpi: int = 600,
     font_family: str | None = None,
-    font_size: float = 7.5,
-    axes_label_size: float = 8,
-    tick_label_size: float = 7,
-    title_size: float = 8,
+    font_size: float = 14,
+    axes_label_size: float = 16,
+    tick_label_size: float = 13,
+    title_size: float = 16,
+    absolute_axes_label_size: float = 22,
+    absolute_tick_label_size: float = 17,
+    absolute_title_size: float = 20,
+    colorbar_label_size: float = 18,
+    normalized_colorbar_tick_size: float = 14,
+    absolute_colorbar_tick_size: float = 15,
     cmap: str = "viridis",
     color_min: float = 0.0,
     color_max: float | None = None,
@@ -570,12 +576,14 @@ def plot_spectrum_robustness_heatmap(
     rc = {"font.family": font_family, "font.size": font_size,
           "axes.labelsize": axes_label_size, "xtick.labelsize": tick_label_size,
           "ytick.labelsize": tick_label_size, "axes.titlesize": title_size,
-          "axes.linewidth": .8, "pdf.fonttype": 42, "ps.fonttype": 42,
+          "axes.linewidth": 1.1, "xtick.major.width": 1.0,
+          "ytick.major.width": 1.0, "xtick.major.size": 4.0,
+          "ytick.major.size": 4.0, "pdf.fonttype": 42, "ps.fonttype": 42,
           **dict(rc_params or {})}
     mesh_options = {"cmap": cmap, "vmin": color_min, "vmax": resolved_color_max,
                     "shading": "flat", "edgecolors": "none", "linewidth": 0,
                     "antialiased": False, "rasterized": True, **dict(pcolormesh_kwargs or {})}
-    box_options = {"fill": False, "edgecolor": "white", "linewidth": .9,
+    box_options = {"fill": False, "edgecolor": "white", "linewidth": 1.3,
                    "linestyle": "--", **dict(highlight_kwargs or {})}
 
     def add_highlight(axis: plt.Axes, x0: float, x1: float) -> None:
@@ -599,16 +607,19 @@ def plot_spectrum_robustness_heatmap(
                 axis = axes_norm[row, column]; x_edges = np.arange(rank + 1) / rank
                 image = axis.pcolormesh(x_edges, y_edges, matrices[(gauge, rank)], **mesh_options)
                 axis.set_title(normalized_title_template.format(
-                    panel=chr(ord("a") + panel), gauge=gauge_labels[gauge], rank=rank), pad=title_pad)
+                    panel=chr(ord("a") + panel), gauge=gauge_labels[gauge], rank=rank),
+                    pad=title_pad, fontsize=title_size)
                 axis.set_xticks(normalized_xticks); axis.set_yticks(alpha_ticks); axis.set_yticklabels(alpha_ticklabels)
                 axis.set_xlim(*normalized_xlim); axis.set_ylim(*(alpha_ylim or (y_edges[0], y_edges[-1])))
                 add_highlight(axis, normalized_xlim[0], normalized_xlim[1])
-                axis.tick_params(direction="out", width=.8, length=3); panel += 1
-        for axis in axes_norm[-1, :]: axis.set_xlabel(normalized_xlabel)
-        for axis in axes_norm[:, 0]: axis.set_ylabel(ylabel)
+                axis.tick_params(direction="out", width=1.0, length=4,
+                                 labelsize=tick_label_size); panel += 1
+        for axis in axes_norm[-1, :]: axis.set_xlabel(normalized_xlabel, fontsize=axes_label_size)
+        for axis in axes_norm[:, 0]: axis.set_ylabel(ylabel, fontsize=axes_label_size)
         cbar = fig_norm.colorbar(image, ax=axes_norm, **{"fraction": .025, "pad": .02,
                                  **dict(normalized_colorbar_kwargs or {})})
-        cbar.set_label(colorbar_label)
+        cbar.set_label(colorbar_label, fontsize=colorbar_label_size)
+        cbar.ax.tick_params(labelsize=normalized_colorbar_tick_size, width=1.0, length=4)
         if normalized_subplot_adjust: fig_norm.subplots_adjust(**normalized_subplot_adjust)
 
         absolute_rank = max(ranks); x_edges = np.arange(absolute_rank + 1, dtype=float)
@@ -623,15 +634,19 @@ def plot_spectrum_robustness_heatmap(
         for panel, (axis, gauge) in enumerate(zip(axes_abs, gauges)):
             image = axis.pcolormesh(x_edges, y_edges, matrices[(gauge, absolute_rank)], **mesh_options)
             axis.set_title(absolute_title_template.format(
-                panel=chr(ord("a") + panel), gauge=gauge_labels[gauge], rank=absolute_rank), pad=title_pad)
+                panel=chr(ord("a") + panel), gauge=gauge_labels[gauge], rank=absolute_rank),
+                pad=title_pad, fontsize=absolute_title_size)
             axis.set_xticks(absolute_xticks); axis.set_yticks(alpha_ticks); axis.set_yticklabels(alpha_ticklabels)
             axis.set_xlim(*absolute_limits); axis.set_ylim(*(alpha_ylim or (y_edges[0], y_edges[-1])))
-            axis.set_xlabel(absolute_xlabel); add_highlight(axis, absolute_limits[0], absolute_limits[1])
-            axis.tick_params(direction="out", width=.8, length=3)
-        axes_abs[0].set_ylabel(ylabel)
+            axis.set_xlabel(absolute_xlabel, fontsize=absolute_axes_label_size)
+            add_highlight(axis, absolute_limits[0], absolute_limits[1])
+            axis.tick_params(direction="out", width=1.0, length=4,
+                             labelsize=absolute_tick_label_size)
+        axes_abs[0].set_ylabel(ylabel, fontsize=absolute_axes_label_size)
         cbar = fig_abs.colorbar(image, ax=axes_abs, **{"fraction": .035, "pad": .025,
                                 **dict(absolute_colorbar_kwargs or {})})
-        cbar.set_label(colorbar_label)
+        cbar.set_label(colorbar_label, fontsize=colorbar_label_size)
+        cbar.ax.tick_params(labelsize=absolute_colorbar_tick_size, width=1.0, length=4)
         if absolute_subplot_adjust: fig_abs.subplots_adjust(**absolute_subplot_adjust)
         normalized_paths = _save_figure_formats(fig_norm, target / normalized_output_name,
                                                 save_formats, dpi, savefig_kwargs)

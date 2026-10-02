@@ -1,0 +1,187 @@
+{
+  "environment": {
+    "python": "3.10.21 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:35:39) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "cpu": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+    "logical_cpus": 16,
+    "torch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "gpus": [
+      "NVIDIA GeForce RTX 5080"
+    ],
+    "source_sha256": {
+      "test\\rbla+\\server_memory\\benchmark.py": "60ef6cedd9728070af7b1efe5c00500a0cd5220aec840ca5cfd3c8ad094c94b1",
+      "test\\rbla+\\server_memory\\runtime_profiler.py": "8477dc51f4369351a99a3bc62ea7012fb46d43a5e9796d76491e4a29db0d2ff1",
+      "test\\rbla+\\server_memory\\snapshot.py": "081445d8468b360a1fa4773231677552402045ea10f634d88430f6a4c1b51ff5",
+      "flex\\fl_algorithms\\aggregation\\methods\\_fed_aggregator_rbla.py": "a518bf4b7314065d32b1a71b4ea70068bd19a219f3998bd6eb4545f024709fad",
+      "flex\\ml_algorithms\\lora\\canonicalization.py": "b5f4d3b7aa2a844e96c143f96b2b1cd506c3b5ed4923e3f92c6364589814dd12",
+      "flex\\ml_algorithms\\lora\\rank_scale_alignment.py": "f80589ecc8e866b740e1ebc2b40d931beb72c688df0e8dcfaeed342e7a7c3d12"
+    },
+    "git_commit": "68b14cbff365e49127ea7f56cda49b793553c784",
+    "torch_build": "PyTorch built with:\n  - C++ Version: 201703\n  - MSVC 194234444\n  - Intel(R) oneAPI Math Kernel Library Version 2025.3-Product Build 20251007 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.10.2 (Git Hash f1d471933dc852f956fd05389f9313c7148783d5)\n  - OpenMP 2019\n  - LAPACK is enabled (usually provided by MKL)\n  - CPU capability usage: AVX512\n  - CUDA Runtime 12.8\n  - NVCC architecture flags: -gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90;-gencode;arch=compute_100,code=sm_100;-gencode;arch=compute_120,code=sm_120\n  - CuDNN 91.9  (built against CUDA 12.9)\n  - Magma 2.5.4\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=70d99e998b4955e0049d13a98d77ae1b14db1f45, CUDA_VERSION=12.8, CUDNN_VERSION=9.19.0, CXX_COMPILER=C:/actions-runner/_work/pytorch/pytorch/pytorch/.ci/pytorch/windows/tmp_bin/sccache-cl.exe, CXX_FLAGS=/DWIN32 /D_WINDOWS /EHsc /Zc:__cplusplus /bigobj /FS /utf-8 -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE /wd4624 /wd4068 /wd4067 /wd4267 /wd4661 /wd4717 /wd4244 /wd4804 /wd4273, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.11.0, USE_CUDA=ON, USE_CUDNN=ON, USE_CUSPARSELT=OFF, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=OFF, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n"
+  },
+  "arguments": {
+    "snapshots": [
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0000-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0009-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0049-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0100-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0000-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0009-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0049-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0100-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0000-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0009-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0049-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0100-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0000-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0009-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0049-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0100-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0000-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0009-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0049-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0100-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0000-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0009-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0049-server-input.pt",
+      "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0100-server-input.pt"
+    ],
+    "shapes": null,
+    "client_ratios": [
+      0.25,
+      0.375,
+      0.5,
+      0.625,
+      0.75,
+      1,
+      0.375,
+      0.5,
+      0.625,
+      0.875
+    ],
+    "scaling": "alpha_over_rank",
+    "methods": [
+      "rbla",
+      "rbla_plus",
+      "dense_svd"
+    ],
+    "phases": [
+      "broadcast",
+      "server_step"
+    ],
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 1,
+    "warmup": 5,
+    "repeats": 20,
+    "output_dir": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory",
+    "plot": true,
+    "worker_input": null,
+    "worker_output": null,
+    "method": null,
+    "phase": null
+  },
+  "boundary": "Inputs already resident. Output copies and, for dense_svd, dense B@A construction are included. Excludes file IO, serialization, device transfers, model load/apply, evaluation, client caches and transport.",
+  "server_step": "Raw uploads -> method-specific upload scaling -> existing RBLA aggregation -> redistribution/downlink scaling -> every requested client state. This is the full server TENSOR step, not end-to-end networking/model staging.",
+  "dense_reference": "RBLA+ scaling/aggregation with dense economy FULL SVD replacing compact QR/core-SVD. Not FLEX sp aggregation and not an optimized truncated solver.",
+  "memory": "Fresh child per input/method/phase. Cold and warm memory runs separate from synchronized warm timing. CPU RSS sampled every 1ms, may miss brief peaks; CUDA allocator allocated/reserved peaks are separate. Increment = peak minus phase baseline.",
+  "inputs": [
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0000-server-input.pt",
+      "sha256": "9a8be33bf53ab37f1418e9a38991e55e71a0dcecdee18c1f5425bf58782cca3f"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0009-server-input.pt",
+      "sha256": "d5266830728eb964720dbb339fb20af38524a19157f9ff754861409ae9a08e9d"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0049-server-input.pt",
+      "sha256": "a9a22c08a673a3fdd1af8572e6e61640c32a660cbcb35cf801fbe268eb25435e"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0100-server-input.pt",
+      "sha256": "edfb5de6598400781b7b901966854854dfe3078a3893bf94003b5f27cc120131"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0000-server-input.pt",
+      "sha256": "3f4e8dfa523fc57d2a622bfee1b110ff28f39e0384589b6dadb55d27841d02d3"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0009-server-input.pt",
+      "sha256": "7f498ae2771ee1113fc21afea7ed556ec9aea0b1b9e46a83b63435ceb49f0e06"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0049-server-input.pt",
+      "sha256": "19389f4dd698cd5718a2361d46798d27fef4b84c6854ede5ed87385b756feaae"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0100-server-input.pt",
+      "sha256": "3d5690521f9fbba0c86564b380a771bb1c046b9395131e6485629ef56d41bf0d"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0000-server-input.pt",
+      "sha256": "890d96e59536862c030ff34daeb7c8895312a1a5d6a4b45d810a99d6ae4879e4"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0009-server-input.pt",
+      "sha256": "a43cdf5fb4bd1d08b9cb679a934114c35c8bde85ff0554bea1f74469dd6746d6"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0049-server-input.pt",
+      "sha256": "5e5c5080f5ef4fb7f212529c87ba5c4a32a2f87597efd2a3661f88c9b8e8eab6"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0100-server-input.pt",
+      "sha256": "5c40bc8f3cc2dba550634652c5bfeba5ecabc0509fc22c945547276cacf9f7af"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0000-server-input.pt",
+      "sha256": "105b63f0cc6ab64a718cac7cb00b20c375ef7c1dc3dcb412a2076b790bd153b1"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0009-server-input.pt",
+      "sha256": "878c15abd3c73bfb0242934d0c2de80ea3d29d500a39891b347c18f25902df66"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0049-server-input.pt",
+      "sha256": "1e91c34763ac9487d33f7594a627273a5119f52f25ccb657191e271d715959dc"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0100-server-input.pt",
+      "sha256": "493925135ed7975341ff1e05878438ee58eff9f4f2e86e3372dad93ff5e08d3e"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0000-server-input.pt",
+      "sha256": "d1e46962c5b18f2083ca08d6563fcc4e8bb3bdfa79d0bb7868f5b85a25d1de22"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0009-server-input.pt",
+      "sha256": "97f9dba135fc68ce7108a8f5ab71a5cde5c0d341732001f7a85ed5e3b68b098c"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0049-server-input.pt",
+      "sha256": "b09708271fd1ad809aa28b8555f9ec64e0421ad364aebca4a9b458170dd6f2db"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0100-server-input.pt",
+      "sha256": "a9623a70cddc3493162e58dcd5b93a2e6cb038ecfa4d586c5783f393ac10f0dd"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0000-server-input.pt",
+      "sha256": "893250c596fd56bb7b24cfdad811417e15686fc32e43e2ed2437b1ee7a8657c1"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0009-server-input.pt",
+      "sha256": "fddc9a7f69ed38234dba457ad67c6dd2de4986a214e9d68b754317667b0d0c84"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0049-server-input.pt",
+      "sha256": "2f1c9d460c6d6e77daa1869945fd05c9120b701db8ac8007bc5d68cf9cae37f3"
+    },
+    {
+      "path": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0100-server-input.pt",
+      "sha256": "99e2b31a58080b8c53a757779877cec15880c6de3144fe0c1f67ef8ac54cb756"
+    }
+  ]
+}

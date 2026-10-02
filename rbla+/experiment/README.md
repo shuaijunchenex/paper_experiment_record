@@ -12,6 +12,7 @@
 - `06_nlp_dirichlet_rank_correct/`：TinyBERT 文本实验，包含结果、配置、依赖、日志和汇总。
 - `07_figures/`：论文补充图、绘图 Notebook 与相关绘图数据。
 - `08_experiment_results/`: complete archive of all 690 CSV files, including raw and classified copies, per-run metrics, and grouped summaries.
+- `09_rank_scale_results/`：从源目录补充归档的 20 份 RBLA+ RankScale CSV，覆盖 9 个数据集；18 份完整训练、2 份未完成记录，附 SHA-256 清单及与不带 scaling 版本的最高 ACC 对比。
 - `manifest.csv`：正式归档 CSV 的分类、来源、相对路径与 SHA-256。
 
 ## 文件数量
@@ -21,6 +22,7 @@
 - NLP 失败/已替代记录：2 个 CSV。
 - 当前合计：238 个 CSV。
 - Complete result archive: 690 source CSV files under `08_experiment_results/`; 688 contain complete metrics and 2 have no metrics table.
+- RankScale 补充归档：`09_rank_scale_results/` 中另有 20 个 CSV；历史 `08_experiment_results/` 快照保持原样。
 
 ## NLP 覆盖情况
 

@@ -1,0 +1,42 @@
+{
+  "all_checks_passed": true,
+  "pdf_pages": 1,
+  "pdf_dimensions_points": [
+    864.0,
+    378.0
+  ],
+  "figure_layout": "one row, three panels, spanning both IEEE text columns",
+  "panel_order": [
+    "a",
+    "c",
+    "b"
+  ],
+  "legend_mode": "per-panel",
+  "physical_size_inches": [
+    12.0,
+    5.25
+  ],
+  "fonts": [
+    {
+      "name": "CZRBLR+STIXGeneral-Regular",
+      "embedded": true,
+      "type": "Type0"
+    },
+    {
+      "name": "FTXWZA+STIXGeneral-Italic",
+      "embedded": true,
+      "type": "Type0"
+    },
+    {
+      "name": "FHXFSG+TimesNewRomanPSMT",
+      "embedded": true,
+      "type": "Type0"
+    }
+  ],
+  "all_text_within_page": true,
+  "renderer": "PyMuPDF",
+  "output_format": "pdf only",
+  "top_titles_removed": true,
+  "descriptive_footer_removed": true,
+  "visual_review": "Final PDF was visually inspected; raster QA previews are temporary and are not delivered."
+}

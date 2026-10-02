@@ -1,0 +1,15 @@
+{
+  "excess_definition": "(E_method - E_opt) / ||X||_F; unsquared Frobenius norms",
+  "target_frobenius_norm": 1.0,
+  "dense_singular_value_norm": 1.0000000000000002,
+  "archived_method_denominator": "||X||_F + float64 machine epsilon",
+  "archived_optimum_denominator": "||svd(X)||_2 + float64 machine epsilon",
+  "method_multiplier": 1.0000000000000002,
+  "optimum_multiplier": 1.0000000000000004,
+  "archived_optimum_reconstruction_gap": 2.7755575615628914e-17,
+  "maximum_excess_change": 9.094947017729282e-13,
+  "maximum_sp_excess": 6.938893903907228e-17,
+  "raw_source_csv_unchanged": true,
+  "new_experiments_run": true,
+  "fixed_target_reconstructed_for_normalization": true
+}

@@ -1,0 +1,4448 @@
+{
+  "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0100-server-input.pt",
+  "input_sha256": "3d5690521f9fbba0c86564b380a771bb1c046b9395131e6485629ef56d41bf0d",
+  "input_kind": "training_checkpoint",
+  "dataset": "cifar10",
+  "driver_method": "rbla_plus_rank_scale",
+  "round": 100,
+  "method": "rbla_plus",
+  "phase": "server_step",
+  "device": "cpu",
+  "dtype": "float32",
+  "threads": 1,
+  "warmup": 5,
+  "repeats": 20,
+  "median_seconds": 0.04111140000168234,
+  "iqr_seconds": 0.0017026500063366257,
+  "min_seconds": 0.039764800007105805,
+  "max_seconds": 0.04261869999754708,
+  "raw_seconds": [
+    0.041139599998132326,
+    0.04059560000314377,
+    0.04122600000118837,
+    0.04061619999993127,
+    0.042325499991420656,
+    0.041882699995767325,
+    0.04140000000188593,
+    0.04261869999754708,
+    0.04040280000481289,
+    0.039764800007105805,
+    0.04200919999857433,
+    0.04003630000806879,
+    0.04024189998744987,
+    0.042070800001965836,
+    0.040120999998180196,
+    0.03991009999299422,
+    0.04011760000139475,
+    0.042347999988123775,
+    0.041083200005232356,
+    0.041307099992991425
+  ],
+  "resident_tensor_storage_bytes": 21927696,
+  "broadcast_output_bytes": 21925136,
+  "cold_phase": "server_step",
+  "cold_rss_start_bytes": 533803008,
+  "cold_rss_end_bytes": 585207808,
+  "cold_rss_delta_bytes": 51404800,
+  "cold_cuda_allocated_start_bytes": null,
+  "cold_cuda_allocated_end_bytes": null,
+  "cold_cuda_peak_allocated_bytes": null,
+  "cold_cuda_reserved_end_bytes": null,
+  "cold_cuda_peak_reserved_bytes": null,
+  "cold_rss_sampled_peak_bytes": 585207808,
+  "cold_rss_peak_incremental_bytes": 51404800,
+  "cold_cuda_reserved_start_bytes": null,
+  "cold_cuda_peak_allocated_increment_bytes": null,
+  "cold_cuda_peak_reserved_increment_bytes": null,
+  "cold_sampling_interval_seconds": 0.001,
+  "cold_elapsed_seconds": 0.0477627000072971,
+  "warm_phase": "server_step",
+  "warm_rss_start_bytes": 587288576,
+  "warm_rss_end_bytes": 587255808,
+  "warm_rss_delta_bytes": -32768,
+  "warm_cuda_allocated_start_bytes": null,
+  "warm_cuda_allocated_end_bytes": null,
+  "warm_cuda_peak_allocated_bytes": null,
+  "warm_cuda_reserved_end_bytes": null,
+  "warm_cuda_peak_reserved_bytes": null,
+  "warm_rss_sampled_peak_bytes": 587354112,
+  "warm_rss_peak_incremental_bytes": 65536,
+  "warm_cuda_reserved_start_bytes": null,
+  "warm_cuda_peak_allocated_increment_bytes": null,
+  "warm_cuda_peak_reserved_increment_bytes": null,
+  "warm_sampling_interval_seconds": 0.001,
+  "warm_elapsed_seconds": 0.043084899996756576,
+  "input_metadata": {
+    "format": "rbla_server_input_v1",
+    "input_kind": "training_checkpoint",
+    "driver_method": "rbla_plus_rank_scale",
+    "round": 100,
+    "update_index": 101,
+    "dataset": "cifar10",
+    "model": "cifar_lora_cnn",
+    "server_profile": {
+      "conv1a": {
+        "prefix": "conv1a",
+        "key_A": "conv1a.lora_A",
+        "key_B": "conv1a.lora_B",
+        "rank": 64,
+        "alpha": 64.0,
+        "scaling": 1.0
+      },
+      "conv1b": {
+        "prefix": "conv1b",
+        "key_A": "conv1b.lora_A",
+        "key_B": "conv1b.lora_B",
+        "rank": 64,
+        "alpha": 64.0,
+        "scaling": 1.0
+      },
+      "conv2a": {
+        "prefix": "conv2a",
+        "key_A": "conv2a.lora_A",
+        "key_B": "conv2a.lora_B",
+        "rank": 64,
+        "alpha": 64.0,
+        "scaling": 1.0
+      },
+      "conv2b": {
+        "prefix": "conv2b",
+        "key_A": "conv2b.lora_A",
+        "key_B": "conv2b.lora_B",
+        "rank": 64,
+        "alpha": 64.0,
+        "scaling": 1.0
+      },
+      "conv3a": {
+        "prefix": "conv3a",
+        "key_A": "conv3a.lora_A",
+        "key_B": "conv3a.lora_B",
+        "rank": 64,
+        "alpha": 64.0,
+        "scaling": 1.0
+      },
+      "conv3b": {
+        "prefix": "conv3b",
+        "key_A": "conv3b.lora_A",
+        "key_B": "conv3b.lora_B",
+        "rank": 64,
+        "alpha": 64.0,
+        "scaling": 1.0
+      },
+      "fc": {
+        "prefix": "fc",
+        "key_A": "fc.lora_A",
+        "key_B": "fc.lora_B",
+        "rank": 16,
+        "alpha": 16.0,
+        "scaling": 1.0
+      }
+    },
+    "client_profiles": {
+      "client.1": {
+        "conv1a": {
+          "prefix": "conv1a",
+          "key_A": "conv1a.lora_A",
+          "key_B": "conv1a.lora_B",
+          "rank": 16,
+          "alpha": 16.0,
+          "scaling": 1.0
+        },
+        "conv1b": {
+          "prefix": "conv1b",
+          "key_A": "conv1b.lora_A",
+          "key_B": "conv1b.lora_B",
+          "rank": 16,
+          "alpha": 16.0,
+          "scaling": 1.0
+        },
+        "conv2a": {
+          "prefix": "conv2a",
+          "key_A": "conv2a.lora_A",
+          "key_B": "conv2a.lora_B",
+          "rank": 16,
+          "alpha": 16.0,
+          "scaling": 1.0
+        },
+        "conv2b": {
+          "prefix": "conv2b",
+          "key_A": "conv2b.lora_A",
+          "key_B": "conv2b.lora_B",
+          "rank": 16,
+          "alpha": 16.0,
+          "scaling": 1.0
+        },
+        "conv3a": {
+          "prefix": "conv3a",
+          "key_A": "conv3a.lora_A",
+          "key_B": "conv3a.lora_B",
+          "rank": 16,
+          "alpha": 16.0,
+          "scaling": 1.0
+        },
+        "conv3b": {
+          "prefix": "conv3b",
+          "key_A": "conv3b.lora_A",
+          "key_B": "conv3b.lora_B",
+          "rank": 16,
+          "alpha": 16.0,
+          "scaling": 1.0
+        },
+        "fc": {
+          "prefix": "fc",
+          "key_A": "fc.lora_A",
+          "key_B": "fc.lora_B",
+          "rank": 4,
+          "alpha": 4.0,
+          "scaling": 1.0
+        }
+      },
+      "client.2": {
+        "conv1a": {
+          "prefix": "conv1a",
+          "key_A": "conv1a.lora_A",
+          "key_B": "conv1a.lora_B",
+          "rank": 56,
+          "alpha": 56.0,
+          "scaling": 1.0
+        },
+        "conv1b": {
+          "prefix": "conv1b",
+          "key_A": "conv1b.lora_A",
+          "key_B": "conv1b.lora_B",
+          "rank": 56,
+          "alpha": 56.0,
+          "scaling": 1.0
+        },
+        "conv2a": {
+          "prefix": "conv2a",
+          "key_A": "conv2a.lora_A",
+          "key_B": "conv2a.lora_B",
+          "rank": 56,
+          "alpha": 56.0,
+          "scaling": 1.0
+        },
+        "conv2b": {
+          "prefix": "conv2b",
+          "key_A": "conv2b.lora_A",
+          "key_B": "conv2b.lora_B",
+          "rank": 56,
+          "alpha": 56.0,
+          "scaling": 1.0
+        },
+        "conv3a": {
+          "prefix": "conv3a",
+          "key_A": "conv3a.lora_A",
+          "key_B": "conv3a.lora_B",
+          "rank": 56,
+          "alpha": 56.0,
+          "scaling": 1.0
+        },
+        "conv3b": {
+          "prefix": "conv3b",
+          "key_A": "conv3b.lora_A",
+          "key_B": "conv3b.lora_B",
+          "rank": 56,
+          "alpha": 56.0,
+          "scaling": 1.0
+        },
+        "fc": {
+          "prefix": "fc",
+          "key_A": "fc.lora_A",
+          "key_B": "fc.lora_B",
+          "rank": 14,
+          "alpha": 14.0,
+          "scaling": 1.0
+        }
+      },
+      "client.3": {
+        "conv1a": {
+          "prefix": "conv1a",
+          "key_A": "conv1a.lora_A",
+          "key_B": "conv1a.lora_B",
+          "rank": 30,
+          "alpha": 30.0,
+          "scaling": 1.0
+        },
+        "conv1b": {
+          "prefix": "conv1b",
+          "key_A": "conv1b.lora_A",
+          "key_B": "conv1b.lora_B",
+          "rank": 30,
+          "alpha": 30.0,
+          "scaling": 1.0
+        },
+        "conv2a": {
+          "prefix": "conv2a",
+          "key_A": "conv2a.lora_A",
+          "key_B": "conv2a.lora_B",
+          "rank": 30,
+          "alpha": 30.0,
+          "scaling": 1.0
+        },
+        "conv2b": {
+          "prefix": "conv2b",
+          "key_A": "conv2b.lora_A",
+          "key_B": "conv2b.lora_B",
+          "rank": 30,
+          "alpha": 30.0,
+          "scaling": 1.0
+        },
+        "conv3a": {
+          "prefix": "conv3a",
+          "key_A": "conv3a.lora_A",
+          "key_B": "conv3a.lora_B",
+          "rank": 30,
+          "alpha": 30.0,
+          "scaling": 1.0
+        },
+        "conv3b": {
+          "prefix": "conv3b",
+          "key_A": "conv3b.lora_A",
+          "key_B": "conv3b.lora_B",
+          "rank": 30,
+          "alpha": 30.0,
+          "scaling": 1.0
+        },
+        "fc": {
+          "prefix": "fc",
+          "key_A": "fc.lora_A",
+          "key_B": "fc.lora_B",
+          "rank": 8,
+          "alpha": 8.0,
+          "scaling": 1.0
+        }
+      },
+      "client.4": {
+        "conv1a": {
+          "prefix": "conv1a",
+          "key_A": "conv1a.lora_A",
+          "key_B": "conv1a.lora_B",
+          "rank": 42,
+          "alpha": 42.0,
+          "scaling": 1.0
+        },
+        "conv1b": {
+          "prefix": "conv1b",
+          "key_A": "conv1b.lora_A",
+          "key_B": "conv1b.lora_B",
+          "rank": 42,
+          "alpha": 42.0,
+          "scaling": 1.0
+        },
+        "conv2a": {
+          "prefix": "conv2a",
+          "key_A": "conv2a.lora_A",
+          "key_B": "conv2a.lora_B",
+          "rank": 42,
+          "alpha": 42.0,
+          "scaling": 1.0
+        },
+        "conv2b": {
+          "prefix": "conv2b",
+          "key_A": "conv2b.lora_A",
+          "key_B": "conv2b.lora_B",
+          "rank": 42,
+          "alpha": 42.0,
+          "scaling": 1.0
+        },
+        "conv3a": {
+          "prefix": "conv3a",
+          "key_A": "conv3a.lora_A",
+          "key_B": "conv3a.lora_B",
+          "rank": 42,
+          "alpha": 42.0,
+          "scaling": 1.0
+        },
+        "conv3b": {
+          "prefix": "conv3b",
+          "key_A": "conv3b.lora_A",
+          "key_B": "conv3b.lora_B",
+          "rank": 42,
+          "alpha": 42.0,
+          "scaling": 1.0
+        },
+        "fc": {
+          "prefix": "fc",
+          "key_A": "fc.lora_A",
+          "key_B": "fc.lora_B",
+          "rank": 11,
+          "alpha": 11.0,
+          "scaling": 1.0
+        }
+      },
+      "client.5": {
+        "conv1a": {
+          "prefix": "conv1a",
+          "key_A": "conv1a.lora_A",
+          "key_B": "conv1a.lora_B",
+          "rank": 64,
+          "alpha": 64.0,
+          "scaling": 1.0
+        },
+        "conv1b": {
+          "prefix": "conv1b",
+          "key_A": "conv1b.lora_A",
+          "key_B": "conv1b.lora_B",
+          "rank": 64,
+          "alpha": 64.0,
+          "scaling": 1.0
+        },
+        "conv2a": {
+          "prefix": "conv2a",
+          "key_A": "conv2a.lora_A",
+          "key_B": "conv2a.lora_B",
+          "rank": 64,
+          "alpha": 64.0,
+          "scaling": 1.0
+        },
+        "conv2b": {
+          "prefix": "conv2b",
+          "key_A": "conv2b.lora_A",
+          "key_B": "conv2b.lora_B",
+          "rank": 64,
+          "alpha": 64.0,
+          "scaling": 1.0
+        },
+        "conv3a": {
+          "prefix": "conv3a",
+          "key_A": "conv3a.lora_A",
+          "key_B": "conv3a.lora_B",
+          "rank": 64,
+          "alpha": 64.0,
+          "scaling": 1.0
+        },
+        "conv3b": {
+          "prefix": "conv3b",
+          "key_A": "conv3b.lora_A",
+          "key_B": "conv3b.lora_B",
+          "rank": 64,
+          "alpha": 64.0,
+          "scaling": 1.0
+        },
+        "fc": {
+          "prefix": "fc",
+          "key_A": "fc.lora_A",
+          "key_B": "fc.lora_B",
+          "rank": 16,
+          "alpha": 16.0,
+          "scaling": 1.0
+        }
+      },
+      "client.6": {
+        "conv1a": {
+          "prefix": "conv1a",
+          "key_A": "conv1a.lora_A",
+          "key_B": "conv1a.lora_B",
+          "rank": 21,
+          "alpha": 21.0,
+          "scaling": 1.0
+        },
+        "conv1b": {
+          "prefix": "conv1b",
+          "key_A": "conv1b.lora_A",
+          "key_B": "conv1b.lora_B",
+          "rank": 21,
+          "alpha": 21.0,
+          "scaling": 1.0
+        },
+        "conv2a": {
+          "prefix": "conv2a",
+          "key_A": "conv2a.lora_A",
+          "key_B": "conv2a.lora_B",
+          "rank": 21,
+          "alpha": 21.0,
+          "scaling": 1.0
+        },
+        "conv2b": {
+          "prefix": "conv2b",
+          "key_A": "conv2b.lora_A",
+          "key_B": "conv2b.lora_B",
+          "rank": 21,
+          "alpha": 21.0,
+          "scaling": 1.0
+        },
+        "conv3a": {
+          "prefix": "conv3a",
+          "key_A": "conv3a.lora_A",
+          "key_B": "conv3a.lora_B",
+          "rank": 21,
+          "alpha": 21.0,
+          "scaling": 1.0
+        },
+        "conv3b": {
+          "prefix": "conv3b",
+          "key_A": "conv3b.lora_A",
+          "key_B": "conv3b.lora_B",
+          "rank": 21,
+          "alpha": 21.0,
+          "scaling": 1.0
+        },
+        "fc": {
+          "prefix": "fc",
+          "key_A": "fc.lora_A",
+          "key_B": "fc.lora_B",
+          "rank": 5,
+          "alpha": 5.0,
+          "scaling": 1.0
+        }
+      },
+      "client.7": {
+        "conv1a": {
+          "prefix": "conv1a",
+          "key_A": "conv1a.lora_A",
+          "key_B": "conv1a.lora_B",
+          "rank": 49,
+          "alpha": 49.0,
+          "scaling": 1.0
+        },
+        "conv1b": {
+          "prefix": "conv1b",
+          "key_A": "conv1b.lora_A",
+          "key_B": "conv1b.lora_B",
+          "rank": 49,
+          "alpha": 49.0,
+          "scaling": 1.0
+        },
+        "conv2a": {
+          "prefix": "conv2a",
+          "key_A": "conv2a.lora_A",
+          "key_B": "conv2a.lora_B",
+          "rank": 49,
+          "alpha": 49.0,
+          "scaling": 1.0
+        },
+        "conv2b": {
+          "prefix": "conv2b",
+          "key_A": "conv2b.lora_A",
+          "key_B": "conv2b.lora_B",
+          "rank": 49,
+          "alpha": 49.0,
+          "scaling": 1.0
+        },
+        "conv3a": {
+          "prefix": "conv3a",
+          "key_A": "conv3a.lora_A",
+          "key_B": "conv3a.lora_B",
+          "rank": 49,
+          "alpha": 49.0,
+          "scaling": 1.0
+        },
+        "conv3b": {
+          "prefix": "conv3b",
+          "key_A": "conv3b.lora_A",
+          "key_B": "conv3b.lora_B",
+          "rank": 49,
+          "alpha": 49.0,
+          "scaling": 1.0
+        },
+        "fc": {
+          "prefix": "fc",
+          "key_A": "fc.lora_A",
+          "key_B": "fc.lora_B",
+          "rank": 12,
+          "alpha": 12.0,
+          "scaling": 1.0
+        }
+      },
+      "client.8": {
+        "conv1a": {
+          "prefix": "conv1a",
+          "key_A": "conv1a.lora_A",
+          "key_B": "conv1a.lora_B",
+          "rank": 18,
+          "alpha": 18.0,
+          "scaling": 1.0
+        },
+        "conv1b": {
+          "prefix": "conv1b",
+          "key_A": "conv1b.lora_A",
+          "key_B": "conv1b.lora_B",
+          "rank": 18,
+          "alpha": 18.0,
+          "scaling": 1.0
+        },
+        "conv2a": {
+          "prefix": "conv2a",
+          "key_A": "conv2a.lora_A",
+          "key_B": "conv2a.lora_B",
+          "rank": 18,
+          "alpha": 18.0,
+          "scaling": 1.0
+        },
+        "conv2b": {
+          "prefix": "conv2b",
+          "key_A": "conv2b.lora_A",
+          "key_B": "conv2b.lora_B",
+          "rank": 18,
+          "alpha": 18.0,
+          "scaling": 1.0
+        },
+        "conv3a": {
+          "prefix": "conv3a",
+          "key_A": "conv3a.lora_A",
+          "key_B": "conv3a.lora_B",
+          "rank": 18,
+          "alpha": 18.0,
+          "scaling": 1.0
+        },
+        "conv3b": {
+          "prefix": "conv3b",
+          "key_A": "conv3b.lora_A",
+          "key_B": "conv3b.lora_B",
+          "rank": 18,
+          "alpha": 18.0,
+          "scaling": 1.0
+        },
+        "fc": {
+          "prefix": "fc",
+          "key_A": "fc.lora_A",
+          "key_B": "fc.lora_B",
+          "rank": 4,
+          "alpha": 4.0,
+          "scaling": 1.0
+        }
+      },
+      "client.9": {
+        "conv1a": {
+          "prefix": "conv1a",
+          "key_A": "conv1a.lora_A",
+          "key_B": "conv1a.lora_B",
+          "rank": 30,
+          "alpha": 30.0,
+          "scaling": 1.0
+        },
+        "conv1b": {
+          "prefix": "conv1b",
+          "key_A": "conv1b.lora_A",
+          "key_B": "conv1b.lora_B",
+          "rank": 30,
+          "alpha": 30.0,
+          "scaling": 1.0
+        },
+        "conv2a": {
+          "prefix": "conv2a",
+          "key_A": "conv2a.lora_A",
+          "key_B": "conv2a.lora_B",
+          "rank": 30,
+          "alpha": 30.0,
+          "scaling": 1.0
+        },
+        "conv2b": {
+          "prefix": "conv2b",
+          "key_A": "conv2b.lora_A",
+          "key_B": "conv2b.lora_B",
+          "rank": 30,
+          "alpha": 30.0,
+          "scaling": 1.0
+        },
+        "conv3a": {
+          "prefix": "conv3a",
+          "key_A": "conv3a.lora_A",
+          "key_B": "conv3a.lora_B",
+          "rank": 30,
+          "alpha": 30.0,
+          "scaling": 1.0
+        },
+        "conv3b": {
+          "prefix": "conv3b",
+          "key_A": "conv3b.lora_A",
+          "key_B": "conv3b.lora_B",
+          "rank": 30,
+          "alpha": 30.0,
+          "scaling": 1.0
+        },
+        "fc": {
+          "prefix": "fc",
+          "key_A": "fc.lora_A",
+          "key_B": "fc.lora_B",
+          "rank": 8,
+          "alpha": 8.0,
+          "scaling": 1.0
+        }
+      },
+      "client.10": {
+        "conv1a": {
+          "prefix": "conv1a",
+          "key_A": "conv1a.lora_A",
+          "key_B": "conv1a.lora_B",
+          "rank": 44,
+          "alpha": 44.0,
+          "scaling": 1.0
+        },
+        "conv1b": {
+          "prefix": "conv1b",
+          "key_A": "conv1b.lora_A",
+          "key_B": "conv1b.lora_B",
+          "rank": 44,
+          "alpha": 44.0,
+          "scaling": 1.0
+        },
+        "conv2a": {
+          "prefix": "conv2a",
+          "key_A": "conv2a.lora_A",
+          "key_B": "conv2a.lora_B",
+          "rank": 44,
+          "alpha": 44.0,
+          "scaling": 1.0
+        },
+        "conv2b": {
+          "prefix": "conv2b",
+          "key_A": "conv2b.lora_A",
+          "key_B": "conv2b.lora_B",
+          "rank": 44,
+          "alpha": 44.0,
+          "scaling": 1.0
+        },
+        "conv3a": {
+          "prefix": "conv3a",
+          "key_A": "conv3a.lora_A",
+          "key_B": "conv3a.lora_B",
+          "rank": 44,
+          "alpha": 44.0,
+          "scaling": 1.0
+        },
+        "conv3b": {
+          "prefix": "conv3b",
+          "key_A": "conv3b.lora_A",
+          "key_B": "conv3b.lora_B",
+          "rank": 44,
+          "alpha": 44.0,
+          "scaling": 1.0
+        },
+        "fc": {
+          "prefix": "fc",
+          "key_A": "fc.lora_A",
+          "key_B": "fc.lora_B",
+          "rank": 11,
+          "alpha": 11.0,
+          "scaling": 1.0
+        }
+      }
+    },
+    "client_shapes": {
+      "client.1": {
+        "conv1a.weight": [
+          [
+            32,
+            3,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_A": [
+          [
+            48,
+            9
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_B": [
+          [
+            96,
+            48
+          ],
+          "torch.float32"
+        ],
+        "bn1a.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv1b.weight": [
+          [
+            32,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_A": [
+          [
+            48,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_B": [
+          [
+            96,
+            48
+          ],
+          "torch.float32"
+        ],
+        "bn1b.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2a.weight": [
+          [
+            64,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_A": [
+          [
+            48,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_B": [
+          [
+            192,
+            48
+          ],
+          "torch.float32"
+        ],
+        "bn2a.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2b.weight": [
+          [
+            64,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_A": [
+          [
+            48,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_B": [
+          [
+            192,
+            48
+          ],
+          "torch.float32"
+        ],
+        "bn2b.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3a.weight": [
+          [
+            128,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_A": [
+          [
+            48,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_B": [
+          [
+            384,
+            48
+          ],
+          "torch.float32"
+        ],
+        "bn3a.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3b.weight": [
+          [
+            128,
+            128,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_A": [
+          [
+            48,
+            384
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_B": [
+          [
+            384,
+            48
+          ],
+          "torch.float32"
+        ],
+        "bn3b.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "fc.weight": [
+          [
+            10,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.bias": [
+          [
+            10
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_A": [
+          [
+            4,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_B": [
+          [
+            10,
+            4
+          ],
+          "torch.float32"
+        ]
+      },
+      "client.2": {
+        "conv1a.weight": [
+          [
+            32,
+            3,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_A": [
+          [
+            168,
+            9
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_B": [
+          [
+            96,
+            168
+          ],
+          "torch.float32"
+        ],
+        "bn1a.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv1b.weight": [
+          [
+            32,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_A": [
+          [
+            168,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_B": [
+          [
+            96,
+            168
+          ],
+          "torch.float32"
+        ],
+        "bn1b.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2a.weight": [
+          [
+            64,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_A": [
+          [
+            168,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_B": [
+          [
+            192,
+            168
+          ],
+          "torch.float32"
+        ],
+        "bn2a.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2b.weight": [
+          [
+            64,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_A": [
+          [
+            168,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_B": [
+          [
+            192,
+            168
+          ],
+          "torch.float32"
+        ],
+        "bn2b.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3a.weight": [
+          [
+            128,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_A": [
+          [
+            168,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_B": [
+          [
+            384,
+            168
+          ],
+          "torch.float32"
+        ],
+        "bn3a.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3b.weight": [
+          [
+            128,
+            128,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_A": [
+          [
+            168,
+            384
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_B": [
+          [
+            384,
+            168
+          ],
+          "torch.float32"
+        ],
+        "bn3b.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "fc.weight": [
+          [
+            10,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.bias": [
+          [
+            10
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_A": [
+          [
+            14,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_B": [
+          [
+            10,
+            14
+          ],
+          "torch.float32"
+        ]
+      },
+      "client.3": {
+        "conv1a.weight": [
+          [
+            32,
+            3,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_A": [
+          [
+            90,
+            9
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_B": [
+          [
+            96,
+            90
+          ],
+          "torch.float32"
+        ],
+        "bn1a.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv1b.weight": [
+          [
+            32,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_A": [
+          [
+            90,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_B": [
+          [
+            96,
+            90
+          ],
+          "torch.float32"
+        ],
+        "bn1b.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2a.weight": [
+          [
+            64,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_A": [
+          [
+            90,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_B": [
+          [
+            192,
+            90
+          ],
+          "torch.float32"
+        ],
+        "bn2a.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2b.weight": [
+          [
+            64,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_A": [
+          [
+            90,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_B": [
+          [
+            192,
+            90
+          ],
+          "torch.float32"
+        ],
+        "bn2b.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3a.weight": [
+          [
+            128,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_A": [
+          [
+            90,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_B": [
+          [
+            384,
+            90
+          ],
+          "torch.float32"
+        ],
+        "bn3a.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3b.weight": [
+          [
+            128,
+            128,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_A": [
+          [
+            90,
+            384
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_B": [
+          [
+            384,
+            90
+          ],
+          "torch.float32"
+        ],
+        "bn3b.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "fc.weight": [
+          [
+            10,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.bias": [
+          [
+            10
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_A": [
+          [
+            8,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_B": [
+          [
+            10,
+            8
+          ],
+          "torch.float32"
+        ]
+      },
+      "client.4": {
+        "conv1a.weight": [
+          [
+            32,
+            3,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_A": [
+          [
+            126,
+            9
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_B": [
+          [
+            96,
+            126
+          ],
+          "torch.float32"
+        ],
+        "bn1a.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv1b.weight": [
+          [
+            32,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_A": [
+          [
+            126,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_B": [
+          [
+            96,
+            126
+          ],
+          "torch.float32"
+        ],
+        "bn1b.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2a.weight": [
+          [
+            64,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_A": [
+          [
+            126,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_B": [
+          [
+            192,
+            126
+          ],
+          "torch.float32"
+        ],
+        "bn2a.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2b.weight": [
+          [
+            64,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_A": [
+          [
+            126,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_B": [
+          [
+            192,
+            126
+          ],
+          "torch.float32"
+        ],
+        "bn2b.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3a.weight": [
+          [
+            128,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_A": [
+          [
+            126,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_B": [
+          [
+            384,
+            126
+          ],
+          "torch.float32"
+        ],
+        "bn3a.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3b.weight": [
+          [
+            128,
+            128,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_A": [
+          [
+            126,
+            384
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_B": [
+          [
+            384,
+            126
+          ],
+          "torch.float32"
+        ],
+        "bn3b.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "fc.weight": [
+          [
+            10,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.bias": [
+          [
+            10
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_A": [
+          [
+            11,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_B": [
+          [
+            10,
+            11
+          ],
+          "torch.float32"
+        ]
+      },
+      "client.5": {
+        "conv1a.weight": [
+          [
+            32,
+            3,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_A": [
+          [
+            192,
+            9
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_B": [
+          [
+            96,
+            192
+          ],
+          "torch.float32"
+        ],
+        "bn1a.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv1b.weight": [
+          [
+            32,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_A": [
+          [
+            192,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_B": [
+          [
+            96,
+            192
+          ],
+          "torch.float32"
+        ],
+        "bn1b.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2a.weight": [
+          [
+            64,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_A": [
+          [
+            192,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_B": [
+          [
+            192,
+            192
+          ],
+          "torch.float32"
+        ],
+        "bn2a.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2b.weight": [
+          [
+            64,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_A": [
+          [
+            192,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_B": [
+          [
+            192,
+            192
+          ],
+          "torch.float32"
+        ],
+        "bn2b.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3a.weight": [
+          [
+            128,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_A": [
+          [
+            192,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_B": [
+          [
+            384,
+            192
+          ],
+          "torch.float32"
+        ],
+        "bn3a.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3b.weight": [
+          [
+            128,
+            128,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_A": [
+          [
+            192,
+            384
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_B": [
+          [
+            384,
+            192
+          ],
+          "torch.float32"
+        ],
+        "bn3b.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "fc.weight": [
+          [
+            10,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.bias": [
+          [
+            10
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_A": [
+          [
+            16,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_B": [
+          [
+            10,
+            16
+          ],
+          "torch.float32"
+        ]
+      },
+      "client.6": {
+        "conv1a.weight": [
+          [
+            32,
+            3,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_A": [
+          [
+            63,
+            9
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_B": [
+          [
+            96,
+            63
+          ],
+          "torch.float32"
+        ],
+        "bn1a.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv1b.weight": [
+          [
+            32,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_A": [
+          [
+            63,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_B": [
+          [
+            96,
+            63
+          ],
+          "torch.float32"
+        ],
+        "bn1b.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2a.weight": [
+          [
+            64,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_A": [
+          [
+            63,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_B": [
+          [
+            192,
+            63
+          ],
+          "torch.float32"
+        ],
+        "bn2a.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2b.weight": [
+          [
+            64,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_A": [
+          [
+            63,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_B": [
+          [
+            192,
+            63
+          ],
+          "torch.float32"
+        ],
+        "bn2b.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3a.weight": [
+          [
+            128,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_A": [
+          [
+            63,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_B": [
+          [
+            384,
+            63
+          ],
+          "torch.float32"
+        ],
+        "bn3a.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3b.weight": [
+          [
+            128,
+            128,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_A": [
+          [
+            63,
+            384
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_B": [
+          [
+            384,
+            63
+          ],
+          "torch.float32"
+        ],
+        "bn3b.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "fc.weight": [
+          [
+            10,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.bias": [
+          [
+            10
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_A": [
+          [
+            5,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_B": [
+          [
+            10,
+            5
+          ],
+          "torch.float32"
+        ]
+      },
+      "client.7": {
+        "conv1a.weight": [
+          [
+            32,
+            3,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_A": [
+          [
+            147,
+            9
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_B": [
+          [
+            96,
+            147
+          ],
+          "torch.float32"
+        ],
+        "bn1a.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv1b.weight": [
+          [
+            32,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_A": [
+          [
+            147,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_B": [
+          [
+            96,
+            147
+          ],
+          "torch.float32"
+        ],
+        "bn1b.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2a.weight": [
+          [
+            64,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_A": [
+          [
+            147,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_B": [
+          [
+            192,
+            147
+          ],
+          "torch.float32"
+        ],
+        "bn2a.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2b.weight": [
+          [
+            64,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_A": [
+          [
+            147,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_B": [
+          [
+            192,
+            147
+          ],
+          "torch.float32"
+        ],
+        "bn2b.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3a.weight": [
+          [
+            128,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_A": [
+          [
+            147,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_B": [
+          [
+            384,
+            147
+          ],
+          "torch.float32"
+        ],
+        "bn3a.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3b.weight": [
+          [
+            128,
+            128,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_A": [
+          [
+            147,
+            384
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_B": [
+          [
+            384,
+            147
+          ],
+          "torch.float32"
+        ],
+        "bn3b.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "fc.weight": [
+          [
+            10,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.bias": [
+          [
+            10
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_A": [
+          [
+            12,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_B": [
+          [
+            10,
+            12
+          ],
+          "torch.float32"
+        ]
+      },
+      "client.8": {
+        "conv1a.weight": [
+          [
+            32,
+            3,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_A": [
+          [
+            54,
+            9
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_B": [
+          [
+            96,
+            54
+          ],
+          "torch.float32"
+        ],
+        "bn1a.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv1b.weight": [
+          [
+            32,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_A": [
+          [
+            54,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_B": [
+          [
+            96,
+            54
+          ],
+          "torch.float32"
+        ],
+        "bn1b.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2a.weight": [
+          [
+            64,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_A": [
+          [
+            54,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_B": [
+          [
+            192,
+            54
+          ],
+          "torch.float32"
+        ],
+        "bn2a.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2b.weight": [
+          [
+            64,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_A": [
+          [
+            54,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_B": [
+          [
+            192,
+            54
+          ],
+          "torch.float32"
+        ],
+        "bn2b.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3a.weight": [
+          [
+            128,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_A": [
+          [
+            54,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_B": [
+          [
+            384,
+            54
+          ],
+          "torch.float32"
+        ],
+        "bn3a.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3b.weight": [
+          [
+            128,
+            128,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_A": [
+          [
+            54,
+            384
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_B": [
+          [
+            384,
+            54
+          ],
+          "torch.float32"
+        ],
+        "bn3b.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "fc.weight": [
+          [
+            10,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.bias": [
+          [
+            10
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_A": [
+          [
+            4,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_B": [
+          [
+            10,
+            4
+          ],
+          "torch.float32"
+        ]
+      },
+      "client.9": {
+        "conv1a.weight": [
+          [
+            32,
+            3,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_A": [
+          [
+            90,
+            9
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_B": [
+          [
+            96,
+            90
+          ],
+          "torch.float32"
+        ],
+        "bn1a.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv1b.weight": [
+          [
+            32,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_A": [
+          [
+            90,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_B": [
+          [
+            96,
+            90
+          ],
+          "torch.float32"
+        ],
+        "bn1b.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2a.weight": [
+          [
+            64,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_A": [
+          [
+            90,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_B": [
+          [
+            192,
+            90
+          ],
+          "torch.float32"
+        ],
+        "bn2a.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2b.weight": [
+          [
+            64,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_A": [
+          [
+            90,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_B": [
+          [
+            192,
+            90
+          ],
+          "torch.float32"
+        ],
+        "bn2b.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3a.weight": [
+          [
+            128,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_A": [
+          [
+            90,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_B": [
+          [
+            384,
+            90
+          ],
+          "torch.float32"
+        ],
+        "bn3a.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3b.weight": [
+          [
+            128,
+            128,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_A": [
+          [
+            90,
+            384
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_B": [
+          [
+            384,
+            90
+          ],
+          "torch.float32"
+        ],
+        "bn3b.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "fc.weight": [
+          [
+            10,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.bias": [
+          [
+            10
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_A": [
+          [
+            8,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_B": [
+          [
+            10,
+            8
+          ],
+          "torch.float32"
+        ]
+      },
+      "client.10": {
+        "conv1a.weight": [
+          [
+            32,
+            3,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_A": [
+          [
+            132,
+            9
+          ],
+          "torch.float32"
+        ],
+        "conv1a.lora_B": [
+          [
+            96,
+            132
+          ],
+          "torch.float32"
+        ],
+        "bn1a.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv1b.weight": [
+          [
+            32,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_A": [
+          [
+            132,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv1b.lora_B": [
+          [
+            96,
+            132
+          ],
+          "torch.float32"
+        ],
+        "bn1b.weight": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.bias": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_mean": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.running_var": [
+          [
+            32
+          ],
+          "torch.float32"
+        ],
+        "bn1b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2a.weight": [
+          [
+            64,
+            32,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_A": [
+          [
+            132,
+            96
+          ],
+          "torch.float32"
+        ],
+        "conv2a.lora_B": [
+          [
+            192,
+            132
+          ],
+          "torch.float32"
+        ],
+        "bn2a.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv2b.weight": [
+          [
+            64,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_A": [
+          [
+            132,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv2b.lora_B": [
+          [
+            192,
+            132
+          ],
+          "torch.float32"
+        ],
+        "bn2b.weight": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.bias": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_mean": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.running_var": [
+          [
+            64
+          ],
+          "torch.float32"
+        ],
+        "bn2b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3a.weight": [
+          [
+            128,
+            64,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_A": [
+          [
+            132,
+            192
+          ],
+          "torch.float32"
+        ],
+        "conv3a.lora_B": [
+          [
+            384,
+            132
+          ],
+          "torch.float32"
+        ],
+        "bn3a.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3a.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "conv3b.weight": [
+          [
+            128,
+            128,
+            3,
+            3
+          ],
+          "torch.float32"
+        ],
+        "conv3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_A": [
+          [
+            132,
+            384
+          ],
+          "torch.float32"
+        ],
+        "conv3b.lora_B": [
+          [
+            384,
+            132
+          ],
+          "torch.float32"
+        ],
+        "bn3b.weight": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.bias": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_mean": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.running_var": [
+          [
+            128
+          ],
+          "torch.float32"
+        ],
+        "bn3b.num_batches_tracked": [
+          [],
+          "torch.int64"
+        ],
+        "fc.weight": [
+          [
+            10,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.bias": [
+          [
+            10
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_A": [
+          [
+            11,
+            128
+          ],
+          "torch.float32"
+        ],
+        "fc.lora_B": [
+          [
+            10,
+            11
+          ],
+          "torch.float32"
+        ]
+      }
+    },
+    "aggregation_options": {
+      "pad_mode": "nan",
+      "lora_only": false
+    },
+    "torch_version": "2.11.0+cu128",
+    "git_commit": "68b14cbff365e49127ea7f56cda49b793553c784",
+    "source_sha256": {
+      "src\\test\\rbla+\\server_memory\\snapshot.py": "081445d8468b360a1fa4773231677552402045ea10f634d88430f6a4c1b51ff5",
+      "src\\flex\\fl_algorithms\\aggregation\\methods\\_fed_aggregator_rbla.py": "a518bf4b7314065d32b1a71b4ea70068bd19a219f3998bd6eb4545f024709fad",
+      "src\\flex\\ml_algorithms\\lora\\canonicalization.py": "b5f4d3b7aa2a844e96c143f96b2b1cd506c3b5ed4923e3f92c6364589814dd12",
+      "src\\flex\\ml_algorithms\\lora\\rank_scale_alignment.py": "f80589ecc8e866b740e1ebc2b40d931beb72c688df0e8dcfaeed342e7a7c3d12"
+    }
+  }
+}

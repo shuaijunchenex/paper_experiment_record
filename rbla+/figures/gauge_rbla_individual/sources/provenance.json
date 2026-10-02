@@ -1,0 +1,35 @@
+{
+  "source_folder": "H:\\paper-experiment-record\\rbla+\\figures\\gauge_rbla_three_panel",
+  "protected_original_files": {
+    "caption.txt": "d63c2bf7ccce47e0c55d8e0531d467d5be3a4cf53aea82fdfcfbceb934ee01c6",
+    "figure_ieee.tex": "183787371b62b98d869199f57be170f88d5a95c64f87e4e78dcc73bd200be4dd",
+    "gauge_analysis.py": "96eaf65d5a2d226b52ce98cb27f972f074de4c825b54164c2558e353a12e3809",
+    "gauge_plot_summary.csv": "1ea8813318d3ad9513ff6653372b69066b740d3b1e8fe8fb58e979e612cff947",
+    "gauge_rbla_three_panel.pdf": "877046b23d9941a879531d222be6189b192523de6b2088c879481dcd99f16752",
+    "gauge_sp_plot_summary.csv": "509cbb92dcd9e839d61ace1973a3528b539cd44b3e5d536d3d1f1f3406159525",
+    "plot_figure.py": "b2fab663ca47c361aa4ba4790a533f0dbd4605a83f45e767d25c34c4cbcc74d1",
+    "plot_metadata.json": "1f33a4b3ed9086f8df5a8bc1c33f47b998cfb0157174ed0fc545e3cc097b85b2",
+    "README.md": "0245513d6e76a4c3f94f073fea2d48628e090f673cb564154426fe4e79d590fe",
+    "synthetic_plot_summary.csv": "adab36de7ba87ff72d9f4d2a7bf37554c22fc49d9f8d884fc9bac93a946e7480",
+    "verify_figure.py": "77a5f9ab8d83462399e7a33ce799a6d8cd2cd608ee562e70594c7c4ca90da69d",
+    "qa/export_verification.json": "5f2336bdd9e09b7aaeaad3fe6812ed09915d6c379b9c0799f2e62f679da2a6f1",
+    "qa/visual_review.md": "a089ef255223894139a004d88af71f3c7df6be2c3e346418c1cfab659e4efcb3",
+    "sources/gauge_raw.csv": "b5d023212421fa04df9783180872bd01d18e7e4969fcba5dceb5b469e4fe0259",
+    "sources/provenance.json": "b4f4adb23adc1d1fb7fdf31372fa6d0d54722a4bb3b32a048ebdfafe46187a29",
+    "sources/synthetic_config.json": "181353b4c685e026c4f308f4a5a4af0116d3be98a19c435568e482a64730e50a",
+    "sources/synthetic_main_raw.csv": "5d54fc6d7b05516c0bccc6318346d76fd79ad865e74fe4da39d98a1d7e04f0dc"
+  },
+  "input_sha256": {
+    "gauge_raw.csv": "b5d023212421fa04df9783180872bd01d18e7e4969fcba5dceb5b469e4fe0259",
+    "synthetic_config.json": "181353b4c685e026c4f308f4a5a4af0116d3be98a19c435568e482a64730e50a",
+    "synthetic_main_raw.csv": "5d54fc6d7b05516c0bccc6318346d76fd79ad865e74fe4da39d98a1d7e04f0dc"
+  },
+  "original_panel_order": [
+    "a",
+    "c",
+    "b"
+  ],
+  "figure_formats": [
+    "pdf"
+  ]
+}

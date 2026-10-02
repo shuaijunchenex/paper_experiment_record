@@ -1,0 +1,12 @@
+{
+  "batch": "run_all_20260915_223408_556671",
+  "archive": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671",
+  "files": [
+    {
+      "name": "reconstruction.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\reconstruction.csv",
+      "sha256": "e16fdc57e3e3e0f52a54ab9e937b6f449bea43e372c0703830570519fce90d53",
+      "bytes": 3772043
+    }
+  ]
+}

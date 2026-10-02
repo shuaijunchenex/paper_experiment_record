@@ -1,0 +1,12 @@
+{
+  "all_passed": true,
+  "cases": 10,
+  "rank_comparisons": 60,
+  "max_absolute_gap": 4.720089446279648e-14,
+  "max_gap_over_factor_scale": 4.61784648123235e-16,
+  "aggregation_mask_reference_max_gap": 5.551115123125783e-17,
+  "eta_zero_reference_max_gap": 5.551115123125783e-17,
+  "aggregate_target_vs_dense_client_average_gap": 1.3871864301329624,
+  "deliberately_corrupted_output_detected": true,
+  "corrupted_output_dense_compact_agree": true
+}

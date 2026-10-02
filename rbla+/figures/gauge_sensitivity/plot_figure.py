@@ -191,14 +191,17 @@ def plot_gauge_sensitivity(
     alpha: float = 4.0, tolerance: float = 1e-10, condition_limit: float = 10.0,
     write_csv: bool = True, csv_path: str | Path | None = None,
     assert_checks: bool = True, print_report: bool = True,
-    figsize: tuple[float, float] = (7.16, 2.65), dpi: int = 600,
-    font_family: str | None = None, font_size: float = 8, axes_label_size: float = 8,
-    tick_label_size: float = 7, legend_fontsize: float = 6.2,
+    figsize: tuple[float, float] = (10.0, 5.0), dpi: int = 600,
+    font_family: str | None = None, font_size: float = 16, axes_label_size: float = 22,
+    tick_label_size: float = 17, legend_fontsize: float = 16,
     colors: Mapping[str, str] | None = None, box_offsets: Mapping[str, float] | None = None,
-    box_width: float = .24, box_alpha: float = .32, show_fliers: bool = False,
+    box_width: float = .24, box_alpha: float = .32, box_linewidth: float = 1.8,
+    median_linewidth: float = 2.2, mean_marker_size: float = 5.5,
+    show_fliers: bool = False,
     show_means: bool = True, dense_color: str = "black", dense_linestyle: str = "--",
-    dense_marker: str = "x", dense_linewidth: float = 1.25,
-    xlabel: str = r"Client rank $r$", ylabel: str = "Relative broadcast reconstruction error",
+    dense_marker: str = "x", dense_linewidth: float = 2.0,
+    dense_marker_size: float = 6.0,
+    xlabel: str = r"Client rank $r$", ylabel: str = "Relative broadcast error",
     title: str | None = None, xlim: tuple[float, float] | None = None,
     ylim: tuple[float, float] | None = None, xticks: Sequence[float] | None = None,
     xticklabels: Sequence[str] | None = None, show_grid: bool = True,
@@ -235,22 +238,24 @@ def plot_gauge_sensitivity(
         fonts = {f.name for f in font_manager.fontManager.ttflist}; font_family = "Times New Roman" if "Times New Roman" in fonts else "DejaVu Serif"
     rc = {"font.family": font_family, "font.size": font_size, "axes.labelsize": axes_label_size,
           "xtick.labelsize": tick_label_size, "ytick.labelsize": tick_label_size,
-          "legend.fontsize": legend_fontsize, "axes.linewidth": .8,
+          "legend.fontsize": legend_fontsize, "axes.linewidth": 1.1,
+          "xtick.major.width": 1.0, "ytick.major.width": 1.0,
+          "xtick.major.size": 4.0, "ytick.major.size": 4.0,
           "pdf.fonttype": 42, "ps.fonttype": 42, **dict(rc_params or {})}
     with mpl.rc_context(rc):
         fig, ax = plt.subplots(**{"figsize": figsize, "dpi": dpi, **dict(figure_kwargs or {})})
         ax.plot(rank_centers, dense_errors, color=dense_color, linestyle=dense_linestyle,
-                marker=dense_marker, linewidth=dense_linewidth, markersize=4.5, zorder=1)
+                marker=dense_marker, linewidth=dense_linewidth, markersize=dense_marker_size, zorder=1)
         for method in ("RBLA prefix", "SP+ (compact QR)"):
             distributions = [frame.loc[frame["method"].eq(method) & frame["r"].eq(rank), "broadcast_error"].to_numpy() for rank in resolved_ranks]
             color = palette[method]
             ax.boxplot(distributions, positions=rank_centers + offsets[method], widths=box_width,
                 manage_ticks=False, patch_artist=True, showfliers=show_fliers, showmeans=show_means,
-                boxprops={"facecolor": color, "edgecolor": color, "alpha": box_alpha, "linewidth": 1.1},
-                whiskerprops={"color": color, "linewidth": 1}, capprops={"color": color, "linewidth": 1},
-                medianprops={"color": color, "linewidth": 1.5},
+                boxprops={"facecolor": color, "edgecolor": color, "alpha": box_alpha, "linewidth": box_linewidth},
+                whiskerprops={"color": color, "linewidth": box_linewidth}, capprops={"color": color, "linewidth": box_linewidth},
+                medianprops={"color": color, "linewidth": median_linewidth},
                 meanprops={"marker": "D", "markerfacecolor": "white", "markeredgecolor": color,
-                           "markeredgewidth": .9, "markersize": 3.2}, zorder=3, **dict(boxplot_kwargs or {}))
+                           "markeredgewidth": 1.0, "markersize": mean_marker_size}, zorder=3, **dict(boxplot_kwargs or {}))
         ax.set_xlabel(xlabel); ax.set_ylabel(ylabel)
         if title is not None: ax.set_title(title)
         ticks = rank_centers if xticks is None else xticks
@@ -258,20 +263,21 @@ def plot_gauge_sensitivity(
         ax.set_xticks(ticks); ax.set_xticklabels(labels)
         ax.set_xlim(*(xlim or (.55, len(resolved_ranks) + .45)))
         ax.set_ylim(*(ylim or (0, float(frame["broadcast_error"].max()) * 1.12)))
-        ax.grid(show_grid, axis="y", which="major", **{"color": ".75", "linestyle": ":", "linewidth": .5, "alpha": .55, **dict(grid_kwargs or {})})
+        ax.grid(show_grid, axis="y", which="major", **{"color": ".75", "linestyle": ":", "linewidth": .7, "alpha": .30, **dict(grid_kwargs or {})})
         ax.set_axisbelow(True)
         for spine in hidden_spines: ax.spines[spine].set_visible(False)
-        ax.tick_params(direction="out", width=.8, length=3)
+        ax.tick_params(direction="out", width=1.0, length=4)
         handles = [
             Patch(facecolor=palette["RBLA prefix"], edgecolor=palette["RBLA prefix"], alpha=box_alpha, label="RBLA prefix"),
             Patch(facecolor=palette["SP+ (compact QR)"], edgecolor=palette["SP+ (compact QR)"], alpha=box_alpha, label="SP+ (compact QR)"),
             Line2D([0], [0], color=dense_color, linestyle=dense_linestyle, marker=dense_marker,
-                   linewidth=dense_linewidth, markersize=4.5, label="Dense optimum"),
+                   linewidth=dense_linewidth, markersize=dense_marker_size, label="Dense optimum"),
         ]
         legend_options = {"handles": handles, "loc": legend_loc, "ncol": legend_ncol,
-                          "fontsize": legend_fontsize, "handlelength": 1.4,
-                          "handletextpad": .35, "columnspacing": .75,
-                          "borderaxespad": 0, **dict(legend_kwargs or {})}
+                          "fontsize": legend_fontsize, "handlelength": 2.0,
+                          "handletextpad": .45, "columnspacing": 1.0,
+                          "borderaxespad": 0, "frameon": False,
+                          **dict(legend_kwargs or {})}
         if legend_bbox_to_anchor is not None: legend_options["bbox_to_anchor"] = legend_bbox_to_anchor
         ax.legend(**legend_options)
         if tight_layout: fig.tight_layout(**{"pad": .3, **dict(tight_layout_kwargs or {})})

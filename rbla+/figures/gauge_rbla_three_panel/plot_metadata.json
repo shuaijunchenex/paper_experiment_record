@@ -1,0 +1,120 @@
+{
+  "layout": {
+    "figsize": [
+      12.0,
+      5.25
+    ],
+    "font_family": "Times New Roman",
+    "dpi": 600,
+    "rows": 1,
+    "columns": 3,
+    "panel_order": [
+      "a",
+      "c",
+      "b"
+    ],
+    "legend_mode": "per-panel",
+    "legend_labels": [
+      [
+        "RBLA-perm.",
+        "RBLA-orth.",
+        "RBLA-diag.",
+        "SP+",
+        "Optimum (zero)"
+      ],
+      [
+        "RBLA prefix",
+        "SP+ (compact QR)"
+      ],
+      [
+        "RBLA prefix",
+        "SP+ (compact QR)",
+        "Optimal rank-r reference"
+      ]
+    ],
+    "output_formats": [
+      "pdf"
+    ],
+    "ieee_two_column_placement": "figure* width=\\textwidth",
+    "reference_figure": "fedgra/semantic_coupling_comparison.pdf",
+    "axes_label_size": 22,
+    "tick_label_size": 20,
+    "panel_label_size": 20,
+    "legend_fontsize": 17,
+    "wspace": 0.34,
+    "font_sizes_at_7_16_inches": {
+      "axes": 13.126666666666667,
+      "ticks": 11.933333333333332,
+      "panels": 11.933333333333332,
+      "legend": 10.143333333333333
+    },
+    "axes_positions": [
+      [
+        0.085,
+        0.275,
+        0.24456521739130432,
+        0.525
+      ],
+      [
+        0.41271739130434787,
+        0.275,
+        0.24456521739130427,
+        0.525
+      ],
+      [
+        0.7404347826086957,
+        0.275,
+        0.24456521739130432,
+        0.525
+      ]
+    ],
+    "panel_titles": [
+      "",
+      "",
+      ""
+    ],
+    "panel_labels": [
+      "(a) Gauge-induced\nexcess error",
+      "(c) Excess\nreconstruction error",
+      "(b) Relative\nreconstruction error"
+    ],
+    "xlabels": [
+      "Client rank $r$",
+      "Normalized client rank $r/R$",
+      "Normalized client rank $r/R$"
+    ],
+    "ylimits": [
+      [
+        -0.021555247404728865,
+        0.9311866878842869
+      ],
+      [
+        -0.005073455258742857,
+        0.1580018923437061
+      ],
+      [
+        -0.03451842025914656,
+        1.075002230927707
+      ]
+    ]
+  },
+  "gauge_checks": {
+    "source gauge experiment passed its numerical checks": true,
+    "all analysis values are finite": true,
+    "excess errors are non-negative within tolerance": true,
+    "SP+ excess error is numerical zero": true,
+    "diagonal RBLA is a zero-excess negative control": true,
+    "full-rank excess error is numerical zero": true
+  },
+  "source_rows": {
+    "gauge": 9600,
+    "synthetic": 960
+  },
+  "gauge_trials_per_type": {
+    "diagonal": 100,
+    "orthogonal": 100,
+    "permutation": 100
+  },
+  "synthetic_seeds": 30,
+  "new_experiments_run": false
+}
