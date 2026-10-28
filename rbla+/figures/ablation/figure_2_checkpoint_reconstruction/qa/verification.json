@@ -1,0 +1,22 @@
+{
+  "pdf": "checkpoint_reconstruction.pdf",
+  "pages": 1,
+  "width_inches": 3.5,
+  "height_inches": 2.0,
+  "displayed_datasets": [
+    "cifar10",
+    "mnli"
+  ],
+  "panels": 2,
+  "legend": "one shared figure-level legend",
+  "plot_data_rows": 42,
+  "source_hashes_verified": true,
+  "qqp_sources_retained": true,
+  "visual_review": "All three PDFs rendered and visually inspected after moving panel labels below x-axis labels; no overlap or clipping. Shared legends and 3.5 x 2.0 inch size retained.",
+  "latex_compiled": false,
+  "previous_height_inches": 2.45,
+  "height_reduction_percent": 18.36734693877552,
+  "panel_labels": "below x-axis labels",
+  "derived_plot_data_unchanged": true,
+  "panel_label_gap_pt": 4
+}

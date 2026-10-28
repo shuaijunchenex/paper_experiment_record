@@ -1,0 +1,112 @@
+{
+  "title": "Reconstruction of real pre-spectral RBLA aggregates",
+  "selections": [
+    {
+      "dataset": "cifar10",
+      "layer": "conv2b",
+      "selection_rule": "floor(number_of_layers / 2) in layer_index order",
+      "layer_count": 7,
+      "round": 100,
+      "update_index": 101,
+      "matrix_shape": [
+        192,
+        192
+      ],
+      "aggregate_width": 192,
+      "target_widths": [
+        48,
+        54,
+        63,
+        90,
+        126,
+        132,
+        147,
+        168,
+        192
+      ]
+    },
+    {
+      "dataset": "mnli",
+      "layer": "model.bert.encoder.layer.0.output.dense",
+      "selection_rule": "floor(number_of_layers / 2) in layer_index order",
+      "layer_count": 17,
+      "round": 100,
+      "update_index": 101,
+      "matrix_shape": [
+        128,
+        512
+      ],
+      "aggregate_width": 8,
+      "target_widths": [
+        2,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ],
+  "metric": "||X - X_q||_F / ||X||_F, X = B A",
+  "dtype": "FP64 factors and metric evaluation",
+  "uncertainty_band": null,
+  "gauge_transformation": null,
+  "dense_reference": "economy full dense SVD followed by truncation",
+  "internal_width_note": "CNN q is factor width, not logical convolution rank; q = 3r for the selected conv2b layer",
+  "source_batch": "run_all_20260915_223408_556671",
+  "source_hashes_verified": true,
+  "source_files": [
+    {
+      "name": "reconstruction.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\reconstruction.csv",
+      "sha256": "e16fdc57e3e3e0f52a54ab9e937b6f449bea43e372c0703830570519fce90d53",
+      "bytes": 3772043
+    }
+  ],
+  "new_experiments_run": false,
+  "displayed_datasets": [
+    "cifar10",
+    "mnli"
+  ],
+  "omitted_from_figure": [
+    "qqp"
+  ],
+  "layout": {
+    "figsize_inches": [
+      3.5,
+      2.0
+    ],
+    "font_family": "Times New Roman",
+    "axis_font_pt": 8,
+    "tick_font_pt": 7.5,
+    "panel_font_pt": 8,
+    "panel_labels": "below x-axis labels",
+    "panel_label_gap_pt": 4,
+    "pdf_fonttype": 42,
+    "legend": "one shared figure legend",
+    "column_layout": "single column",
+    "reference": [
+      "rbla+/figures/complexity_comparison/broadcast_space_complexity.pdf",
+      "rbla+/figures/gauge_induced_suboptimality/gauge_induced_suboptimality.pdf"
+    ],
+    "axes_positions": [
+      [
+        0.14,
+        0.28,
+        0.36244541484716153,
+        0.62
+      ],
+      [
+        0.6075545851528383,
+        0.28,
+        0.36244541484716153,
+        0.62
+      ]
+    ]
+  },
+  "software": {
+    "python": "3.11.11",
+    "matplotlib": "3.10.7",
+    "numpy": "1.26.4",
+    "pandas": "2.3.1"
+  }
+}

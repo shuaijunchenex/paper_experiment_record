@@ -1,0 +1,60 @@
+{
+  "table": 2,
+  "rows": 9,
+  "summary_records": 18,
+  "raw_measurements": 144,
+  "notes": "Entries are median [IQR], where IQR = Q3 - Q1, across eight checkpoint inputs per dataset (two training paths x logged rounds 0, 9, 49, 100). Each input's time is the median of 20 warm repetitions after five warmups. CPU, FP32, one PyTorch thread. Memory is cold-pass peak incremental CPU RSS above the resident-input baseline, sampled every 1 ms; it is not GPU memory. Positive IQRs that round to 0.00 are shown as <0.01. Server step includes aggregation and all requested broadcasts. File I/O, serialization, device transfers, model loading and evaluation are excluded. Dense SVD constructs the dense matrix, uses economy full SVD, then truncates; it is not an optimized truncated-SVD solver.",
+  "quantile_method": "linear",
+  "display_decimals": 2,
+  "environment": {
+    "python": "3.10.21 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:35:39) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "cpu": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+    "logical_cpus": 16,
+    "torch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "gpus": [
+      "NVIDIA GeForce RTX 5080"
+    ],
+    "source_sha256": {
+      "test\\rbla+\\server_memory\\benchmark.py": "60ef6cedd9728070af7b1efe5c00500a0cd5220aec840ca5cfd3c8ad094c94b1",
+      "test\\rbla+\\server_memory\\runtime_profiler.py": "8477dc51f4369351a99a3bc62ea7012fb46d43a5e9796d76491e4a29db0d2ff1",
+      "test\\rbla+\\server_memory\\snapshot.py": "081445d8468b360a1fa4773231677552402045ea10f634d88430f6a4c1b51ff5",
+      "flex\\fl_algorithms\\aggregation\\methods\\_fed_aggregator_rbla.py": "a518bf4b7314065d32b1a71b4ea70068bd19a219f3998bd6eb4545f024709fad",
+      "flex\\ml_algorithms\\lora\\canonicalization.py": "b5f4d3b7aa2a844e96c143f96b2b1cd506c3b5ed4923e3f92c6364589814dd12",
+      "flex\\ml_algorithms\\lora\\rank_scale_alignment.py": "f80589ecc8e866b740e1ebc2b40d931beb72c688df0e8dcfaeed342e7a7c3d12"
+    },
+    "git_commit": "68b14cbff365e49127ea7f56cda49b793553c784",
+    "torch_build": "PyTorch built with:\n  - C++ Version: 201703\n  - MSVC 194234444\n  - Intel(R) oneAPI Math Kernel Library Version 2025.3-Product Build 20251007 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.10.2 (Git Hash f1d471933dc852f956fd05389f9313c7148783d5)\n  - OpenMP 2019\n  - LAPACK is enabled (usually provided by MKL)\n  - CPU capability usage: AVX512\n  - CUDA Runtime 12.8\n  - NVCC architecture flags: -gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90;-gencode;arch=compute_100,code=sm_100;-gencode;arch=compute_120,code=sm_120\n  - CuDNN 91.9  (built against CUDA 12.9)\n  - Magma 2.5.4\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=70d99e998b4955e0049d13a98d77ae1b14db1f45, CUDA_VERSION=12.8, CUDNN_VERSION=9.19.0, CXX_COMPILER=C:/actions-runner/_work/pytorch/pytorch/pytorch/.ci/pytorch/windows/tmp_bin/sccache-cl.exe, CXX_FLAGS=/DWIN32 /D_WINDOWS /EHsc /Zc:__cplusplus /bigobj /FS /utf-8 -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE /wd4624 /wd4068 /wd4067 /wd4267 /wd4661 /wd4717 /wd4244 /wd4804 /wd4273, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.11.0, USE_CUDA=ON, USE_CUDNN=ON, USE_CUSPARSELT=OFF, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=OFF, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n"
+  },
+  "measurement_boundary": "Inputs already resident. Output copies and, for dense_svd, dense B@A construction are included. Excludes file IO, serialization, device transfers, model load/apply, evaluation, client caches and transport.",
+  "layout": "single-column, five columns with dataset group rows",
+  "latex_float": "table",
+  "latex_width": "columnwidth",
+  "preview_width_inches": 3.5,
+  "preview_body_font_pt": 8,
+  "compact_notes": "Median [IQR] across eight checkpoint inputs; each time is the median of 20 runs after five warmups. CPU FP32, one thread. \u0394RSS is cold-pass peak incremental CPU RSS above resident inputs (1 ms sampling). Full step includes aggregation and all requested broadcasts; excludes I/O, transfers, model loading and evaluation. Dense SVD uses economy full SVD then truncation. Positive IQRs rounding to zero appear as <0.01.",
+  "within_input_timing_iqr": "retained separately in CSV; not displayed as across-input IQR",
+  "source_batch": "run_all_20260915_223408_556671",
+  "source_files": [
+    {
+      "name": "measurements.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\server_memory\\measurements.csv",
+      "sha256": "639ce9a12011a40d830ec072a8011001ee62111267cc6ffe70264ba61743e2e1",
+      "bytes": 13599073
+    },
+    {
+      "name": "manifest.json",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\server_memory\\manifest.json",
+      "sha256": "5eb52a94cb681c041d1a1e520219a011e0fa6cf06adb9f1674b9f361d5677560",
+      "bytes": 16604
+    }
+  ],
+  "source_hashes_verified": true,
+  "new_experiments_run": false,
+  "pdf_renderer": "ReportLab using the same formatted cells as the LaTeX table",
+  "latex_compiled_locally": false,
+  "latex_dependencies": [
+    "booktabs"
+  ]
+}

@@ -1,0 +1,34 @@
+% Requires \usepackage{booktabs}
+\begin{table}[t]
+  \centering
+  \caption{Measured CPU server cost: median [IQR].}
+  \label{tab:ablation-server-cost}
+  \footnotesize
+  \setlength{\tabcolsep}{2pt}
+  \renewcommand{\arraystretch}{1.12}
+  \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrrr@{}}
+    \toprule
+    Method & \multicolumn{2}{c}{Broadcast} & \multicolumn{2}{c}{Full step} \\
+    \cmidrule(lr){2-3}\cmidrule(l){4-5}
+     & Time (ms) & $\Delta$RSS (MiB) & Time (ms) & $\Delta$RSS (MiB) \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textbf{CIFAR10}} \\
+    RBLA & 2.03 [0.01] & 2.24 [$<0.01$] & 13.28 [0.43] & 28.88 [0.21] \\
+    RBLA+ & 26.41 [0.31] & 15.18 [0.10] & 39.23 [0.72] & 48.99 [0.11] \\
+    Dense SVD & 20.80 [0.33] & 13.23 [0.08] & 34.21 [1.17] & 47.00 [0.06] \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textbf{MNLI}} \\
+    RBLA & 9.72 [0.47] & 6.84 [2.53] & 44.73 [0.36] & 311.03 [11.25] \\
+    RBLA+ & 20.87 [0.84] & 12.34 [0.08] & 57.01 [0.53] & 293.37 [30.29] \\
+    Dense SVD & 186.48 [0.33] & 8.54 [0.07] & 212.64 [0.64] & 313.19 [22.65] \\
+    \midrule
+    \multicolumn{5}{@{}l}{\textbf{QQP}} \\
+    RBLA & 9.64 [0.19] & 5.87 [0.03] & 44.66 [0.28] & 311.04 [12.54] \\
+    RBLA+ & 20.44 [0.76] & 10.68 [0.10] & 56.47 [0.40] & 277.90 [56.17] \\
+    Dense SVD & 186.54 [0.28] & 8.09 [0.04] & 215.79 [1.04] & 318.07 [26.59] \\
+    \bottomrule
+  \end{tabular*}
+  \par\smallskip
+  \parbox{\columnwidth}{\footnotesize
+  Median [IQR] across eight checkpoint inputs; each time is the median of 20 runs after five warmups. CPU FP32, one thread. $\Delta$RSS is cold-pass peak incremental CPU RSS above resident inputs (1\,ms sampling). Full step includes aggregation and all requested broadcasts; excludes I/O, transfers, model loading and evaluation. Dense SVD uses economy full SVD then truncation. Positive IQRs rounding to zero appear as $<0.01$.}
+\end{table}

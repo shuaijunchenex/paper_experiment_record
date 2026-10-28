@@ -1,0 +1,73 @@
+{
+  "all_checks_passed": true,
+  "existing_figures_unchanged": true,
+  "protected_original_files": 9,
+  "file": "condition_number_excess_error.pdf",
+  "sha256": "0438f27cf915622c245456fc2b5eccb58087dd2ac9fc0f8ebe5075540a948a7d",
+  "page_size_inches": [
+    5.2,
+    4.9
+  ],
+  "font": "Times New Roman",
+  "embedded_fonts": [
+    "CZRBLR+STIXGeneral-Regular",
+    "FTXWZA+STIXGeneral-Italic",
+    "FHXFSG+TimesNewRomanPSMT"
+  ],
+  "axis_label_size_pt": 22,
+  "tick_label_size_pt": 20,
+  "legend_size_pt": 17,
+  "legend": [
+    "RBLA prefix",
+    "SP+",
+    "Optimum (zero)"
+  ],
+  "no_title_or_footer": true,
+  "x_axis": "Gauge condition number kappa(G)",
+  "x_scale": "log",
+  "x_ticks": [
+    1,
+    10,
+    100,
+    1000,
+    10000,
+    100000
+  ],
+  "sampled_kappas": [
+    1,
+    1.5,
+    2,
+    3,
+    5,
+    7.5,
+    10,
+    20,
+    50,
+    100,
+    200,
+    500,
+    1000,
+    2000,
+    5000,
+    10000,
+    20000,
+    50000,
+    100000
+  ],
+  "no_added_samples": false,
+  "y_scale": "symlog",
+  "y_linthresh": 1,
+  "y_linscale": 0.7,
+  "new_experiments_run": true,
+  "fixed_rank_ratio": 0.5,
+  "trials": 100,
+  "statistic": "median and interquartile interval",
+  "figure_format": "pdf only",
+  "dependencies": {
+    "python": "3.11.11",
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "matplotlib": "3.10.7",
+    "pymupdf": "1.28.2"
+  }
+}

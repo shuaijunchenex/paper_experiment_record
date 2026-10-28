@@ -1,0 +1,36 @@
+{
+  "pdf": "accuracy_summary.pdf",
+  "sha256": "27b6b077866b58cd7bca2a9b320867a61cc432983ce0b9bc1c059d30f41e4abd",
+  "pages": 1,
+  "page_points": [
+    540.0,
+    235.8000030517578
+  ],
+  "raster_images": 0,
+  "used_fonts": [
+    "TimesNewRomanPS-BoldMT",
+    "TimesNewRomanPSMT"
+  ],
+  "fonts": [
+    {
+      "font": "AAAAAA+TimesNewRomanPS-BoldMT",
+      "embedded_bytes": 59392,
+      "type": "TrueType"
+    },
+    {
+      "font": "AAAAAA+TimesNewRomanPSMT",
+      "embedded_bytes": 75172,
+      "type": "TrueType"
+    }
+  ],
+  "source_hashes_verified": true,
+  "text_within_page": true,
+  "visually_reviewed_poppler_render": true,
+  "summary_records": 12,
+  "raw_points": 1212,
+  "last10_window_verified": [
+    92,
+    101
+  ],
+  "checks_passed": true
+}

@@ -1,0 +1,49 @@
+{
+  "started_utc": "2026-09-10T14:26:07.748186+00:00",
+  "config_sha256": "d3c39e6fe945a84e5610fa43f81cd5f421e84b055988f99279ddf1a6838b91e9",
+  "python": "3.11.11 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:34:19) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "command": [
+    "rbla+/figures/synthetic_rbla_redistribution/run.py"
+  ],
+  "dependencies": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "matplotlib": "3.10.7",
+    "scipy": "1.16.0",
+    "threadpoolctl": "3.5.0",
+    "PyMuPDF": "1.28.2",
+    "Pillow": "11.3.0"
+  },
+  "source_sha256": {
+    "core.py": "0c592f7ba6d9ff44dfc4bd40bfce5a2255570324d8881c0883e135a4f99e5d40",
+    "plot_figure.py": "e3081eba07194abc57b62f296c7e865e37fe102c44ff4ffc47bb3e5ce8c8f263",
+    "prepare_config.py": "d18ff8b042df40f09cd8068594579d8964a853e1f742f41c6d7cb895e783824e",
+    "reference_sp_plus.py": "037b9226a272801a7f96667b478eb885f7770e0cfc1be050af25ccfdf42abc89",
+    "report.py": "ba09c106f3204ec6ae2aaee2066618be974add042f4a43418345a600e9476f46",
+    "run.py": "c8ad2f089ce006472a59ab71ecad33f01af62a5b463409944584ace22e599f72",
+    "validate.py": "cf199a23bb51d96f8462c465994a9bff3b8f1f7204858db739be81ed16523414"
+  },
+  "blas": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "C:\\Users\\94804\\AppData\\Roaming\\Python\\Python311\\site-packages\\numpy.libs\\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Cooperlake"
+    }
+  ],
+  "completed": true,
+  "completed_utc": "2026-09-10T14:26:12.239940+00:00",
+  "elapsed_seconds": 4.392411500011804,
+  "settings": 7,
+  "aggregations": 210,
+  "rank_comparisons": 7200,
+  "validation_passed": true,
+  "all_production_checks_passed": true,
+  "max_abs_normalized_sp_opt_gap": 3.764578796284711e-15,
+  "raw_sha256": "47d3343f6ace377fa0f33d2afe522bd9b011f6a4d89347b85a166972bf3f217c"
+}

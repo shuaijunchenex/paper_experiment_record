@@ -1,0 +1,12 @@
+{
+  "rounds": 5,
+  "test_samples": 2000,
+  "seed": 42,
+  "gate_abs": 0.01,
+  "gate_rel": 0.1,
+  "conditions": [
+    "mnist_dirichlet_0_8_rho_zero"
+  ],
+  "output_dir": "H:\\flex-src\\experiment_results\\spmi_mnist\\mnist_6conditions_5rounds_v2\\condition_runs\\mnist_dirichlet_0_8_rho_zero",
+  "verbose_framework": false
+}

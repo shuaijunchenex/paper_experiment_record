@@ -1,0 +1,9 @@
+{
+  "source": "H:\\paper-experiment-record\\rbla+\\figures\\broadcast_reconstruction\\plot_figure.py",
+  "source_sha256": "b3df1c58c319605bcfb41f82af2a8d732cabf78cdc235adbd382c3d0bd1f8bbe",
+  "function": "compact_sp_plus",
+  "function_sha256": "88d94470abbaf9402f16a5a0be21fe1100d51c917860496877d56ae1bbc64052",
+  "git_head": "8806e1f48d21053fcc3aed661a65edbd5bfd2aea",
+  "source_was_locally_modified": true,
+  "agents_md_found": false
+}

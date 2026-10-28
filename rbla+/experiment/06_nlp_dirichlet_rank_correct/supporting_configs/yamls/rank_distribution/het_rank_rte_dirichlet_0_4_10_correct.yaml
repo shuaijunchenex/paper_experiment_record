@@ -1,0 +1,6 @@
+# RTE Dirichlet alpha=0.4, data-volume/rank matched.
+# Client volumes, ordered by client.1..client.10: [278, 454, 342, 206, 294, 47, 130, 43, 216, 480]
+# rho_i = 0.25 + 0.75 * (n_i - n_min) / (n_max - n_min)
+# n_min=43; n_max=480; volume-rank Spearman=+1.0
+rank_distribution:
+  rank_ratio_list: [0.6533, 0.9554, 0.7632, 0.5297, 0.6808, 0.2569, 0.3993, 0.2500, 0.5469, 1.0000]

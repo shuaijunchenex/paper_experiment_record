@@ -1,0 +1,175 @@
+{
+  "state": "complete",
+  "completed": [
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0009-server-input.pt",
+      "dtype": "float64",
+      "rows": 183
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0049-server-input.pt",
+      "dtype": "float64",
+      "rows": 183
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0100-server-input.pt",
+      "dtype": "float64",
+      "rows": 183
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0009-server-input.pt",
+      "dtype": "float64",
+      "rows": 183
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0049-server-input.pt",
+      "dtype": "float64",
+      "rows": 183
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0100-server-input.pt",
+      "dtype": "float64",
+      "rows": 183
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0009-server-input.pt",
+      "dtype": "float64",
+      "rows": 255
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0049-server-input.pt",
+      "dtype": "float64",
+      "rows": 255
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0100-server-input.pt",
+      "dtype": "float64",
+      "rows": 255
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0009-server-input.pt",
+      "dtype": "float64",
+      "rows": 255
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0049-server-input.pt",
+      "dtype": "float64",
+      "rows": 255
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0100-server-input.pt",
+      "dtype": "float64",
+      "rows": 255
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0009-server-input.pt",
+      "dtype": "float64",
+      "rows": 306
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0049-server-input.pt",
+      "dtype": "float64",
+      "rows": 306
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0100-server-input.pt",
+      "dtype": "float64",
+      "rows": 306
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0009-server-input.pt",
+      "dtype": "float64",
+      "rows": 306
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0049-server-input.pt",
+      "dtype": "float64",
+      "rows": 306
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0100-server-input.pt",
+      "dtype": "float64",
+      "rows": 306
+    }
+  ],
+  "skipped": [
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0000-server-input.pt",
+      "reason": "driver/round filter"
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0000-server-input.pt",
+      "reason": "driver/round filter"
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0000-server-input.pt",
+      "reason": "driver/round filter"
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0000-server-input.pt",
+      "reason": "driver/round filter"
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0000-server-input.pt",
+      "reason": "driver/round filter"
+    },
+    {
+      "input": "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0000-server-input.pt",
+      "reason": "driver/round filter"
+    }
+  ],
+  "failed": [],
+  "numerical_failures": [],
+  "coverage": {
+    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5": {
+      "present_rounds": [
+        9,
+        49,
+        100
+      ],
+      "missing_requested_rounds": []
+    },
+    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e": {
+      "present_rounds": [
+        9,
+        49,
+        100
+      ],
+      "missing_requested_rounds": []
+    },
+    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3": {
+      "present_rounds": [
+        9,
+        49,
+        100
+      ],
+      "missing_requested_rounds": []
+    },
+    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d": {
+      "present_rounds": [
+        9,
+        49,
+        100
+      ],
+      "missing_requested_rounds": []
+    },
+    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf": {
+      "present_rounds": [
+        9,
+        49,
+        100
+      ],
+      "missing_requested_rounds": []
+    },
+    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca": {
+      "present_rounds": [
+        9,
+        49,
+        100
+      ],
+      "missing_requested_rounds": []
+    }
+  },
+  "missing_requested_drivers": [],
+  "coverage_complete": true
+}

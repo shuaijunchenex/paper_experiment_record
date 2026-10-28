@@ -1,0 +1,34 @@
+Gauge sensitivity and reconstruction error in synthetic RBLA aggregation.
+Left-to-right panel order is (a), (c), (b), with a separate legend for each panel.
+(a) Gauge-induced excess reconstruction error for a fixed structured 128 x 96
+rank-16 update with singular values exp(-4j/15), j=0,...,15. The existing control
+experiment applies 100 random transformations per gauge type (permutation,
+orthogonal, or positive diagonal scaling) to the same factorization while
+preserving the full update. Curves show the pointwise median; shaded regions
+show the 25th-75th percentiles for permutation and orthogonal gauges. The SP+
+curve pools the existing 300 gauge trials, as in the original gauge figure;
+SP+, the diagonal control, and the dense optimum coincide at numerical zero.
+The horizontal axis in (a) is the absolute target rank r, with R=16.
+(b,c) Synthetic RBLA aggregation experiment using N=10 equally weighted clients,
+m=n=512, maximum adapter rank R=32, and client ranks
+[8,8,12,12,16,16,20,24,28,32]. Client LoRA factors are shared iid Gaussian
+reference blocks plus independent perturbations with eta=0.3; the noise standard
+deviation equals the RMS of the corresponding reference block. Effective LoRA
+scaling is one. Each of 30 fixed independent seeds produces one original RBLA
+participation-normalized factor aggregation. RBLA prefix and SP+ are paired on
+exactly the same aggregated B_global and A_global, with X=B_global A_global.
+Unlike the gauge control in (a), no additional gauge transformation, rotation,
+permutation, or reordering is applied after aggregation in (b,c).
+Panel (b) shows relative reconstruction errors and the optimal rank-r reference;
+panel (c) shows excess reconstruction errors above that reference, normalized
+by ||X||_F. SP+ errors are measured from its actual compact QR-SVD output factors.
+The black dashed optimum in (b) overlaps SP+. Curves and shading in (b,c) are
+pointwise medians and interquartile ranges across seeds, not confidence intervals.
+Their horizontal axes show r/R; markers identify actual client ranks.
+All errors use unsquared Frobenius norms. The archived gauge measurements use
+||X||_F + machine epsilon as their normalization denominator; the synthetic RBLA
+measurements use ||X||_F with an explicit reliability check. This existing
+convention is preserved; the gauge target is nonzero and well-scaled.
+Only tolerance-level negative excess errors in (b,c) are displayed as zero;
+the raw data are preserved. These synthetic matrix experiments do not establish
+improvements in task accuracy, convergence, fairness, or aggregation bias.

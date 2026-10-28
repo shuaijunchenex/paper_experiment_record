@@ -1,0 +1,12 @@
+check,value
+trials_per_gauge_type,1000
+raw_trial_cells,3360000
+maximum_orthogonality_entrywise_error,2.220446049250313e-15
+maximum_raw_full_rank_squared_residual,1.7763568394002505e-15
+minimum_raw_excess_error,-6.774999669351828e-13
+validation_cases,24
+maximum_full_update_error,3.944686778881832e-15
+maximum_sp_plus_optimal_gap,4.892702968907852e-15
+maximum_gauge_condition_number,1.0000000000000016
+compact_path_no_dense_intermediate,True
+all_numerical_checks_passed,True

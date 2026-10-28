@@ -1,0 +1,91 @@
+{
+  "table": 1,
+  "rows": 4,
+  "summary_records": 12,
+  "raw_curve_points": 1212,
+  "notes": "Accuracy (%), unweighted mean over ten client broadcast models. Final: update 101 (logged round 100). Last 10: mean of updates 92-101 (logged rounds 91-100). One seed (42), correct rank assignment, Dirichlet alpha=0.4. Cross-broadcast evaluation does not change the training path. RBLA+ includes bidirectional RankScale. Bold marks the highest value in each dataset/metric column. Last 10 is a temporal mean, not an average over seeds. Full-width server-model accuracy is excluded.",
+  "display_decimals": 2,
+  "bold_selection": "highest unrounded value per dataset/metric",
+  "source_batch": "run_all_20260915_223408_556671",
+  "source_files": [
+    {
+      "name": "cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-rbla-broadcast-accuracy.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\spectum_ablation\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-rbla-broadcast-accuracy.csv",
+      "sha256": "09c449d665c3c7404b212685c5c5deec9c16aa8ab7ea03d42815f46e2aa93487",
+      "bytes": 74538
+    },
+    {
+      "name": "cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-rbla_plus_rank_scale-broadcast-accuracy.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\spectum_ablation\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-rbla_plus_rank_scale-broadcast-accuracy.csv",
+      "sha256": "b0a3209202cad4c248b52361ec403c53be0a518dde68bb96bbb8372ca4c7eddf",
+      "bytes": 78553
+    },
+    {
+      "name": "cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-rbla-broadcast-accuracy.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\spectum_ablation\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-rbla-broadcast-accuracy.csv",
+      "sha256": "6af7d075139181b27f44c9f26fbf880279fbec09d2ad44382689382cf659c0d3",
+      "bytes": 79036
+    },
+    {
+      "name": "cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-rbla_plus_rank_scale-broadcast-accuracy.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\spectum_ablation\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-rbla_plus_rank_scale-broadcast-accuracy.csv",
+      "sha256": "62901a523f0645f34bbab0c35ecde28b433aa6f8843ce297a08f68f8187ac6bc",
+      "bytes": 79130
+    },
+    {
+      "name": "mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-rbla-broadcast-accuracy.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\spectum_ablation\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-rbla-broadcast-accuracy.csv",
+      "sha256": "e8f24516dd792f6d81d3db75d92405ae2eed93574794591aefe8e466d4af3f07",
+      "bytes": 150781
+    },
+    {
+      "name": "mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-rbla_plus_rank_scale-broadcast-accuracy.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\spectum_ablation\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-rbla_plus_rank_scale-broadcast-accuracy.csv",
+      "sha256": "713b99d6ce6b72deced3c3218e99c4df14181dc37badcfd2212ac22d1d696fcc",
+      "bytes": 151268
+    },
+    {
+      "name": "mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-rbla-broadcast-accuracy.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\spectum_ablation\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-rbla-broadcast-accuracy.csv",
+      "sha256": "e0cab110d55153ea537b99e88a993757e7f2ee61108b4e18bb0fa0b60500a1df",
+      "bytes": 150661
+    },
+    {
+      "name": "mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-rbla_plus_rank_scale-broadcast-accuracy.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\spectum_ablation\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-rbla_plus_rank_scale-broadcast-accuracy.csv",
+      "sha256": "9c3a0e80da8314d08c45a763a5c1f8064d32814beadb2834c5994753d11ca1b6",
+      "bytes": 150974
+    },
+    {
+      "name": "qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-rbla-broadcast-accuracy.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\spectum_ablation\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-rbla-broadcast-accuracy.csv",
+      "sha256": "9e0a332a9a6c99651a80a20ba59eb169b697b18dbeeffe92ec53a111a5f16247",
+      "bytes": 150596
+    },
+    {
+      "name": "qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-rbla_plus_rank_scale-broadcast-accuracy.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\spectum_ablation\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-rbla_plus_rank_scale-broadcast-accuracy.csv",
+      "sha256": "8ce3f888bd8d9c645707a97d6e61927f579d393fa0c12e9b3ca6ef6ca79fb816",
+      "bytes": 150389
+    },
+    {
+      "name": "qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-rbla-broadcast-accuracy.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\spectum_ablation\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-rbla-broadcast-accuracy.csv",
+      "sha256": "83f1783b24f5445e2bc0aa4020c8d0d31e0224b4fca1c882819c64cda97f0f48",
+      "bytes": 150401
+    },
+    {
+      "name": "qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-rbla_plus_rank_scale-broadcast-accuracy.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\spectum_ablation\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-rbla_plus_rank_scale-broadcast-accuracy.csv",
+      "sha256": "51030f8812642f8790e62d62be14648d4316079395b91eb03d02c4e2eb9109b6",
+      "bytes": 150959
+    }
+  ],
+  "source_hashes_verified": true,
+  "new_experiments_run": false,
+  "pdf_renderer": "ReportLab using the same formatted cells as the LaTeX table",
+  "latex_compiled_locally": false,
+  "latex_dependencies": [
+    "booktabs"
+  ]
+}

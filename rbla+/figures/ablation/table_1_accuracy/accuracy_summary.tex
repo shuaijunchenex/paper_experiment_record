@@ -1,0 +1,23 @@
+% Requires \usepackage{booktabs}
+\begin{table*}[t]
+  \centering
+  \caption{Training-path and broadcast ablation. Accuracy (\%) at the fixed final update and averaged over the last ten updates.}
+  \label{tab:ablation-accuracy}
+  \small
+  \setlength{\tabcolsep}{6pt}
+  \begin{tabular}{@{}llrrrrrr@{}}
+    \toprule
+    Training path & Broadcast & \multicolumn{2}{c}{CIFAR10} & \multicolumn{2}{c}{MNLI} & \multicolumn{2}{c}{QQP} \\
+    \cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(l){7-8}
+     & & Final & Last 10 & Final & Last 10 & Final & Last 10 \\
+    \midrule
+    RBLA & RBLA & 16.97 & 17.84 & 56.81 & 56.93 & 75.66 & 75.99 \\
+    RBLA & RBLA+ & 35.49 & 38.45 & 42.60 & 42.56 & 70.13 & 69.83 \\
+    RBLA+ & RBLA & \textbf{72.96} & \textbf{72.84} & 58.04 & 58.14 & \textbf{76.64} & 77.07 \\
+    RBLA+ & RBLA+ & 72.73 & 72.76 & \textbf{60.53} & \textbf{62.59} & 75.27 & \textbf{77.25} \\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip
+  \parbox{\textwidth}{\footnotesize
+  Values are the unweighted mean accuracy of ten client broadcast models. Final uses update 101 (logged round 100); Last 10 averages updates 92--101 (logged rounds 91--100). All runs use seed 42, correct rank assignment and Dirichlet $\alpha=0.4$. Cross-broadcast evaluation does not change the training path. RBLA+ includes bidirectional RankScale. Bold indicates the highest value in each dataset/metric column. Temporal averages are not averages over seeds. Full-width server-model accuracy is excluded.}
+\end{table*}

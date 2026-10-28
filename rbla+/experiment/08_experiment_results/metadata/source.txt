@@ -1,0 +1,5 @@
+source=H:\flex-src\src\test\experiment_results
+target=H:\paper-experiment-record\rbla+\experiment\08_experiment_results
+archived_at=2026-08-18T19:48:57+10:00
+csv_count=690
+source_bytes=23040605

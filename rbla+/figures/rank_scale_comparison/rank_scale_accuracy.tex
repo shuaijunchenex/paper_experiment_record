@@ -1,0 +1,40 @@
+% Single column in a two-column paper. Requires \usepackage{booktabs}
+\begin{table}[t]
+  \centering
+  \caption{Peak accuracy (\%) of RBLA+ with and without rank scaling under Dirichlet $\alpha=0.4$.}
+  \label{tab:rbla-rank-scale-accuracy}
+  \footnotesize
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrr@{}}
+    \toprule
+    Dataset & w/o scale & w/ scale & $\Delta$ (pp) \\
+    \midrule
+    \multicolumn{4}{c}{\textit{Rank-correct}} \\
+    \midrule
+    CIFAR10 & 78.30 & \textbf{79.12} & +0.82 \\
+    CINIC10 & 69.13 & \textbf{69.65} & +0.52 \\
+    SVHN & 92.90 & \textbf{92.98} & +0.08 \\
+    AG News & 90.99 & \textbf{91.33} & +0.34 \\
+    IMDb & 82.25 & \textbf{84.32} & +2.07 \\
+    MNLI & 64.51 & \textbf{65.16} & +0.64 \\
+    QQP & 81.66 & \textbf{82.48} & +0.82 \\
+    RTE & 54.51 & \textbf{57.04} & +2.53 \\
+    SST-2 & 79.36 & \textbf{80.62} & +1.26 \\
+    \midrule
+    \multicolumn{4}{c}{\textit{Rank-mismatch}} \\
+    \midrule
+    CIFAR10 & \textbf{79.21} & 78.95 & -0.26 \\
+    CINIC10 & \textbf{69.25} & 68.89 & -0.36 \\
+    SVHN & \textbf{93.45} & 93.20 & -0.25 \\
+    AG News & 90.50 & \textbf{91.68} & +1.18 \\
+    IMDb & 81.41 & \textbf{83.64} & +2.23 \\
+    MNLI & 60.02 & \textbf{64.37} & +4.35 \\
+    QQP & 79.81 & \textbf{81.02} & +1.21 \\
+    RTE & \textbf{55.96} & 55.60 & -0.36 \\
+    SST-2 & \textbf{81.08} & 80.50 & -0.57 \\
+    \bottomrule
+  \end{tabular*}
+  \par\smallskip
+  \parbox{\columnwidth}{\scriptsize
+  Values are the maximum server-model accuracy over logged rounds 0--100 of complete runs, not seed averages. Bold marks the higher accuracy within each dataset and rank assignment. $\Delta=\mathrm{ACC}_{\mathrm{w/\ scale}}-\mathrm{ACC}_{\mathrm{w/o\ scale}}$ is computed before rounding and reported in percentage points (pp). Incomplete runs and the separate broadcast ablation are excluded. MNIST, Fashion-MNIST, KMNIST, QMNIST, and MRPC lack paired scaling results and are omitted.}
+\end{table}

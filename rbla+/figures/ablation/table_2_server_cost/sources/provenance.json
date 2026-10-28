@@ -1,0 +1,18 @@
+{
+  "batch": "run_all_20260915_223408_556671",
+  "archive": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671",
+  "files": [
+    {
+      "name": "measurements.csv",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\server_memory\\measurements.csv",
+      "sha256": "639ce9a12011a40d830ec072a8011001ee62111267cc6ffe70264ba61743e2e1",
+      "bytes": 13599073
+    },
+    {
+      "name": "manifest.json",
+      "original": "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671\\server_memory\\manifest.json",
+      "sha256": "5eb52a94cb681c041d1a1e520219a011e0fa6cf06adb9f1674b9f361d5677560",
+      "bytes": 16604
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "run_id": "mismatch_seed43",
+  "assignment": "mismatch",
+  "seed": 43,
+  "config": "H:\\flex-src\\src\\test\\rbla+\\verification\\mnist\\mnist_double_imbalance_mismatch_rbla.yaml",
+  "device": "cpu",
+  "rounds": 1,
+  "local_epochs": 5,
+  "rank_ratios": [
+    1.0,
+    0.9,
+    0.8,
+    0.7,
+    0.6,
+    0.5,
+    0.4,
+    0.3,
+    0.2,
+    0.1
+  ],
+  "client_volumes": [
+    600.0,
+    1266.0,
+    2016.0,
+    2873.0,
+    3873.0,
+    5073.0,
+    6573.0,
+    8573.0,
+    11573.0,
+    16442.0
+  ],
+  "client_weights": [
+    0.010193333559851856,
+    0.02150793381128742,
+    0.03424960076110224,
+    0.04880907886242397,
+    0.06579796812884374,
+    0.08618463524854746,
+    0.11166796914817709,
+    0.14564574768101662,
+    0.1966124154802759,
+    0.2793313173184737
+  ],
+  "total_volume": 58862.0,
+  "volume_rank_spearman": -1.0,
+  "initial_server_checksum": {
+    "sum": 0.7531540635973215,
+    "squared_sum": 246.58008426296482,
+    "elements": 422750
+  },
+  "spmi": {
+    "full_update_energy": 21373.07905670705,
+    "weighted_raw_residual": 10196.112693068586,
+    "weighted_optimal_residual": 0.462249641928348,
+    "spmi_abs": 0.47703236470400723,
+    "spmi_rel": 0.9999546641297675,
+    "client_metrics": [
+      {
+        "client_index": 0,
+        "weight": 0.010193333559851856,
+        "layer_ranks": {
+          "_fc1.lora_A": 160,
+          "_fc2.lora_A": 160,
+          "_fc3.lora_A": 10
+        },
+        "raw_residual": 0.0,
+        "optimal_residual": 0.0,
+        "spmi_abs": 0.0,
+        "spmi_rel": 0.0
+      },
+      {
+        "client_index": 1,
+        "weight": 0.02150793381128742,
+        "layer_ranks": {
+          "_fc1.lora_A": 144,
+          "_fc2.lora_A": 144,
+          "_fc3.lora_A": 10
+        },
+        "raw_residual": 174.42256422179355,
+        "optimal_residual": 6.0586121823582e-05,
+        "spmi_abs": 0.008160850534117895,
+        "spmi_rel": 0.9999996526474536
+      },
+      {
+        "client_index": 2,
+        "weight": 0.03424960076110224,
+        "layer_ranks": {
+          "_fc1.lora_A": 128,
+          "_fc2.lora_A": 128,
+          "_fc3.lora_A": 10
+        },
+        "raw_residual": 585.5585491470788,
+        "optimal_residual": 0.0003263176566394273,
+        "spmi_abs": 0.02739699887301306,
+        "spmi_rel": 0.9999994427241184
+      },
+      {
+        "client_index": 3,
+        "weight": 0.04880907886242397,
+        "layer_ranks": {
+          "_fc1.lora_A": 112,
+          "_fc2.lora_A": 112,
+          "_fc3.lora_A": 10
+        },
+        "raw_residual": 1282.5252440968834,
+        "optimal_residual": 0.0011012217396132637,
+        "spmi_abs": 0.06000652219890035,
+        "spmi_rel": 0.9999991413644724
+      },
+      {
+        "client_index": 4,
+        "weight": 0.06579796812884374,
+        "layer_ranks": {
+          "_fc1.lora_A": 96,
+          "_fc2.lora_A": 96,
+          "_fc3.lora_A": 10
+        },
+        "raw_residual": 2310.8104803115416,
+        "optimal_residual": 0.003070214549749581,
+        "spmi_abs": 0.10811766540356484,
+        "spmi_rel": 0.9999986713689523
+      },
+      {
+        "client_index": 5,
+        "weight": 0.08618463524854746,
+        "layer_ranks": {
+          "_fc1.lora_A": 80,
+          "_fc2.lora_A": 80,
+          "_fc3.lora_A": 10
+        },
+        "raw_residual": 4223.76118696035,
+        "optimal_residual": 0.008109576393312234,
+        "spmi_abs": 0.1976202430252326,
+        "spmi_rel": 0.9999980800106743
+      },
+      {
+        "client_index": 6,
+        "weight": 0.11166796914817709,
+        "layer_ranks": {
+          "_fc1.lora_A": 64,
+          "_fc2.lora_A": 64,
+          "_fc3.lora_A": 10
+        },
+        "raw_residual": 6418.678954740463,
+        "optimal_residual": 0.021444734612453324,
+        "spmi_abs": 0.30031505956515997,
+        "spmi_rel": 0.9999966590111823
+      },
+      {
+        "client_index": 7,
+        "weight": 0.14564574768101662,
+        "layer_ranks": {
+          "_fc1.lora_A": 48,
+          "_fc2.lora_A": 48,
+          "_fc3.lora_A": 10
+        },
+        "raw_residual": 9497.39869481812,
+        "optimal_residual": 0.06520917202767301,
+        "spmi_abs": 0.4443596292535936,
+        "spmi_rel": 0.9999931339965686
+      },
+      {
+        "client_index": 8,
+        "weight": 0.1966124154802759,
+        "layer_ranks": {
+          "_fc1.lora_A": 32,
+          "_fc2.lora_A": 32,
+          "_fc3.lora_A": 10
+        },
+        "raw_residual": 13224.416078941895,
+        "optimal_residual": 0.23021882407604716,
+        "spmi_abs": 0.618730966419551,
+        "spmi_rel": 0.9999825913807686
+      },
+      {
+        "client_index": 9,
+        "weight": 0.2793313173184737,
+        "layer_ranks": {
+          "_fc1.lora_A": 16,
+          "_fc2.lora_A": 16,
+          "_fc3.lora_A": 10
+        },
+        "raw_residual": 17518.752752600147,
+        "optimal_residual": 1.4467639161461534,
+        "spmi_abs": 0.8195967432772362,
+        "spmi_rel": 0.999917416271776
+      }
+    ]
+  },
+  "elapsed_seconds": 17.242256800000177
+}

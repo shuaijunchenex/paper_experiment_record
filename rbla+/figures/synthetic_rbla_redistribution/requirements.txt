@@ -1,0 +1,8 @@
+# Executed with CPython 3.11.11; see results/run_manifest.json for BLAS/platform.
+numpy==1.26.4
+pandas==2.3.1
+matplotlib==3.10.7
+scipy==1.16.0
+threadpoolctl==3.5.0
+PyMuPDF==1.28.2
+Pillow==11.3.0

@@ -1,0 +1,142 @@
+[
+  {
+    "setting": "shared_R32_eta0",
+    "filename": "shared_R32_eta0",
+    "font_family": "Times New Roman",
+    "png_dpi": 600,
+    "ylimits": [
+      [
+        -0.03449125961868099,
+        1.0741563709817792
+      ],
+      [
+        -0.004376929261162935,
+        0.13631008270478853
+      ]
+    ],
+    "titles": [
+      "(a) Relative reconstruction error",
+      "(b) Excess reconstruction error"
+    ]
+  },
+  {
+    "setting": "shared_R32_eta0.1",
+    "filename": "shared_R32_eta0.1",
+    "font_family": "Times New Roman",
+    "png_dpi": 600,
+    "ylimits": [
+      [
+        -0.03449547169890796,
+        1.074287547194562
+      ],
+      [
+        -0.0044536415299832,
+        0.1386991219337625
+      ]
+    ],
+    "titles": [
+      "(a) Relative reconstruction error",
+      "(b) Excess reconstruction error"
+    ]
+  },
+  {
+    "setting": "shared_R32_eta0.3",
+    "filename": "main_R32_eta0.3",
+    "font_family": "Times New Roman",
+    "png_dpi": 600,
+    "ylimits": [
+      [
+        -0.03451842025914655,
+        1.075002230927707
+      ],
+      [
+        -0.0050734552587428546,
+        0.15800189234370604
+      ]
+    ],
+    "titles": [
+      "(a) Relative reconstruction error",
+      "(b) Excess reconstruction error"
+    ]
+  },
+  {
+    "setting": "shared_R32_eta1",
+    "filename": "shared_R32_eta1",
+    "font_family": "Times New Roman",
+    "png_dpi": 600,
+    "ylimits": [
+      [
+        -0.03466738352368316,
+        1.079641372594704
+      ],
+      [
+        -0.011240919419810745,
+        0.3500743476455346
+      ]
+    ],
+    "titles": [
+      "(a) Relative reconstruction error",
+      "(b) Excess reconstruction error"
+    ]
+  },
+  {
+    "setting": "independent_R32",
+    "filename": "independent_R32",
+    "font_family": "Times New Roman",
+    "png_dpi": 600,
+    "ylimits": [
+      [
+        -0.034971987646481614,
+        1.0891276152761415
+      ],
+      [
+        -0.028459735691320168,
+        0.8863174829582565
+      ]
+    ],
+    "titles": [
+      "(a) Relative reconstruction error",
+      "(b) Excess reconstruction error"
+    ]
+  },
+  {
+    "setting": "shared_R16_eta0.3",
+    "filename": "shared_R16_eta0.3",
+    "font_family": "Times New Roman",
+    "png_dpi": 600,
+    "ylimits": [
+      [
+        -0.0340149939534494,
+        1.0593240974074243
+      ],
+      [
+        -0.0038260352441859473,
+        0.11915366903321949
+      ]
+    ],
+    "titles": [
+      "(a) Relative reconstruction error",
+      "(b) Excess reconstruction error"
+    ]
+  },
+  {
+    "setting": "shared_R64_eta0.3",
+    "filename": "shared_R64_eta0.3",
+    "font_family": "Times New Roman",
+    "png_dpi": 600,
+    "ylimits": [
+      [
+        -0.0347432118468666,
+        1.0820028832309885
+      ],
+      [
+        -0.006802793325989693,
+        0.211858420723679
+      ]
+    ],
+    "titles": [
+      "(a) Relative reconstruction error",
+      "(b) Excess reconstruction error"
+    ]
+  }
+]

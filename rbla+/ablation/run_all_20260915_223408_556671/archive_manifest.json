@@ -1,0 +1,1192 @@
+{
+    "batch":  "run_all_20260915_223408_556671",
+    "archived_at":  "2026-09-16T20:56:58.8260185+10:00",
+    "source_repository":  "H:\\flex-src",
+    "source_batch":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671",
+    "archive_root":  "H:\\paper-experiment-record\\rbla+\\ablation\\run_all_20260915_223408_556671",
+    "source_run_state":  "complete",
+    "copied_file_count":  192,
+    "copied_bytes":  55655619,
+    "verification":  "SHA-256 verified for every copied file; originals unchanged.",
+    "unavailable_checkpoint_count":  24,
+    "unavailable_checkpoints":  [
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0000-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0009-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0049-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-round0100-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0000-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0009-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0049-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-round0100-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0000-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0009-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0049-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-round0100-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0000-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0009-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0049-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-round0100-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0000-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0009-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0049-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-round0100-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0000-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0009-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0049-server-input.pt",
+                                    "C:\\Users\\FlexRunner\\work\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\server_inputs\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-round0100-server-input.pt"
+                                ],
+    "files":  [
+                  {
+                      "path":  "status.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\status.json",
+                      "bytes":  18855,
+                      "sha256":  "cd563e96db4fe2d68c019309480eb66e98af5d44d14bb546120ee777d322d48f"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/full_width.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\full_width.csv",
+                      "bytes":  570268,
+                      "sha256":  "0de4bc0ab8fb9c1eb1c9570cd7e0b03d0577fbee6b93e1bf9a3e1a8e9a9dd6e3"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0001_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0001_float64.json",
+                      "bytes":  392251,
+                      "sha256":  "7ffac8f7fcd6c7df89431f1ebaf5c0a1ea9c007252d26e4896504b317951437a"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0002_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0002_float64.json",
+                      "bytes":  392327,
+                      "sha256":  "02c9e304187eacd64094b529c7bef4c668b5a450be98915c6a6feef0ca958b33"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0003_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0003_float64.json",
+                      "bytes":  392485,
+                      "sha256":  "2c67378d2f06b76dbeee3af776cff6c50b6c5b49e03c50b87d5a911e27f2b866"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0005_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0005_float64.json",
+                      "bytes":  395044,
+                      "sha256":  "6eed4158f8d4914e391f2ce23404cc64873109d56bde3f601563fb8ffca765fa"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0006_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0006_float64.json",
+                      "bytes":  395376,
+                      "sha256":  "11b15573482a1e16daba3712c80dcc7fe7eae6ec83203e81de93add9f95fe8c6"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0007_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0007_float64.json",
+                      "bytes":  395576,
+                      "sha256":  "5674150a20cb32f36ed44e6385308d554d79f16dfc8e3dff6afe32207de67347"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0009_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0009_float64.json",
+                      "bytes":  576855,
+                      "sha256":  "91f83c3dd05ee41ed1b0c3a522659ae479cf3c768bd87928b6c32ae8f622cb91"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0010_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0010_float64.json",
+                      "bytes":  576663,
+                      "sha256":  "5495b47da0a5e5ed3ac4b6c34ec0a95fc4efc50e9f9b48bf9cf809997eb7f6ef"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0011_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0011_float64.json",
+                      "bytes":  576834,
+                      "sha256":  "85d584721c22c97f6fe0825b81abbadcd1e7621d1cab3ca0dd92119b816603f7"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0013_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0013_float64.json",
+                      "bytes":  582341,
+                      "sha256":  "160d6849f0a3b737664b2a0b078c5ceb3751064b7693c45f157b528ad85b6fb9"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0014_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0014_float64.json",
+                      "bytes":  581619,
+                      "sha256":  "868f27a7a9532b50e6b544d4785534054c982aaf174ee86a46ff41b22e724310"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0015_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0015_float64.json",
+                      "bytes":  581874,
+                      "sha256":  "246c7e56f52c1cdb8c8be78e124ecd69e7491138e149b5eac571b3dc16c739dc"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0017_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0017_float64.json",
+                      "bytes":  674537,
+                      "sha256":  "ccdbafcf9f901816813a7d1a8550a91c67c259b076a1472c299ee67768fb1b44"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0018_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0018_float64.json",
+                      "bytes":  673963,
+                      "sha256":  "65fb6852e1a484bc276ede2d318f76c9991c21bdf49ac7bccf901536c5441c8d"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0019_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0019_float64.json",
+                      "bytes":  674422,
+                      "sha256":  "4274a922b194c6bd18f17f59a4754686b4b8835cb84a274482c6b57e3bfcd973"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0021_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0021_float64.json",
+                      "bytes":  680761,
+                      "sha256":  "5133aa3e443e7821412208571c15145c80ab2bf95dcd0430a7e19e950d38a352"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0022_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0022_float64.json",
+                      "bytes":  679850,
+                      "sha256":  "acfa73b3d07ee97c1fa4918fab33bfe7cd5816c5976bc878a0646f72bd13d899"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/input_0023_float64.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\input_0023_float64.json",
+                      "bytes":  680108,
+                      "sha256":  "1d8c6146da629a2518fb9fd21a50d89bf74701d12de2a82ef6a574dba0cf1b1b"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/manifest.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\manifest.json",
+                      "bytes":  3295306,
+                      "sha256":  "5fdcab15917921c4f8b3ac8bf45a98c24ffce7e1026848ee590e75adbbac8bcf"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/reconstruction.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\reconstruction.csv",
+                      "bytes":  3772043,
+                      "sha256":  "e16fdc57e3e3e0f52a54ab9e937b6f449bea43e372c0703830570519fce90d53"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/reconstruction.pdf",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\reconstruction.pdf",
+                      "bytes":  190390,
+                      "sha256":  "11ec9b5f809a6f55804e611da71910df44481aa696c2f8b58e8dcb5b0ac6c1ff"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/status.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\status.json",
+                      "bytes":  8358,
+                      "sha256":  "5f2bdcda35d2fa3707a609f6751b10e793ebb39c1f2665bf7368d985b1b3d620"
+                  },
+                  {
+                      "path":  "checkpoint_reconstruction/summary.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\checkpoint_reconstruction\\summary.json",
+                      "bytes":  14835,
+                      "sha256":  "c7f77ac44d80add8c9139f7d0026a9d1fb8b619a48ade1ec2308e61fcc8a96ff"
+                  },
+                  {
+                      "path":  "server_memory/000_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\000_broadcast_dense_svd.json",
+                      "bytes":  88667,
+                      "sha256":  "7844d8d3eb41f5c878e93a8b18b5876ad499cb69f2d8cf08d9acc3798e3ce264"
+                  },
+                  {
+                      "path":  "server_memory/000_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\000_broadcast_rbla.json",
+                      "bytes":  88687,
+                      "sha256":  "d100ce9442d0d2d2023ca776b5945a0a1b269c9a869e6655c6690090876b140a"
+                  },
+                  {
+                      "path":  "server_memory/000_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\000_broadcast_rbla_plus.json",
+                      "bytes":  88678,
+                      "sha256":  "5a591c34b4e8de968c5d2c8a347c2e698117c36c1f070961ca1c3f6060120835"
+                  },
+                  {
+                      "path":  "server_memory/000_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\000_server_step_dense_svd.json",
+                      "bytes":  88677,
+                      "sha256":  "55d6c46750b9ced0e20961b3cd30e35d67d302739080290b449102fd2414970d"
+                  },
+                  {
+                      "path":  "server_memory/000_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\000_server_step_rbla.json",
+                      "bytes":  88676,
+                      "sha256":  "43ac82f62d52d9f19043c3c28534c465a2bc0211901106d4346b4f9dc1aee797"
+                  },
+                  {
+                      "path":  "server_memory/000_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\000_server_step_rbla_plus.json",
+                      "bytes":  88677,
+                      "sha256":  "43af6b97f90a9c6c69c8a2c8a9c38ae155aa6fe0305d637cdb17d9e7f2a24e66"
+                  },
+                  {
+                      "path":  "server_memory/001_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\001_broadcast_dense_svd.json",
+                      "bytes":  88677,
+                      "sha256":  "400b57d4110ef932655fcf8b10cb8e0e45a44fe2e14e0372d2e31e45df693158"
+                  },
+                  {
+                      "path":  "server_memory/001_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\001_broadcast_rbla.json",
+                      "bytes":  88688,
+                      "sha256":  "f378421e2077fa29c8ae097e96cb3aebaa7bc9f3aa387c9c56d36b1ffb161504"
+                  },
+                  {
+                      "path":  "server_memory/001_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\001_broadcast_rbla_plus.json",
+                      "bytes":  88679,
+                      "sha256":  "739430b232648ea063ca229c4fafdf47964619e17d936668a19289547b1257e9"
+                  },
+                  {
+                      "path":  "server_memory/001_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\001_server_step_dense_svd.json",
+                      "bytes":  88680,
+                      "sha256":  "1761b19cfaba9b2b0116f7813940a8f74a5f6a1407be1723367eeebc54fdc677"
+                  },
+                  {
+                      "path":  "server_memory/001_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\001_server_step_rbla.json",
+                      "bytes":  88676,
+                      "sha256":  "101d8230f622ca7c6208eec88db98d16329b892a2b6ad57091bfb0e13ec5e0b0"
+                  },
+                  {
+                      "path":  "server_memory/001_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\001_server_step_rbla_plus.json",
+                      "bytes":  88671,
+                      "sha256":  "f1825d9724e802486122cef09d7ccbf2217f264d1b3413afaec68acd63f48990"
+                  },
+                  {
+                      "path":  "server_memory/002_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\002_broadcast_dense_svd.json",
+                      "bytes":  88676,
+                      "sha256":  "4ea33b1caf47e4b993ff8d22b11c10ea700e81a68e5e299e9f6475787041e42c"
+                  },
+                  {
+                      "path":  "server_memory/002_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\002_broadcast_rbla.json",
+                      "bytes":  88689,
+                      "sha256":  "65cb39d596d6f873b2b83d7c66c5b7a8412298e7dad95a6e3f1695126c6fc802"
+                  },
+                  {
+                      "path":  "server_memory/002_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\002_broadcast_rbla_plus.json",
+                      "bytes":  88674,
+                      "sha256":  "bae392bff49646e83ce2142b6d2a668dd0676c9c6057bc8a925e8fb06feed331"
+                  },
+                  {
+                      "path":  "server_memory/002_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\002_server_step_dense_svd.json",
+                      "bytes":  88679,
+                      "sha256":  "d1fbd0f36cd6420a47cc4884dd7e31b422f707d8a26c269d1137e4b087e9684b"
+                  },
+                  {
+                      "path":  "server_memory/002_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\002_server_step_rbla.json",
+                      "bytes":  88678,
+                      "sha256":  "58126354821388c83296d168b0bc220bc33dd03b23757a34546b1cf20fe3b7fe"
+                  },
+                  {
+                      "path":  "server_memory/002_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\002_server_step_rbla_plus.json",
+                      "bytes":  88669,
+                      "sha256":  "d78e1a472171f0fc5d77afb829baa29b05b057dfde36df5b4912824024d8d645"
+                  },
+                  {
+                      "path":  "server_memory/003_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\003_broadcast_dense_svd.json",
+                      "bytes":  88671,
+                      "sha256":  "83a9a5796bbd8fbf41705abbd8395137694a9dafc70edbbb36bc55df727a8fb5"
+                  },
+                  {
+                      "path":  "server_memory/003_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\003_broadcast_rbla.json",
+                      "bytes":  88692,
+                      "sha256":  "d57171c800111a7701d5b6df3d91d3bcf6a9bc66ca45195abc603e31d9355129"
+                  },
+                  {
+                      "path":  "server_memory/003_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\003_broadcast_rbla_plus.json",
+                      "bytes":  88686,
+                      "sha256":  "99a146a393784da941c9a42fd42fa2a361fc493fe9d297d30b4d69e0d291caf4"
+                  },
+                  {
+                      "path":  "server_memory/003_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\003_server_step_dense_svd.json",
+                      "bytes":  88684,
+                      "sha256":  "037eceda5bc021e98b0dc53c1754517c2b783a9b9ab2bbd169958439e256eecc"
+                  },
+                  {
+                      "path":  "server_memory/003_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\003_server_step_rbla.json",
+                      "bytes":  88679,
+                      "sha256":  "2e70d32a104496999152a64284e5d52f7aac38b35f85a151e0944d5046d0722e"
+                  },
+                  {
+                      "path":  "server_memory/003_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\003_server_step_rbla_plus.json",
+                      "bytes":  88678,
+                      "sha256":  "7f33a5679d5bc34a4c772fbc4b3ac9a4cc6832694ffb36c1bb15001f941e3b4e"
+                  },
+                  {
+                      "path":  "server_memory/004_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\004_broadcast_dense_svd.json",
+                      "bytes":  88706,
+                      "sha256":  "acc3b94af3b17f7ebe4937998942a45dc1b15c15fa2996bee9b43792c95cfdaa"
+                  },
+                  {
+                      "path":  "server_memory/004_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\004_broadcast_rbla.json",
+                      "bytes":  88723,
+                      "sha256":  "10aba7737bccb6cb4cc1e293a1af9d9af4f7ab8922446a6aa7df68d5c09fe7b8"
+                  },
+                  {
+                      "path":  "server_memory/004_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\004_broadcast_rbla_plus.json",
+                      "bytes":  88716,
+                      "sha256":  "df44a1ae60d7edcc1b411fea2842effd997ffed5418a8f347c4dc0b26c3cd733"
+                  },
+                  {
+                      "path":  "server_memory/004_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\004_server_step_dense_svd.json",
+                      "bytes":  88714,
+                      "sha256":  "5daef6528aeb73de1d2db26e2eca5e0357956a610de11f6791fd7d4a7025645b"
+                  },
+                  {
+                      "path":  "server_memory/004_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\004_server_step_rbla.json",
+                      "bytes":  88713,
+                      "sha256":  "5c43effe02635ee24375de9746b3abe8312c89017a01e5757a644522125bae8a"
+                  },
+                  {
+                      "path":  "server_memory/004_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\004_server_step_rbla_plus.json",
+                      "bytes":  88708,
+                      "sha256":  "7f2f7761e0fa8446687d21e658cd0dd72e001bf362242eb330756b5743861a57"
+                  },
+                  {
+                      "path":  "server_memory/005_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\005_broadcast_dense_svd.json",
+                      "bytes":  88717,
+                      "sha256":  "e02b6cd39ce7c4e7f3b3969de177d617719580753d7dda6d9f28669320495144"
+                  },
+                  {
+                      "path":  "server_memory/005_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\005_broadcast_rbla.json",
+                      "bytes":  88722,
+                      "sha256":  "a16e9e52e2d566d2f6b9f42af8f78818efbb8820229a70ae5979af1634059236"
+                  },
+                  {
+                      "path":  "server_memory/005_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\005_broadcast_rbla_plus.json",
+                      "bytes":  88715,
+                      "sha256":  "ea8c3c7612ab82e2be0edefe50f2b3290f21402234207b8da6df47dc9a6605ce"
+                  },
+                  {
+                      "path":  "server_memory/005_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\005_server_step_dense_svd.json",
+                      "bytes":  88718,
+                      "sha256":  "cb84efe50ac9f85c673997aeff22ecc2a0ccdb849ee10859e80e7f61121bec18"
+                  },
+                  {
+                      "path":  "server_memory/005_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\005_server_step_rbla.json",
+                      "bytes":  88717,
+                      "sha256":  "f69d416ae2e545aafaa60094f7b64fb42de22a5e7f8b5f201f436d619f563010"
+                  },
+                  {
+                      "path":  "server_memory/005_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\005_server_step_rbla_plus.json",
+                      "bytes":  88705,
+                      "sha256":  "a836f25d0c54180fdac3e88f15d3cf7009dff99210ff5f2a25e623f0153e529a"
+                  },
+                  {
+                      "path":  "server_memory/006_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\006_broadcast_dense_svd.json",
+                      "bytes":  88713,
+                      "sha256":  "eb52cbb9827470703abb506f812b96b2c0feb0a2db11668651a504ecf95919b9"
+                  },
+                  {
+                      "path":  "server_memory/006_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\006_broadcast_rbla.json",
+                      "bytes":  88722,
+                      "sha256":  "df849f95d96046abd12075406095368a303b78083a348ce775d0b701102f8e13"
+                  },
+                  {
+                      "path":  "server_memory/006_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\006_broadcast_rbla_plus.json",
+                      "bytes":  88715,
+                      "sha256":  "c9f4b3c65fba3c8984adb64dffaa5219860f11c263d09dc285d17402ad1b5a88"
+                  },
+                  {
+                      "path":  "server_memory/006_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\006_server_step_dense_svd.json",
+                      "bytes":  88715,
+                      "sha256":  "617eecb05d50fb97c1f3d6c268e5deb84949b6273bee86e5f2343f21c77bf4d9"
+                  },
+                  {
+                      "path":  "server_memory/006_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\006_server_step_rbla.json",
+                      "bytes":  88718,
+                      "sha256":  "9cfdb45d32aa79064e5d070f4c57bb28cbe027c05141cd6cc7a3ef9fb9ab80c3"
+                  },
+                  {
+                      "path":  "server_memory/006_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\006_server_step_rbla_plus.json",
+                      "bytes":  88711,
+                      "sha256":  "462df4f1850fe427b3705f5536b2d4648d716ec2b247181c9654dbe37018d582"
+                  },
+                  {
+                      "path":  "server_memory/007_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\007_broadcast_dense_svd.json",
+                      "bytes":  88715,
+                      "sha256":  "6ef2b6c09feff71b508c016ee5d46b3dd7596dd6f48a69ece20d5c6816904adf"
+                  },
+                  {
+                      "path":  "server_memory/007_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\007_broadcast_rbla.json",
+                      "bytes":  88724,
+                      "sha256":  "f2eb155df085b9e531279930ebf96445f32668d39c0eb056d9ecb1a255f8b5d1"
+                  },
+                  {
+                      "path":  "server_memory/007_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\007_broadcast_rbla_plus.json",
+                      "bytes":  88722,
+                      "sha256":  "3489ea10755c436568a1635d4329660ca9c3be5aabcea892d3ebc7aff1111c93"
+                  },
+                  {
+                      "path":  "server_memory/007_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\007_server_step_dense_svd.json",
+                      "bytes":  88724,
+                      "sha256":  "6a9c75293f7b808c302757f84284e46902ebf168a084ba06149e27189508eb7d"
+                  },
+                  {
+                      "path":  "server_memory/007_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\007_server_step_rbla.json",
+                      "bytes":  88719,
+                      "sha256":  "8f91fb5d7f9f98c5fbcf4d20fa52a7ae12db1f122670234d9fde58112415d366"
+                  },
+                  {
+                      "path":  "server_memory/007_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\007_server_step_rbla_plus.json",
+                      "bytes":  88722,
+                      "sha256":  "67e680118edb14b7156428d87aa967a841f16d3aa6d71bf2e4e021bee0c2080d"
+                  },
+                  {
+                      "path":  "server_memory/008_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\008_broadcast_dense_svd.json",
+                      "bytes":  189737,
+                      "sha256":  "47e94beb68c2dec0ef59988afbd7442267a7b897b5e6cca97960e3731d1e8da7"
+                  },
+                  {
+                      "path":  "server_memory/008_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\008_broadcast_rbla.json",
+                      "bytes":  189756,
+                      "sha256":  "3e5dc6b1a23fad93c74f09e4cdeb9a551d1bc562572b5e5a08b409dd03941a18"
+                  },
+                  {
+                      "path":  "server_memory/008_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\008_broadcast_rbla_plus.json",
+                      "bytes":  189764,
+                      "sha256":  "c50ff495527425e12e60dba03902a6a8dfa31e1c0068c7e557951ee79ff75c0e"
+                  },
+                  {
+                      "path":  "server_memory/008_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\008_server_step_dense_svd.json",
+                      "bytes":  189753,
+                      "sha256":  "d4d89710c61db20b66156e6f420be5e0687aa9b6cd8704d3ba25f504d6ccb2c5"
+                  },
+                  {
+                      "path":  "server_memory/008_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\008_server_step_rbla.json",
+                      "bytes":  189753,
+                      "sha256":  "ea864721776ddfa6eb81d59c9fd8e8c42fd164c1f84e0aa07aef105b9275723e"
+                  },
+                  {
+                      "path":  "server_memory/008_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\008_server_step_rbla_plus.json",
+                      "bytes":  189766,
+                      "sha256":  "f876ac1dd7c8fde42d189b3e3f10c7fd50a00f71d35d5c2e8fe6b7b624c3cdcb"
+                  },
+                  {
+                      "path":  "server_memory/009_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\009_broadcast_dense_svd.json",
+                      "bytes":  189739,
+                      "sha256":  "fde51f38afa6073b155815daeb4fb9fe085462304108459043ad3eb84c80471d"
+                  },
+                  {
+                      "path":  "server_memory/009_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\009_broadcast_rbla.json",
+                      "bytes":  189756,
+                      "sha256":  "820d5949da5c08dca1fffe7cb933c39bf3d60639f8129c7289725a6fd5afccff"
+                  },
+                  {
+                      "path":  "server_memory/009_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\009_broadcast_rbla_plus.json",
+                      "bytes":  189764,
+                      "sha256":  "29abce9915f972256c15009fd6148bde2b057cad667c90158149de36bcf89527"
+                  },
+                  {
+                      "path":  "server_memory/009_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\009_server_step_dense_svd.json",
+                      "bytes":  189755,
+                      "sha256":  "6917c059c663da90e221da55851f8482b63bcbbed0d5b3624c43896ac0fc4336"
+                  },
+                  {
+                      "path":  "server_memory/009_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\009_server_step_rbla.json",
+                      "bytes":  189756,
+                      "sha256":  "46de9a855124b3099371d863223fe7e4b12aa2926ff5e7c2b53a51ec8cb69ad2"
+                  },
+                  {
+                      "path":  "server_memory/009_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\009_server_step_rbla_plus.json",
+                      "bytes":  189767,
+                      "sha256":  "0a9caaec7cdab4320c73dda81ef56512f4468556e08f1ddc80fcdf269d74127b"
+                  },
+                  {
+                      "path":  "server_memory/010_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\010_broadcast_dense_svd.json",
+                      "bytes":  189739,
+                      "sha256":  "d1493fdac0195ba809932f65bcabbd8f82924ee9b29ea18aaea5529e1c12434c"
+                  },
+                  {
+                      "path":  "server_memory/010_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\010_broadcast_rbla.json",
+                      "bytes":  189748,
+                      "sha256":  "0b15ddefb0d78b2d811b9d6103e9707b2ab185c97ed91218b5f52d823eda73e8"
+                  },
+                  {
+                      "path":  "server_memory/010_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\010_broadcast_rbla_plus.json",
+                      "bytes":  189757,
+                      "sha256":  "8c89760438514fb2515b98ead019a4f9731ee592a711df08b066a8a854a6905b"
+                  },
+                  {
+                      "path":  "server_memory/010_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\010_server_step_dense_svd.json",
+                      "bytes":  189755,
+                      "sha256":  "4f9e626f8ff424c1b3034b5b8878e1f4a61400c088f2b0769b2663e45199f053"
+                  },
+                  {
+                      "path":  "server_memory/010_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\010_server_step_rbla.json",
+                      "bytes":  189754,
+                      "sha256":  "9a1a011f1d093489e0de5674d2cb70ff5c71a0d9414557f2c23748c15983b16c"
+                  },
+                  {
+                      "path":  "server_memory/010_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\010_server_step_rbla_plus.json",
+                      "bytes":  189770,
+                      "sha256":  "41797b90002b3b0355e26e5cf040be3f21797469a89a8f6fb7744659f98b67fe"
+                  },
+                  {
+                      "path":  "server_memory/011_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\011_broadcast_dense_svd.json",
+                      "bytes":  189736,
+                      "sha256":  "37d19b673330f04ec1274a2e58906262a0f33e0939d07417c5de3394490c3770"
+                  },
+                  {
+                      "path":  "server_memory/011_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\011_broadcast_rbla.json",
+                      "bytes":  189764,
+                      "sha256":  "e8fe14ba5c75083e3be9d4425f7ae7c4371f2ec2c6168e7e5eef0e73d25fbeae"
+                  },
+                  {
+                      "path":  "server_memory/011_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\011_broadcast_rbla_plus.json",
+                      "bytes":  189774,
+                      "sha256":  "3ee96394f82cdf0c846521449cee818ce4184df4aabcdf56d95c0730cb57dcac"
+                  },
+                  {
+                      "path":  "server_memory/011_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\011_server_step_dense_svd.json",
+                      "bytes":  189759,
+                      "sha256":  "a4af0e6013d7f613cc8974498a80b76fe3728b1e16c1672b6b2f69427848c417"
+                  },
+                  {
+                      "path":  "server_memory/011_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\011_server_step_rbla.json",
+                      "bytes":  189756,
+                      "sha256":  "9428230c7362fe985c4b992575a151bd19ca129e88dbd5246e798adccdd63875"
+                  },
+                  {
+                      "path":  "server_memory/011_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\011_server_step_rbla_plus.json",
+                      "bytes":  189771,
+                      "sha256":  "c3fde147353e9ba10bcf2042f70eb4fa266bf5a382ebaad9163fd5eecb04716a"
+                  },
+                  {
+                      "path":  "server_memory/012_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\012_broadcast_dense_svd.json",
+                      "bytes":  189774,
+                      "sha256":  "1c11d7c331b26dd03bc5b09f96d175bbb5a51ff002517b9815192919ae414723"
+                  },
+                  {
+                      "path":  "server_memory/012_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\012_broadcast_rbla.json",
+                      "bytes":  189795,
+                      "sha256":  "0efa385a7125d1e8782c91b2ba43acb0c3013fa0f0ce63bd24c520c4b5c0c293"
+                  },
+                  {
+                      "path":  "server_memory/012_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\012_broadcast_rbla_plus.json",
+                      "bytes":  189789,
+                      "sha256":  "1ff073d8d3d8391c49f5b77f64983eac0884780bec9408dc45d8207b3c286d3f"
+                  },
+                  {
+                      "path":  "server_memory/012_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\012_server_step_dense_svd.json",
+                      "bytes":  189788,
+                      "sha256":  "ec743e9c01ab29a1e6858685299204086381a4976beebebe205d6333b9a33b83"
+                  },
+                  {
+                      "path":  "server_memory/012_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\012_server_step_rbla.json",
+                      "bytes":  189785,
+                      "sha256":  "4f5655a48ced1daaac30be8d11bed61720c00e5fa551ec3a72d6d67dec271737"
+                  },
+                  {
+                      "path":  "server_memory/012_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\012_server_step_rbla_plus.json",
+                      "bytes":  189805,
+                      "sha256":  "023e876218ea87f0cd9589684cee6afafb988c87dc4bb790c138eb6e7ad86b1b"
+                  },
+                  {
+                      "path":  "server_memory/013_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\013_broadcast_dense_svd.json",
+                      "bytes":  189778,
+                      "sha256":  "5a13eda3980981405ed845f8c7e8c5e50cf7ae7a1ea6538c636f04cbeac31e6c"
+                  },
+                  {
+                      "path":  "server_memory/013_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\013_broadcast_rbla.json",
+                      "bytes":  189792,
+                      "sha256":  "8a69e0130cbd0d9c6396ba7cae84b29290cbe9f4727dd4506dc0e1b0ad252226"
+                  },
+                  {
+                      "path":  "server_memory/013_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\013_broadcast_rbla_plus.json",
+                      "bytes":  189806,
+                      "sha256":  "3b6f592379aac52814ea6cda47e903170304b36daa83041c981216101f8f4d72"
+                  },
+                  {
+                      "path":  "server_memory/013_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\013_server_step_dense_svd.json",
+                      "bytes":  189791,
+                      "sha256":  "fa1b655125595eaf6fb10ed26510dddf80679a91c33a0a974ae232e1839bca79"
+                  },
+                  {
+                      "path":  "server_memory/013_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\013_server_step_rbla.json",
+                      "bytes":  189788,
+                      "sha256":  "ef7f56be2a8a888e5224503f60034d011c1083de40c39719a0b35e6b9b356c2f"
+                  },
+                  {
+                      "path":  "server_memory/013_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\013_server_step_rbla_plus.json",
+                      "bytes":  189805,
+                      "sha256":  "06b76c0b64d2d00678ee327b8174899a6b0b11a21ae8f74ac4a7ce917042d46b"
+                  },
+                  {
+                      "path":  "server_memory/014_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\014_broadcast_dense_svd.json",
+                      "bytes":  189778,
+                      "sha256":  "a55432d778ff8d39ca4d315137a740a04ded485bf03e8cc2e3dac42ce7bc7f4b"
+                  },
+                  {
+                      "path":  "server_memory/014_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\014_broadcast_rbla.json",
+                      "bytes":  189790,
+                      "sha256":  "df7ccc043026e4547b573b2f7e4b15562b43790769a391a2153e771161d4b60b"
+                  },
+                  {
+                      "path":  "server_memory/014_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\014_broadcast_rbla_plus.json",
+                      "bytes":  189793,
+                      "sha256":  "8f92450d923364a8348faddb02a0473804552be9c6a1f523237ce9f2c6747673"
+                  },
+                  {
+                      "path":  "server_memory/014_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\014_server_step_dense_svd.json",
+                      "bytes":  189790,
+                      "sha256":  "956338ab1b5dd353393d18f36d90304b1b15f685ff17a9805d26b229981e38d6"
+                  },
+                  {
+                      "path":  "server_memory/014_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\014_server_step_rbla.json",
+                      "bytes":  189795,
+                      "sha256":  "99ba871e63569be4b196a0c2cc527cc16bfb370dea58f78f34ba0ced0289dcc2"
+                  },
+                  {
+                      "path":  "server_memory/014_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\014_server_step_rbla_plus.json",
+                      "bytes":  189806,
+                      "sha256":  "f0f72818e0030348899d914ae48c6cf7f620f83155e8c89c55e3f8cb1e84bc83"
+                  },
+                  {
+                      "path":  "server_memory/015_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\015_broadcast_dense_svd.json",
+                      "bytes":  189784,
+                      "sha256":  "f28953ad1d0ca09832f6aaaff9df18a123338c21c379d34886476866d17bfc4e"
+                  },
+                  {
+                      "path":  "server_memory/015_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\015_broadcast_rbla.json",
+                      "bytes":  189795,
+                      "sha256":  "607adc687dcb14776c61fa9549ea05ff1bda4d6ed6fd9b932599340b28ef0b8f"
+                  },
+                  {
+                      "path":  "server_memory/015_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\015_broadcast_rbla_plus.json",
+                      "bytes":  189807,
+                      "sha256":  "818c67a5570a478eeff880265cd5f631db1025c4ead51f11816f3b71c0856ce6"
+                  },
+                  {
+                      "path":  "server_memory/015_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\015_server_step_dense_svd.json",
+                      "bytes":  189796,
+                      "sha256":  "19f378bbc3c5e783ab86f95b4f3a926b1bfd57920e82edfd8f6b8bbb4653699e"
+                  },
+                  {
+                      "path":  "server_memory/015_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\015_server_step_rbla.json",
+                      "bytes":  189792,
+                      "sha256":  "b261096fbb17e03159db3080e3d5b39f37930a489a43e9996d340fd32dbdc16b"
+                  },
+                  {
+                      "path":  "server_memory/015_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\015_server_step_rbla_plus.json",
+                      "bytes":  189811,
+                      "sha256":  "22b8ef72d190432dcc896699ef2400124eda6e7e5910603a1e48219f63252ab1"
+                  },
+                  {
+                      "path":  "server_memory/016_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\016_broadcast_dense_svd.json",
+                      "bytes":  189220,
+                      "sha256":  "b78bca2500e2fe4377a82c964fb9c0967a77c58df7713e8b2d4117fe17009d26"
+                  },
+                  {
+                      "path":  "server_memory/016_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\016_broadcast_rbla.json",
+                      "bytes":  189243,
+                      "sha256":  "934ea9624105a53b2d6ff9d990833dca7a928a980ef6170c7553d227913829a5"
+                  },
+                  {
+                      "path":  "server_memory/016_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\016_broadcast_rbla_plus.json",
+                      "bytes":  189239,
+                      "sha256":  "aceff642f70b27d8a7f75fb3cdfbbcbeb0146e1b050b377eefad6e8589ceb936"
+                  },
+                  {
+                      "path":  "server_memory/016_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\016_server_step_dense_svd.json",
+                      "bytes":  189243,
+                      "sha256":  "cbe0bb0a1520dce2ac114656fd5c506bb4cdae259ee52797866047f54f14b2ff"
+                  },
+                  {
+                      "path":  "server_memory/016_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\016_server_step_rbla.json",
+                      "bytes":  189238,
+                      "sha256":  "b2bf0fbd6dc50ef854ab33834cac75e4b5c532abe246879455229a177738f17c"
+                  },
+                  {
+                      "path":  "server_memory/016_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\016_server_step_rbla_plus.json",
+                      "bytes":  189250,
+                      "sha256":  "8e8b50ea5015312f0e54b1f0d79f34bfd82583b1a1322f19f15703d13551f796"
+                  },
+                  {
+                      "path":  "server_memory/017_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\017_broadcast_dense_svd.json",
+                      "bytes":  189220,
+                      "sha256":  "84213cdb3600eb4d24f95d5b31f7b44746a3701b4db579cf94a2f53e167bd1bc"
+                  },
+                  {
+                      "path":  "server_memory/017_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\017_broadcast_rbla.json",
+                      "bytes":  189243,
+                      "sha256":  "f9485b456077ee3070c277c486294d79efa33773b51d672c01997ec91d491bd2"
+                  },
+                  {
+                      "path":  "server_memory/017_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\017_broadcast_rbla_plus.json",
+                      "bytes":  189242,
+                      "sha256":  "129622691dff4153dfa04d1c76cf3ee8b64ab6a40839e988f4a4a19c6742d720"
+                  },
+                  {
+                      "path":  "server_memory/017_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\017_server_step_dense_svd.json",
+                      "bytes":  189242,
+                      "sha256":  "55d0af35e01fb8cd4ad7a7151e2f2cb8e93d819054ec22b5e281696d9910e3c8"
+                  },
+                  {
+                      "path":  "server_memory/017_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\017_server_step_rbla.json",
+                      "bytes":  189244,
+                      "sha256":  "19aae76d72547076be5984d3b3b856e28385c8c845535493cdd175f40f207e4b"
+                  },
+                  {
+                      "path":  "server_memory/017_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\017_server_step_rbla_plus.json",
+                      "bytes":  189256,
+                      "sha256":  "e7e54fa47b1e8a85447b7d1a9769f6e71c5423f671e31958a2c689d88444f5fb"
+                  },
+                  {
+                      "path":  "server_memory/018_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\018_broadcast_dense_svd.json",
+                      "bytes":  189221,
+                      "sha256":  "1e1f700917ae25e51826d7f366fab5b7c8ea2bdebbc9b53d13908759172b9367"
+                  },
+                  {
+                      "path":  "server_memory/018_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\018_broadcast_rbla.json",
+                      "bytes":  189240,
+                      "sha256":  "4e4e71d316aafee23318cdf6833e34cad295b72ae4f07b3e1a0d7a9ed72fd033"
+                  },
+                  {
+                      "path":  "server_memory/018_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\018_broadcast_rbla_plus.json",
+                      "bytes":  189253,
+                      "sha256":  "a838d65e891cbcaef1d30b677aa0df8d7a85122bf48b941de6a9c1e39fc2730e"
+                  },
+                  {
+                      "path":  "server_memory/018_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\018_server_step_dense_svd.json",
+                      "bytes":  189243,
+                      "sha256":  "fbaca81ec59d6c0a295c297090cc4e1504facc64c466d2bba58c69e6d0c2eac0"
+                  },
+                  {
+                      "path":  "server_memory/018_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\018_server_step_rbla.json",
+                      "bytes":  189236,
+                      "sha256":  "263fd31a20c99262d2ff794b705dd1de9e133f7f1047e5dcb45a08c955969ccf"
+                  },
+                  {
+                      "path":  "server_memory/018_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\018_server_step_rbla_plus.json",
+                      "bytes":  189254,
+                      "sha256":  "d22c554971339ac6d28fcce9c94b3b9eba9e3da2d8588935bfc488a56b8f6d62"
+                  },
+                  {
+                      "path":  "server_memory/019_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\019_broadcast_dense_svd.json",
+                      "bytes":  189226,
+                      "sha256":  "d6ebc2e6e79dad890aa6d74e69ab756cdebf60369d97ba879f8d4d9abe6a6d32"
+                  },
+                  {
+                      "path":  "server_memory/019_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\019_broadcast_rbla.json",
+                      "bytes":  189243,
+                      "sha256":  "c42106b6c1a9d25e58e9f478c32f27df75e648008790701fafbdbc42e6991df2"
+                  },
+                  {
+                      "path":  "server_memory/019_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\019_broadcast_rbla_plus.json",
+                      "bytes":  189246,
+                      "sha256":  "cc88442097490b441f3888b6e89afc9dacdfc4288c8d759ea547a2169e8c2abe"
+                  },
+                  {
+                      "path":  "server_memory/019_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\019_server_step_dense_svd.json",
+                      "bytes":  189244,
+                      "sha256":  "973c5adf358fe34b5b5ca314c0f63ffca5597f47b255c4bc6e72bc7651ea52f9"
+                  },
+                  {
+                      "path":  "server_memory/019_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\019_server_step_rbla.json",
+                      "bytes":  189247,
+                      "sha256":  "3c17fc67d548b2ac7a1c21a54baa6afea8a4aa446c36a16fc08988553d93dec4"
+                  },
+                  {
+                      "path":  "server_memory/019_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\019_server_step_rbla_plus.json",
+                      "bytes":  189254,
+                      "sha256":  "327f980aa0a8ca163d815c33265db2b28ca2d1964540244385458dd6309e129e"
+                  },
+                  {
+                      "path":  "server_memory/020_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\020_broadcast_dense_svd.json",
+                      "bytes":  189257,
+                      "sha256":  "12e269f20ed9a8cbe2f18b17d7255f3660f27bab0d68bbee9e78206d0307ff79"
+                  },
+                  {
+                      "path":  "server_memory/020_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\020_broadcast_rbla.json",
+                      "bytes":  189278,
+                      "sha256":  "f06fe47bf93960b132f9e1e412e1446281a5c7a0296d800d2a2a4f60794e9f53"
+                  },
+                  {
+                      "path":  "server_memory/020_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\020_broadcast_rbla_plus.json",
+                      "bytes":  189287,
+                      "sha256":  "89582131282bcca3bb663615b5873338a8ca78af8e0d227fdcf66f0ef8be435c"
+                  },
+                  {
+                      "path":  "server_memory/020_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\020_server_step_dense_svd.json",
+                      "bytes":  189270,
+                      "sha256":  "07df0e4989ba139a07de2e4ba5c6d06a24b1bfe7aa6a8852cfdbc2b526515e91"
+                  },
+                  {
+                      "path":  "server_memory/020_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\020_server_step_rbla.json",
+                      "bytes":  189280,
+                      "sha256":  "50c86bf5e0f96599ebdbc56cb0cbe92491e225ed4f13d0c02398e13a54712f0d"
+                  },
+                  {
+                      "path":  "server_memory/020_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\020_server_step_rbla_plus.json",
+                      "bytes":  189290,
+                      "sha256":  "e16638ddc728ed254cd7c22a1499a7cee51a089ac689d33b353ae264c435881b"
+                  },
+                  {
+                      "path":  "server_memory/021_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\021_broadcast_dense_svd.json",
+                      "bytes":  189262,
+                      "sha256":  "332ba9790286660394517038db00fa2db2428bd9e99e0124383d4c5f206ae6d8"
+                  },
+                  {
+                      "path":  "server_memory/021_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\021_broadcast_rbla.json",
+                      "bytes":  189278,
+                      "sha256":  "fdc4cb1f62d0ee06d17a6537697fb9bf6d0ca82729ad0cd6245f06bdb34dd150"
+                  },
+                  {
+                      "path":  "server_memory/021_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\021_broadcast_rbla_plus.json",
+                      "bytes":  189283,
+                      "sha256":  "dfd0dc55b275f50353f744459355a4790e32b0b9825f25d8d987b0bebfbd8cd9"
+                  },
+                  {
+                      "path":  "server_memory/021_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\021_server_step_dense_svd.json",
+                      "bytes":  189279,
+                      "sha256":  "041f442d191bbf72433adea32bc06dbfd8ac6887a358d3cf613120da6697a332"
+                  },
+                  {
+                      "path":  "server_memory/021_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\021_server_step_rbla.json",
+                      "bytes":  189274,
+                      "sha256":  "d60187650eb6de54fec0c7823973a8a7dcbcadc130ad0c8577a33c33392d99d8"
+                  },
+                  {
+                      "path":  "server_memory/021_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\021_server_step_rbla_plus.json",
+                      "bytes":  189293,
+                      "sha256":  "624bfa4d477a4eb3d511483ba6d8cc3ff494f8d0e68a722dd80c9c76b4e5ce8f"
+                  },
+                  {
+                      "path":  "server_memory/022_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\022_broadcast_dense_svd.json",
+                      "bytes":  189262,
+                      "sha256":  "66093a2f1924c7f8bd90dabf233e97b301c03ccd6c387c709e4b72bfda8f2fca"
+                  },
+                  {
+                      "path":  "server_memory/022_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\022_broadcast_rbla.json",
+                      "bytes":  189276,
+                      "sha256":  "cfddcc19a3ab7e1ba68d72ffcbeabe10743d46c28a9c5f018d3665a803778af9"
+                  },
+                  {
+                      "path":  "server_memory/022_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\022_broadcast_rbla_plus.json",
+                      "bytes":  189290,
+                      "sha256":  "705445e13be6f9dfae43283ddb6d6891714481cf1671d571ce9816467093ff03"
+                  },
+                  {
+                      "path":  "server_memory/022_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\022_server_step_dense_svd.json",
+                      "bytes":  189283,
+                      "sha256":  "e103e8a26ee4e9568095b1aa3d5b048d1c324f612e28c9fdb39a0bb0bb12eddc"
+                  },
+                  {
+                      "path":  "server_memory/022_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\022_server_step_rbla.json",
+                      "bytes":  189275,
+                      "sha256":  "8ea9045350630a59a80c347b1b718496177cf7bdd11d8fda5d8ede4014c8f511"
+                  },
+                  {
+                      "path":  "server_memory/022_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\022_server_step_rbla_plus.json",
+                      "bytes":  189296,
+                      "sha256":  "367c91eb3b087bf4fca64e6e4f5ebe4f83f68eb3f3896b9def6e727a294a1524"
+                  },
+                  {
+                      "path":  "server_memory/023_broadcast_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\023_broadcast_dense_svd.json",
+                      "bytes":  189258,
+                      "sha256":  "713b02ace1247c036fa9c4ac4e13218caecb63270e967fd78e0d0d0b25a440df"
+                  },
+                  {
+                      "path":  "server_memory/023_broadcast_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\023_broadcast_rbla.json",
+                      "bytes":  189282,
+                      "sha256":  "840f38564e0fed586e20fa638f1b736e4d0b43bb883dbf06bf09cd96c595f052"
+                  },
+                  {
+                      "path":  "server_memory/023_broadcast_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\023_broadcast_rbla_plus.json",
+                      "bytes":  189290,
+                      "sha256":  "c74aa84b285503157d04e41d25944fa38165c7eaa790a2c80116d4625ce8ebca"
+                  },
+                  {
+                      "path":  "server_memory/023_server_step_dense_svd.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\023_server_step_dense_svd.json",
+                      "bytes":  189286,
+                      "sha256":  "cbf33dedf3aa2200fa0b635345516f97e146a8ea3ec08faf7956c2f08aa03c40"
+                  },
+                  {
+                      "path":  "server_memory/023_server_step_rbla.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\023_server_step_rbla.json",
+                      "bytes":  189281,
+                      "sha256":  "a65379645f274dd03a7c54bc69399ef20962be1f7e612683440ae55b0dba32d1"
+                  },
+                  {
+                      "path":  "server_memory/023_server_step_rbla_plus.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\023_server_step_rbla_plus.json",
+                      "bytes":  189293,
+                      "sha256":  "596d90808684d1ef223acf3a3e5ef32aa9d948930cca3b1d91b2c0f5cbdf11ee"
+                  },
+                  {
+                      "path":  "server_memory/broadcast.pdf",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\broadcast.pdf",
+                      "bytes":  28078,
+                      "sha256":  "a6f5749334baa687ef45e3f8e627f0273bca48015eca85c717964f3cc4165f6e"
+                  },
+                  {
+                      "path":  "server_memory/manifest.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\manifest.json",
+                      "bytes":  16604,
+                      "sha256":  "5eb52a94cb681c041d1a1e520219a011e0fa6cf06adb9f1674b9f361d5677560"
+                  },
+                  {
+                      "path":  "server_memory/measurements.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\measurements.csv",
+                      "bytes":  13599073,
+                      "sha256":  "639ce9a12011a40d830ec072a8011001ee62111267cc6ffe70264ba61743e2e1"
+                  },
+                  {
+                      "path":  "server_memory/server_step.pdf",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\server_step.pdf",
+                      "bytes":  26820,
+                      "sha256":  "226b199d027e804e8118fe06ccbf243c4cc45bffb83ae95d6a6bd8eff5bfb4a3"
+                  },
+                  {
+                      "path":  "server_memory/status.json",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\results\\run_all_20260915_223408_556671\\server_memory\\status.json",
+                      "bytes":  41,
+                      "sha256":  "69f341eb301e8e851d6fc0bd5367dc849cedc39a8ac0dd4fc54903b996bc6b37"
+                  },
+                  {
+                      "path":  "spectum_ablation/cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e.csv",
+                      "bytes":  41808,
+                      "sha256":  "92152859eff307af11420d415d9dd44391d5acb7594123078532b80db7627347"
+                  },
+                  {
+                      "path":  "spectum_ablation/cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-rbla-broadcast-accuracy.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-rbla-broadcast-accuracy.csv",
+                      "bytes":  79036,
+                      "sha256":  "6af7d075139181b27f44c9f26fbf880279fbec09d2ad44382689382cf659c0d3"
+                  },
+                  {
+                      "path":  "spectum_ablation/cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-rbla_plus_rank_scale-broadcast-accuracy.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\cifar10_rbla_plus_-train-20260916_003840-527d8374165f5f5e-rbla_plus_rank_scale-broadcast-accuracy.csv",
+                      "bytes":  79130,
+                      "sha256":  "62901a523f0645f34bbab0c35ecde28b433aa6f8843ce297a08f68f8187ac6bc"
+                  },
+                  {
+                      "path":  "spectum_ablation/cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5.csv",
+                      "bytes":  32541,
+                      "sha256":  "2dac549610835cfd2da5cc2f24e475fe78df71e2d0bed25f3d88cb3b733d22aa"
+                  },
+                  {
+                      "path":  "spectum_ablation/cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-rbla-broadcast-accuracy.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-rbla-broadcast-accuracy.csv",
+                      "bytes":  74538,
+                      "sha256":  "09c449d665c3c7404b212685c5c5deec9c16aa8ab7ea03d42815f46e2aa93487"
+                  },
+                  {
+                      "path":  "spectum_ablation/cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-rbla_plus_rank_scale-broadcast-accuracy.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\cifar10_rbla_-train-20260915_230749-a6f769c0ffcab3a5-rbla_plus_rank_scale-broadcast-accuracy.csv",
+                      "bytes":  78553,
+                      "sha256":  "b0a3209202cad4c248b52361ec403c53be0a518dde68bb96bbb8372ca4c7eddf"
+                  },
+                  {
+                      "path":  "spectum_ablation/mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d.csv",
+                      "bytes":  47074,
+                      "sha256":  "71ea5093becb0ca57d6037a13ebe8a1cdde4b6cc0f2f71af167ffce50cdbf3d5"
+                  },
+                  {
+                      "path":  "spectum_ablation/mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-rbla-broadcast-accuracy.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-rbla-broadcast-accuracy.csv",
+                      "bytes":  150661,
+                      "sha256":  "e0cab110d55153ea537b99e88a993757e7f2ee61108b4e18bb0fa0b60500a1df"
+                  },
+                  {
+                      "path":  "spectum_ablation/mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-rbla_plus_rank_scale-broadcast-accuracy.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\mnli_rbla_plus_-train-20260916_053255-9ae1fb76df17fa7d-rbla_plus_rank_scale-broadcast-accuracy.csv",
+                      "bytes":  150974,
+                      "sha256":  "9c3a0e80da8314d08c45a763a5c1f8064d32814beadb2834c5994753d11ca1b6"
+                  },
+                  {
+                      "path":  "spectum_ablation/mnli_rbla_-train-20260916_021602-a1c4f51e144975b3.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3.csv",
+                      "bytes":  37768,
+                      "sha256":  "e662711cafe0eda80c1f71db8aeb3f8101e29ffbcfbc66fa089220a0ebebe07b"
+                  },
+                  {
+                      "path":  "spectum_ablation/mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-rbla-broadcast-accuracy.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-rbla-broadcast-accuracy.csv",
+                      "bytes":  150781,
+                      "sha256":  "e8f24516dd792f6d81d3db75d92405ae2eed93574794591aefe8e466d4af3f07"
+                  },
+                  {
+                      "path":  "spectum_ablation/mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-rbla_plus_rank_scale-broadcast-accuracy.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\mnli_rbla_-train-20260916_021602-a1c4f51e144975b3-rbla_plus_rank_scale-broadcast-accuracy.csv",
+                      "bytes":  151268,
+                      "sha256":  "713b99d6ce6b72deced3c3218e99c4df14181dc37badcfd2212ac22d1d696fcc"
+                  },
+                  {
+                      "path":  "spectum_ablation/qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca.csv",
+                      "bytes":  46934,
+                      "sha256":  "7aea3904b3d4de6639d112634e20b307c35d27ac43a7896449e7de51aa4f150b"
+                  },
+                  {
+                      "path":  "spectum_ablation/qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-rbla-broadcast-accuracy.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-rbla-broadcast-accuracy.csv",
+                      "bytes":  150401,
+                      "sha256":  "83f1783b24f5445e2bc0aa4020c8d0d31e0224b4fca1c882819c64cda97f0f48"
+                  },
+                  {
+                      "path":  "spectum_ablation/qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-rbla_plus_rank_scale-broadcast-accuracy.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\qqp_rbla_plus_-train-20260916_140435-f5413a3423c552ca-rbla_plus_rank_scale-broadcast-accuracy.csv",
+                      "bytes":  150959,
+                      "sha256":  "51030f8812642f8790e62d62be14648d4316079395b91eb03d02c4e2eb9109b6"
+                  },
+                  {
+                      "path":  "spectum_ablation/qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf.csv",
+                      "bytes":  37497,
+                      "sha256":  "46baa15346d1e89edbfd4738f47aca9d2b738f130657ce3d4b8b1a47d081741d"
+                  },
+                  {
+                      "path":  "spectum_ablation/qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-rbla-broadcast-accuracy.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-rbla-broadcast-accuracy.csv",
+                      "bytes":  150596,
+                      "sha256":  "9e0a332a9a6c99651a80a20ba59eb169b697b18dbeeffe92ec53a111a5f16247"
+                  },
+                  {
+                      "path":  "spectum_ablation/qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-rbla_plus_rank_scale-broadcast-accuracy.csv",
+                      "source":  "H:\\flex-src\\src\\test\\rbla+\\ablation\\spectum_ablation\\results\\qqp_rbla_-train-20260916_085140-0ef4f0f8458e51cf-rbla_plus_rank_scale-broadcast-accuracy.csv",
+                      "bytes":  150389,
+                      "sha256":  "8ce3f888bd8d9c645707a97d6e61927f579d393fa0c12e9b3ca6ef6ca79fb816"
+                  }
+              ]
+}
