@@ -1,0 +1,159 @@
+yaml_folder_aggreation_path: ../../../../yamls/aggregation/
+yaml_folder_client_selection_path: ../../../../yamls/client_selection/
+yaml_folder_dataset_loader_path: ../../../../yamls/dataset_loader/
+yaml_folder_data_distribution_path: ../../../../yamls/data_distribution/
+yaml_folder_loss_func_path: ../../../../yamls/loss_func/
+yaml_folder_lora_inference_path: ../../../../yamls/lora_inference/
+yaml_folder_nn_model_path: ../../../../yamls/nn_model/
+yaml_folder_fl_nodes_path: ../../../../yamls/fl_nodes/
+yaml_folder_optimizer_path: ../../../../yamls/optimizer/
+yaml_folder_client_strategy_path: ../../../../yamls/client_strategy/
+yaml_folder_server_strategy_path: ../../../../yamls/server_strategy/
+yaml_folder_runner_strategy_path: ../../../../yamls/runner_strategy/
+yaml_folder_trainer_path: ../../../../yamls/trainer/
+yaml_folder_training_logger_path: ../../../../yamls/training_logger/
+yaml_folder_training_path: ../../../../yamls/training/
+yaml_folder_general_path: ../../../../yamls/general
+yaml_folder_role_path: ../../../../yamls/role/
+yaml_folder_rank_distribution_path: ../../../../yamls/rank_distribution
+yaml_folder_tokenizer_path: ../../../../yamls/tokenlizer/
+
+yaml_folder_aggreation_files:
+- aggregation_fedavg.yaml: aggregation_fedavg
+- aggregation_close_optimal.yaml: aggregation_close_optimal
+- aggregation_flora.yaml: aggregation_flora
+- aggregation_fedsalora.yaml: aggregation_fedsalora
+- aggregation_ffalora.yaml: aggregation_ffalora
+- aggregation_rbla.yaml: aggregation_rbla
+- aggregation_rolora.yaml: aggregation_rolora
+- aggregation_zeropadding.yaml: aggregation_zeropadding
+
+yaml_folder_client_selection_files:
+- random.yaml: client_selection_random
+
+yaml_folder_tokenizer_files:
+- roberta_large_tokenizer.yaml: tokenizer_roberta_large
+
+yaml_folder_role_files:
+- server.yaml: role_server
+- client.yaml: role_client
+
+yaml_folder_dataset_loader_files:
+- cola.yaml: dataset_loader_cola
+- mnist.yaml: dataset_loader_mnist
+- fmnist.yaml: dataset_loader_fmnist
+- kmnist.yaml: dataset_loader_kmnist
+- qmnist.yaml: dataset_loader_qmnist
+
+yaml_folder_data_distribution_files:
+- cola_noniid_extreme_10.yaml: cola_noniid_extreme_10
+- cola_noniid_extreme_2.yaml: cola_noniid_extreme_2
+- cola_noniid_balance_10.yaml: cola_noniid_balance_10
+- cola_noniid_dirichlet_0_5_10.yaml: cola_noniid_dirichlet_0_5_10
+- cola_noniid_dirichlet_0_1_10.yaml: cola_noniid_dirichlet_0_1_10
+
+- mnist_one_label.yaml: mnist_one_label
+- fmnist_one_label.yaml: fmnist_one_label
+- qmnist_one_label.yaml: qmnist_one_label
+- kmnist_one_label.yaml: kmnist_one_label
+- kmnist_noniid_double_imbalance_10.yaml: kmnist_double_imbalance
+
+yaml_folder_loss_func_files:
+- cross_entropy.yaml: cross_entropy
+
+yaml_folder_nn_model_files:
+- transformer_roberta_large_lora.yaml: transformer_roberta_large_lora
+- nn_model_mnist_mlp_lora.yaml: nn_model_mnist_mlp_lora
+
+yaml_folder_lora_inference_files:
+- base_lora_inference.yaml: base_lora_inference_mode
+
+yaml_folder_fl_nodes_files:
+- default_10_clients.yaml: fl_nodes_10_clients
+- 2_clients.yaml: fl_nodes_2_clients
+
+yaml_folder_optimizer_files:
+- adam_1e3.yaml: adam_1e3
+- adamw_2e5.yaml: adamw_2e5
+- adamw_5e5.yaml: adamw_5e5
+- sgd.yaml: sgd
+- adamw_test.yaml: adamw_test
+
+yaml_folder_training_files:
+- training_epoch50_batch32.yaml: training_epoch50_batch32
+- training_epoch3_batch32.yaml: training_epoch3_batch32
+- training_epoch1.yaml: training_epoch1
+- training_epoch3.yaml: training_epoch3
+
+yaml_folder_client_strategy_files:
+- fedavg.yaml: fedavg_client_strategy
+- rbla.yaml: rbla_client_strategy
+- sp.yaml: sp_client_strategy
+
+yaml_folder_server_strategy_files:
+- fedavg.yaml: fedavg_server_strategy
+- rbla.yaml: rbla_server_strategy
+- sp.yaml: sp_server_strategy
+
+yaml_folder_runner_strategy_files:
+- fedavg.yaml: fedavg_runner_strategy
+- rbla.yaml: rbla_runner_strategy
+- sp.yaml: sp_runner_strategy
+
+yaml_folder_trainer_files:
+- glue_trainer.yaml: trainer_glue
+- glue_test_trainer.yaml: trainer_glue_test
+- standard_trainer.yaml: trainer_standard
+
+yaml_folder_training_logger_files:
+- standard_training_logger.yaml: training_logger
+
+yaml_folder_general_files:
+- general_round100_cuda.yaml: general_round100_cuda
+- general_round60.yaml: general_round60
+- general_round30.yaml: general_round30
+- general_round10.yaml: general_round10
+- general_round100.yaml: general_round100
+- general_round150.yaml: general_round150
+
+yaml_folder_rank_distribution_files:
+- rank100.yaml: rank_distribution_100_homogeneous
+- het_rank.yaml: rank_distribution_het_rank
+- het_rank_full.yaml: rank_distribution_het_rank_full
+- rank005.yaml: rank_distrubution_005
+
+yaml_combination:
+  runner:
+  - general_round100_cuda
+  - training_logger
+  - fl_nodes_10_clients
+  - sp_runner_strategy
+  client_yaml:
+  - role_client
+  - training_logger
+  - dataset_loader_kmnist
+  - nn_model_mnist_mlp_lora
+  - cross_entropy
+  - adam_1e3
+  - training_epoch3
+  - sp_client_strategy
+  - trainer_standard
+  - tokenizer_roberta_large
+  edge_yaml: []
+  server_yaml:
+  - role_server
+  - general_round100_cuda
+  - training_logger
+  - dataset_loader_kmnist
+  - nn_model_mnist_mlp_lora
+  - cross_entropy
+  - adam_1e3
+  - training_epoch3
+  - trainer_standard
+  - tokenizer_roberta_large
+  - kmnist_double_imbalance
+  - client_selection_random
+  - sp_server_strategy
+  - aggregation_close_optimal
+  - rank_distribution_het_rank_full
+  - base_lora_inference_mode
